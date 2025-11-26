@@ -1,572 +1,690 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>琉球総合開発株式会社 | 沖縄の未来を創る、確かな現場力。</title>
-    <meta name="description" content="沖縄県うるま市の建設会社、琉球総合開発株式会社。土木工事、解体、リフォーム、外構工事まで、確かな技術で対応します。">
-    <style>
-        /* --- リセット & 基本設定 --- */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-            line-height: 1.8; /* 読みやすく広めに設定 */
-            color: #333;
-            background-color: #f9f9f9;
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-        ul {
-            list-style: none;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            vertical-align: bottom;
-            display: block; /* 画像下の隙間防止 */
-        }
+  <meta charset="UTF-8" />
+  <title>琉球総合開発株式会社 | 建築・土木・解体・リフォーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="琉球総合開発株式会社の公式サイト。土木建築、解体工事、リフォーム増改築、外構・エクステリアなど、沖縄の住まいと街づくりをトータルサポートします。" />
 
-        /* --- ヘッダー --- */
-        header {
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #0044cc;
-        }
-        .header-btn {
-            background-color: #cc0000;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
+  <style>
+    :root {
+      --bg-dark: #0b1120;
+      --bg-main: #020617;
+      --bg-section: #020617;
+      --bg-card: #0f172a;
+      --accent: #fbbf24;
+      --accent-soft: #fde68a;
+      --text-main: #f9fafb;
+      --text-sub: #cbd5f5;
+      --border-soft: #1e293b;
+      --max-width: 1120px;
+    }
 
-        /* --- HEROセクション --- */
-        .hero {
-            position: relative;
-            height: 100vh;
-            min-height: 500px;
-            background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop'); /* 建設現場 */
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* 暗く加工 */
-        }
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            padding: 20px;
-        }
-        .hero-title {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-weight: bold;
-            letter-spacing: 0.05em;
-        }
-        .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        /* --- セクション共通 --- */
-        section {
-            padding: 80px 20px;
-        }
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 60px;
-            color: #0044cc;
-            font-weight: bold;
-            letter-spacing: 0.1em;
-        }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text-main);
+      background: radial-gradient(circle at top, #1d283a 0, #020617 45%, #000 100%);
+    }
 
-        /* --- SERVICE (事業内容) --- */
-        /* ★修正ポイント: テキストが切れないようにFlex/Gridの設定を最適化 */
-        .service-item {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 60px;
-            background: #fff;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-radius: 8px;
-            overflow: hidden; /* カード自体の角丸用 */
-        }
-        @media (min-width: 768px) {
-            .service-item {
-                flex-direction: row;
-                align-items: stretch; /* 高さを揃える */
-            }
-            .service-item:nth-child(even) {
-                flex-direction: row-reverse; /* 左右交互 */
-            }
-            .service-img {
-                width: 50%;
-            }
-            .service-text {
-                width: 50%;
-            }
-        }
-        .service-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            min-height: 250px; /* スマホでも高さを確保 */
-        }
-        .service-text {
-            padding: 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .service-text h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #333;
-            border-bottom: 2px solid #0044cc;
-            display: inline-block;
-            padding-bottom: 5px;
-        }
-        /* ★重要修正: テキスト省略バグの根源を断つ設定 */
-        .service-text p {
-            font-size: 1rem;
-            color: #555;
-            white-space: normal !important; /* 強制折り返し禁止を解除 */
-            overflow: visible !important;   /* はみ出し非表示を解除 */
-            text-overflow: clip !important; /* …省略を解除 */
-            display: block;
-        }
+    body {
+      line-height: 1.7;
+    }
 
-        /* --- WORKS (施工事例) --- */
-        .works-item {
-            background: #fff;
-            padding: 30px;
-            margin-bottom: 50px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            border-radius: 8px;
-        }
-        .works-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            border-left: 5px solid #0044cc;
-            padding-left: 15px;
-        }
-        .ba-container {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap; /* スマホで縦並び許容 */
-        }
-        .ba-box {
-            flex: 1;
-            min-width: 280px; /* 小さくなりすぎないように */
-            position: relative;
-        }
-        .ba-box img {
-            width: 100%;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
-        .ba-label {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            background: rgba(0,0,0,0.7);
-            color: #fff;
-            padding: 5px 10px;
-            font-size: 0.8rem;
-            border-radius: 4px;
-        }
-        /* ★重要修正: WORKS説明文の表示バグ対策 */
-        .work-desc {
-            font-size: 1rem;
-            color: #555;
-            margin-top: 15px;
-            white-space: normal !important;
-            overflow: visible !important;
-        }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-        /* --- REASON (選ばれる理由) --- */
-        .reason-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .reason-item {
-            flex: 1;
-            min-width: 300px;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            position: relative;
-            border: 2px solid #eee;
-        }
-        .reason-num {
-            font-size: 4rem;
-            font-weight: bold;
-            color: #f0f0f0;
-            position: absolute;
-            top: 0;
-            right: 15px;
-            line-height: 1;
-            z-index: 0;
-        }
-        .reason-content {
-            position: relative;
-            z-index: 1;
-        }
-        .reason-content h3 {
-            font-size: 1.3rem;
-            margin-bottom: 15px;
-            color: #0044cc;
-        }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        /* --- FAQ --- */
-        .faq-item {
-            background: #fff;
-            margin-bottom: 15px;
-            border-radius: 4px;
-            border: 1px solid #eee;
-        }
-        .faq-q {
-            padding: 15px 20px;
-            background: #f1f1f1;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .faq-a {
-            padding: 20px;
-            display: none; /* デフォルトは閉じ */
-        }
-        .faq-item.open .faq-a {
-            display: block; /* openクラスがあるものは表示 */
-        }
+    .site-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        /* --- COMPANY (会社概要) --- */
-        .company-container {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        @media (min-width: 768px) {
-            .company-container {
-                flex-direction: row;
-            }
-        }
-        .company-info {
-            flex: 1;
-        }
-        .company-info table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .company-info th, .company-info td {
-            text-align: left;
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-        }
-        .company-info th {
-            width: 30%;
-            background: #f9f9f9;
-        }
-        .company-map {
-            flex: 1;
-        }
-        .company-map img {
-            width: 100%;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-        }
+    .container {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
 
-        /* --- CONTACT --- */
-        .contact-section {
-            background-color: #eef2f6;
-        }
-        .contact-box {
-            text-align: center;
-            background: #fff;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        .contact-tel {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #cc0000;
-            margin: 20px 0;
-            display: block;
-        }
-        .line-qr {
-            width: 150px;
-            margin: 0 auto 20px;
-        }
-        .btn-contact {
-            display: inline-block;
-            background-color: #0044cc;
-            color: #fff;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            border-radius: 50px;
-            transition: opacity 0.3s;
-        }
-        .btn-contact:hover {
-            opacity: 0.8;
-        }
+    /* Header & Hero */
+    header {
+      position: relative;
+      color: var(--text-main);
+      overflow: hidden;
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 55%),
+        radial-gradient(circle at bottom right, rgba(251, 191, 36, 0.18), transparent 50%),
+        linear-gradient(135deg, #020617 0%, #020617 55%, #020617 100%);
+    }
 
-        /* --- Footer --- */
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9rem;
-        }
-    </style>
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(16px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.75));
+      border-bottom: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 16px;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      font-size: 14px;
+    }
+
+    .nav-logo-mark {
+      width: 28px;
+      height: 28px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #facc15 0, #ea580c 38%, #581c87 100%);
+      box-shadow:
+        0 0 18px rgba(250, 204, 21, 0.6),
+        0 0 40px rgba(30, 64, 175, 0.7);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-size: 13px;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 3px;
+      color: var(--text-sub);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 0;
+      border-radius: 999px;
+      background: linear-gradient(90deg, #fbbf24, #f97316);
+      transition: width 0.2s ease;
+    }
+
+    .nav-links a:hover { color: var(--text-main); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      padding: 8px 14px;
+      font-size: 13px;
+      border-radius: 999px;
+      border: 1px solid rgba(252, 211, 77, 0.6);
+      background: radial-gradient(circle at top left, rgba(250, 204, 21, 0.25), transparent 60%);
+      color: #fefce8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow:
+        0 0 12px rgba(250, 204, 21, 0.4),
+        0 0 24px rgba(30, 64, 175, 0.5);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    /* Hero Section */
+
+    .hero {
+      padding: 52px 0 64px;
+      position: relative;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      font-size: 11px;
+      color: var(--text-sub);
+      margin-bottom: 16px;
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-badge-pill {
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: radial-gradient(circle at top left, #fbbf24, #f97316);
+      color: #111827;
+      font-weight: 700;
+    }
+
+    .hero-title {
+      font-size: 34px;
+      line-height: 1.25;
+      letter-spacing: 0.05em;
+      margin: 0 0 16px;
+    }
+
+    .hero-title span.accent {
+      background: linear-gradient(90deg, #fbbf24, #f97316);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      font-size: 14px;
+      color: var(--text-sub);
+      margin: 0 0 20px;
+      max-width: 36em;
+    }
+
+    .hero-point-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 22px;
+      padding: 0;
+      list-style: none;
+      font-size: 12px;
+      color: var(--text-sub);
+    }
+
+    .hero-point-list li {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.8);
+    }
+
+    .hero-point-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: radial-gradient(circle, #facc15 0, #f97316 100%);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .btn-primary {
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: #111827;
+      background: linear-gradient(135deg, #facc15, #f97316);
+      box-shadow:
+        0 0 18px rgba(250, 204, 21, 0.7),
+        0 0 36px rgba(30, 64, 175, 0.7);
+    }
+
+    .btn-outline {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+      font-size: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-sub);
+      background: rgba(15, 23, 42, 0.8);
+      cursor: pointer;
+    }
+
+    .hero-note {
+      font-size: 11px;
+      color: #9ca3af;
+    }
+
+    /* --- ここまで PART1 --- */
+  </style>
 </head>
-<body>
 
+<!-- PART1 END -->
+<body>
+  <div class="site-wrapper">
+
+    <!-- ========== HEADER / NAVIGATION / HERO ========== -->
     <header>
-        <div class="logo">琉球総合開発株式会社</div>
-        <a href="#contact" class="header-btn">お問い合わせ</a>
+      <div class="nav">
+        <div class="nav-inner">
+          <div class="nav-logo">
+            <div class="nav-logo-mark"></div>
+            <div>
+              <div style="font-size:12px;">琉球総合開発株式会社</div>
+              <div style="font-size:10px;color:#9ca3af;">建築・土木・解体・リフォーム</div>
+            </div>
+          </div>
+
+          <div class="nav-links">
+            <a href="#service">事業内容</a>
+            <a href="#works">施工事例</a>
+            <a href="#company">会社概要</a>
+            <a href="#line">LINE相談</a>
+            <button class="nav-cta" onclick="document.getElementById('line').scrollIntoView({behavior:'smooth'});">
+              <span>✉</span>
+              <span>無料見積もり・相談</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- HERO -->
+      <div class="hero">
+        <div class="container">
+          <div class="hero-inner">
+
+            <!-- HERO LEFT (Text) -->
+            <div class="hero-copy">
+              <div class="hero-badge">
+                <span class="hero-badge-pill">RYUKYU GENERAL DEVELOPMENT</span>
+                <span>建築・土木・解体・外構までトータル対応</span>
+              </div>
+
+              <h1 class="hero-title">
+                確かな技術で、<span class="accent">街と暮らしの未来</span>をつくる。
+              </h1>
+
+              <p class="hero-sub">
+                琉球総合開発株式会社は、土木建築・解体工事・リフォーム増改築・外構エクステリアまで、
+                住まいと街づくりを一気通貫でサポートする施工会社です。安全第一と丁寧な施工で、
+                地域の皆さまに長く選ばれるパートナーを目指しています。
+              </p>
+
+              <ul class="hero-point-list">
+                <li><span class="hero-point-dot"></span>公共・民間工事どちらも対応</li>
+                <li><span class="hero-point-dot"></span>解体〜造成〜新築・リフォームまで一括相談</li>
+                <li><span class="hero-point-dot"></span>近隣配慮・安全対策を徹底</li>
+              </ul>
+
+              <div class="hero-actions">
+                <button class="btn-primary" onclick="document.getElementById('line').scrollIntoView({behavior:'smooth'});">
+                  <span>➤</span>
+                  <span>LINEで無料見積もり・相談</span>
+                </button>
+
+                <button class="btn-outline" onclick="document.getElementById('works').scrollIntoView({behavior:'smooth'});">
+                  <span>施工事例を見る</span>
+                </button>
+              </div>
+
+              <div class="hero-note">
+                写真・図面・現地の状況がわかるものをお送りいただくと、より具体的なご提案が可能です。
+              </div>
+            </div>
+
+            <!-- HERO RIGHT (Photo & Cards) -->
+            <div class="hero-visual">
+              <div class="hero-main-card">
+
+                <div class="hero-main-image">
+                  <div class="hero-main-image-inner"></div>
+                  <div class="hero-main-image-overlay"></div>
+                  <div class="hero-main-image-caption">
+                    建築・土木・解体・外構までワンストップ対応
+                  </div>
+                </div>
+
+                <div class="hero-status-row">
+                  <div class="hero-status-pill">
+                    <span class="hero-status-dot"></span>
+                    <span>安全第一の施工管理</span>
+                  </div>
+
+                  <div class="hero-status-pill">
+                    <span class="hero-status-dot" style="background:radial-gradient(circle,#facc15 0,#f97316 100%);"></span>
+                    <span>地域密着での丁寧な対応</span>
+                  </div>
+                </div>
+
+                <div class="hero-metrics">
+                  <div class="hero-metric">
+                    <div class="hero-metric-label">対応工事</div>
+                    <div class="hero-metric-value">建築・土木・解体・外構</div>
+                  </div>
+
+                  <div class="hero-metric">
+                    <div class="hero-metric-label">対応エリア</div>
+                    <div class="hero-metric-value">沖縄本島エリア</div>
+                  </div>
+
+                  <div class="hero-metric">
+                    <div class="hero-metric-label">相談窓口</div>
+                    <div class="hero-metric-value">LINE・お電話</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="hero-float-card">
+                <strong>無料見積もり・現地確認 OK</strong>
+                <span class="sub">解体だけ・外構だけ・リフォームだけのご相談も歓迎です。</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </header>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">沖縄の未来を創る、<br>確かな現場力。</h1>
-            <p class="hero-subtitle">信頼と実績で、地域のインフラと暮らしを支えます。</p>
-            <a href="#contact" class="btn-contact">無料相談・お見積り</a>
-        </div>
-    </section>
-
-    <section id="service">
+    <main>
+      <!-- ===== SERVICE セクションここから ===== -->
+      <!-- ===== SERVICE ===== -->
+      <section id="service">
         <div class="container">
+
+          <div class="section-header">
+            <div class="section-eyebrow">SERVICE</div>
             <h2 class="section-title">事業内容</h2>
+            <p class="section-sub">
+              土木建築・解体工事・リフォーム増改築・外構エクステリアまで、ワンストップでご相談いただけます。
+            </p>
+          </div>
 
-            <div class="service-item">
-                <div class="service-img">
-                    <img src="https://images.unsplash.com/photo-1591531109669-7d8d21b0687f?q=80&w=2070&auto=format&fit=crop" alt="土木工事">
-                </div>
-                <div class="service-text">
-                    <h3>土木工事</h3>
-                    <p>
-                        道路工事から造成工事まで、地域の基盤となるインフラ整備を行います。
-                        長年の経験に基づいた確かな技術力で、安全性と品質を第一に考えた施工を徹底しています。
-                        公共工事から民間開発まで幅広く対応可能です。
-                    </p>
-                </div>
-            </div>
+          <div class="service-grid">
 
-            <div class="service-item">
-                <div class="service-img">
-                    <img src="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?q=80&w=2074&auto=format&fit=crop" alt="解体工事">
-                </div>
-                <div class="service-text">
-                    <h3>解体工事</h3>
-                    <p>
-                        木造住宅からRC造のビルまで、あらゆる建物の解体工事に対応します。
-                        近隣への配慮（騒音・防塵対策）を徹底し、マニフェストに基づいた適正な廃棄物処理を行います。
-                        更地渡し後の土地活用のご相談も承ります。
-                    </p>
-                </div>
-            </div>
+            <!-- 土木建築 -->
+            <article class="service-card">
+              <h3 class="service-title">土木建築</h3>
+              <p class="service-body">
+                道路工事・造成工事・基礎工事など、公共工事から民間工事まで幅広く対応します。
+                現場ごとの条件や安全性を最優先に、確かな技術で地域のインフラを支えます。
+              </p>
+              <p class="service-note">
+                構造物の新設・改修、敷地の有効活用など、計画段階からご相談ください。
+              </p>
+            </article>
 
-            <div class="service-item">
-                <div class="service-img">
-                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop" alt="リフォーム">
-                </div>
-                <div class="service-text">
-                    <h3>リフォーム・修繕</h3>
-                    <p>
-                        内装のリノベーションから水回りの修繕まで、お客様のライフスタイルに合わせた提案を行います。
-                        老朽化した設備の交換や、バリアフリー化など、快適な住環境づくりをサポートします。
-                    </p>
-                </div>
-            </div>
+            <!-- 解体工事 -->
+            <article class="service-card">
+              <h3 class="service-title">解体工事</h3>
+              <p class="service-body">
+                木造住宅からRC造建物、店舗やテナントの内装解体まで、周辺環境に配慮した安全・安心の解体工事を行います。
+                近隣挨拶や騒音・粉じん対策もしっかり行い、スムーズな撤去と引き渡しを実現します。
+              </p>
+              <p class="service-note">
+                建替え前の解体のみのご依頼や、一部のみの解体なども柔軟に対応いたします。
+              </p>
+            </article>
 
-            <div class="service-item">
-                <div class="service-img">
-                    <img src="https://images.unsplash.com/photo-1621262602758-c0529d38865d?q=80&w=2070&auto=format&fit=crop" alt="外構工事">
-                </div>
-                <div class="service-text">
-                    <h3>外構・エクステリア</h3>
-                    <p>
-                        駐車場の舗装、フェンス設置、お庭の造成など、建物の顔となる外回りを美しく仕上げます。
-                        デザイン性だけでなく、防犯性や使い勝手を考慮した最適なプランをご提案いたします。
-                    </p>
-                </div>
-            </div>
+            <!-- リフォーム増改築 -->
+            <article class="service-card">
+              <h3 class="service-title">リフォーム増改築</h3>
+              <p class="service-body">
+                キッチン・バス・トイレなどの水回りリフォームから、間取り変更・増築・フルリノベーションまでトータルで対応します。
+                「今の暮らしに合った住まい」になるよう、プラン提案から施工、アフターまで一貫してサポートします。
+              </p>
+              <p class="service-note">
+                小さな修繕から大規模な改装まで、まずはご希望のイメージをお聞かせください。
+              </p>
+            </article>
+
+            <!-- 外構・エクステリア -->
+            <article class="service-card">
+              <h3 class="service-title">外構・エクステリア</h3>
+              <p class="service-body">
+                カースペースの拡張、アプローチ、フェンス・門扉、ブロック塀、ウッドデッキなど、建物を引き立てる外構工事を承ります。
+                駐車場レイアウトや動線計画も含めて、使いやすさと見た目のバランスを考えたご提案を行います。
+              </p>
+              <p class="service-note">
+                庭木の撤去や雑草対策を含めた「外まわりのまるごと相談」も承ります。
+              </p>
+            </article>
+
+          </div>
         </div>
-    </section>
+      </section>
 
-    <section id="works" style="background-color: #fff;">
+      <!-- ===== WORKS ===== -->
+      <section id="works">
         <div class="container">
+
+          <div class="section-header">
+            <div class="section-eyebrow">WORKS</div>
             <h2 class="section-title">施工事例</h2>
+            <p class="section-sub">
+              実際にご依頼いただいた工事の一部をご紹介します。ビフォー・アフターや現場条件に合わせた施工内容などの参考にご覧ください。
+            </p>
+          </div>
 
-            <div class="works-item">
-                <h3>古民家再生・修繕工事</h3>
-                <div class="ba-container">
-                    <div class="ba-box">
-                        <span class="ba-label">Before</span>
-                        <img src="work_before_01.jpg" alt="施工前">
-                    </div>
-                    <div class="ba-box">
-                        <span class="ba-label">After</span>
-                        <img src="work_after_01.jpg" alt="施工後">
-                    </div>
-                </div>
-                <p class="work-desc">
-                    長年放置されていた古民家の構造補強と内装フルリノベーションを行いました。
-                    柱や梁の味わいを残しつつ、現代の生活様式に合わせた快適な空間へと生まれ変わらせました。
-                    耐震性も向上させ、安心して住み継げる家になりました。
-                </p>
-            </div>
+          <div class="works-grid">
 
-            <div class="works-item">
-                <h3>駐車場造成工事</h3>
-                <div class="ba-container">
-                    <div class="ba-box">
-                        <span class="ba-label">Before</span>
-                        <img src="work_before_02.jpg" alt="施工前">
-                    </div>
-                    <div class="ba-box">
-                        <span class="ba-label">After</span>
-                        <img src="work_after_02.jpg" alt="施工後">
-                    </div>
-                </div>
-                <p class="work-desc">
-                    未活用の荒地を整地し、アスファルト舗装を行って収益用の駐車場へと整備しました。
-                    水はけを考慮した勾配設計と、耐久性の高い路盤改良を行い、メンテナンスコストを抑えた施工を実現しました。
-                </p>
-            </div>
+            <!-- 駐車場拡張工事 -->
+            <article class="works-card">
+              <div class="works-thumb">
+                <div class="works-thumb-inner" style="background-image:url('works1.jpg');"></div>
+                <div class="works-label">BEFORE → AFTER</div>
+              </div>
+              <h3 class="works-title">駐車場拡張工事（庭木撤去＋カースペース増設）</h3>
+              <p class="works-body">
+                既存の庭木や花壇を撤去し、2台分だった駐車スペースを4台分に拡張しました。
+                生活動線を邪魔しないレイアウトと、雨の日でも使いやすい勾配・排水計画を行っています。
+              </p>
+            </article>
+
+            <!-- 古民家リノベーション -->
+            <article class="works-card">
+              <div class="works-thumb">
+                <div class="works-thumb-inner" style="background-image:url('works2.jpg');"></div>
+                <div class="works-label">RENOVATION</div>
+              </div>
+              <h3 class="works-title">古民家リノベーション（外観はそのまま・内装フル改装）</h3>
+              <p class="works-body">
+                瓦屋根など外観の雰囲気は残しながら、室内は断熱・配管・内装を一新。
+                和室中心の間取りを、家族が集まりやすい広いLDKへ変更し、明るく開放的な住まいに生まれ変わりました。
+              </p>
+            </article>
+
+            <!-- 住宅解体工事 -->
+            <article class="works-card">
+              <div class="works-thumb">
+                <div class="works-thumb-inner" style="background-image:url('works3.jpg');"></div>
+                <div class="works-label">DEMOLITION</div>
+              </div>
+              <h3 class="works-title">住宅解体工事（近隣住宅が近接するエリア）</h3>
+              <p class="works-body">
+                道路幅が狭く、周辺住宅との距離も近い現場でしたが、養生・防音シート・散水などを徹底して解体を実施。
+                近隣の方への事前挨拶と工程説明を行い、トラブルなく無事に完了しています。
+              </p>
+            </article>
+
+            <!-- 外構リニューアル -->
+            <article class="works-card">
+              <div class="works-thumb">
+                <div class="works-thumb-inner" style="background-image:url('works4.jpg');"></div>
+                <div class="works-label">EXTERIOR</div>
+              </div>
+              <h3 class="works-title">外構リニューアル（アプローチ＋フェンス改修）</h3>
+              <p class="works-body">
+                経年劣化したブロック塀とアプローチを撤去し、シンプルなコンクリート土間とスリットフェンスに変更しました。
+                玄関まわりの印象が明るくなり、防犯性とプライバシーも向上しています。
+              </p>
+            </article>
+
+          </div>
         </div>
-    </section>
-
-    <section id="reason" style="background-color: #f9f9f9;">
+      </section>
+      <!-- ===== COMPANY ===== -->
+      <section id="company">
         <div class="container">
-            <h2 class="section-title">選ばれる理由</h2>
-            <div class="reason-list">
-                <div class="reason-item">
-                    <div class="reason-num">01</div>
-                    <div class="reason-content">
-                        <h3>地域密着のスピード対応</h3>
-                        <p>沖縄本島全域をカバーし、緊急のトラブルにも迅速に駆けつけます。地元の気候風土を知り尽くした提案が強みです。</p>
-                    </div>
-                </div>
-                <div class="reason-item">
-                    <div class="reason-num">02</div>
-                    <div class="reason-content">
-                        <h3>適正価格・明朗会計</h3>
-                        <p>お見積りは詳細まで項目を明記。追加料金が発生しないよう、事前の現地調査と説明を徹底しています。</p>
-                    </div>
-                </div>
-                <div class="reason-item">
-                    <div class="reason-num">03</div>
-                    <div class="reason-content">
-                        <h3>有資格者による施工管理</h3>
-                        <p>経験豊富な職人と有資格者がチームを組み、品質管理と安全管理を徹底した現場運営を行います。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="faq">
-        <div class="container">
-            <h2 class="section-title">よくある質問</h2>
-            <div class="faq-item open">
-                <div class="faq-q">Q. ホームページに載っていない作業も相談できますか？</div>
-                <div class="faq-a">
-                    A. はい、可能です。建設・土木に関わることなら何でもご相談ください。
-                    小規模な修繕から特殊な工事まで、協力会社とのネットワークも含めて最適な解決策をご提案します。
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="company">
-        <div class="container">
+          <div class="section-header">
+            <div class="section-eyebrow">COMPANY</div>
             <h2 class="section-title">会社概要</h2>
-            <div class="company-container">
-                <div class="company-info">
-                    <table>
-                        <tr>
-                            <th>会社名</th>
-                            <td>琉球総合開発株式会社</td>
-                        </tr>
-                        <tr>
-                            <th>所在地</th>
-                            <td>沖縄県うるま市字（詳細住所）</td>
-                        </tr>
-                        <tr>
-                            <th>代表者</th>
-                            <td>代表取締役 前</td>
-                        </tr>
-                        <tr>
-                            <th>事業内容</th>
-                            <td>土木工事、解体工事、リフォーム、外構工事、産業廃棄物収集運搬</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="company-map">
-                    <img src="map.png" alt="アクセスマップ">
-                </div>
-            </div>
-        </div>
-    </section>
+            <p class="section-sub">
+              琉球総合開発株式会社の会社情報・所在地・連絡先です。工事のご相談やお見積もり依頼は、LINE またはお電話にてお気軽にお問い合わせください。
+            </p>
+          </div>
 
-    <section id="contact" class="contact-section">
+          <div class="company-layout">
+
+            <div>
+              <table class="company-table">
+                <tr>
+                  <th>会社名</th>
+                  <td>琉球総合開発株式会社</td>
+                </tr>
+                <tr>
+                  <th>所在地</th>
+                  <td>沖縄県宜野湾市我如古４丁目４－１</td>
+                </tr>
+                <tr>
+                  <th>事業内容</th>
+                  <td>
+                    建築工事業・土木工事業・解体工事業・リフォーム工事業・外構エクステリア工事業 ほか
+                  </td>
+                </tr>
+                <tr>
+                  <th>対応エリア</th>
+                  <td>沖縄本島エリア（周辺地域はご相談ください）</td>
+                </tr>
+                <tr>
+                  <th>お問い合わせ</th>
+                  <td>
+                    LINE公式アカウント・お電話・メールフォーム など<br>
+                    ※最初はLINEでのご相談がスムーズです。
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div>
+              <div class="company-map-card">
+                <div class="company-map-title">アクセスマップ</div>
+                <div class="company-map-frame">
+                  <img src="map.png" alt="琉球総合開発株式会社 周辺地図">
+                </div>
+                <p class="company-map-note">
+                  実際の位置は Google マップ等でご確認ください。ご来社の際は、事前にご連絡をいただけますとスムーズです。
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ===== LINE CONTACT ===== -->
+      <section id="line">
         <div class="container">
-            <h2 class="section-title">お問い合わせ</h2>
-            <div class="contact-box">
-                <p>お見積り・ご相談は無料です。お気軽にお問い合わせください。</p>
-                <a href="tel:090-0000-0000" class="contact-tel">090-XXXX-XXXX</a>
-                <p style="margin-bottom:10px;">LINEでも受付中</p>
-                <img src="line_qr.png" alt="LINE QRコード" class="line-qr">
-                
-                <div style="margin-top: 30px;">
-                    <a href="#" class="btn-contact">お問い合わせフォームへ</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
+          <div class="section-header">
+            <div class="section-eyebrow">CONTACT</div>
+            <h2 class="section-title">公式LINE相談窓口</h2>
+            <p class="section-sub">
+              写真や図面を送りながら、工事内容・費用感・スケジュールなどを気軽にご相談いただける窓口です。
+              お問い合わせ～見積もりまでは無料です。
+            </p>
+          </div>
+
+          <div class="line-card">
+
+            <div>
+              <div class="line-copy-title">LINEでかんたん無料相談</div>
+              <p class="line-copy-sub">
+                「こんな工事も頼める？」「だいたいどれくらいかかる？」など、
+                まだ具体的に決まっていない段階のご相談も歓迎です。
+              </p>
+
+              <ul class="line-bullets">
+                <li>解体・造成・リフォーム・外構までまとめて相談OK</li>
+                <li>写真・動画・図面を送っていただくとスムーズです</li>
+                <li>ご予算に合わせたプランのご提案も可能です</li>
+              </ul>
+
+              <div class="line-cta-row">
+                <button class="btn-line">
+                  <span>LINE</span>
+                  <span>友だち追加して相談する</span>
+                </button>
+                <span class="line-note">※ボタンまたはQRコードから公式LINEを追加できます。</span>
+              </div>
+            </div>
+
+            <div class="line-qr">
+              <img src="line_image.jpg" alt="琉球総合開発 公式LINE QRコード">
+              <div class="line-qr-caption">
+                スマートフォンでQRコードを読み取ると、<br>
+                公式LINEアカウントにアクセスできます。
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <p>&copy; 2025 Ryukyu Sogo Kaihatsu Co., Ltd. All Rights Reserved.</p>
+      <div class="container">
+        <div class="footer-inner">
+
+          <div class="footer-logo">
+            <div class="footer-logo-mark"></div>
+            <div>
+              <div>琉球総合開発株式会社</div>
+              <div style="font-size:10px;">© Ryukyu General Development Co., Ltd.</div>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <span>建築・土木・解体・リフォーム・外構工事のご相談はお気軽にお問い合わせください。</span>
+          </div>
+
+        </div>
+      </div>
     </footer>
 
+  </div>
 </body>
 </html>
