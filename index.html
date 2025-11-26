@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>琉球総合開発株式会社 | 沖縄の建設・土木・リフォーム・解体</title>
+    <meta name="description" content="沖縄県全域対応。建設、土木、リフォーム、解体のことなら琉球総合開発株式会社へ。技術者の誇りと品質にこだわり、現場の「安心」をお届けします。">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .pt-\[66\.66\%] { padding-top: 66.66%; }
+        /* カスタムカラーの定義 */
+        .bg-ryukyu-navy { background-color: #0f172a; }
+        .text-ryukyu-yellow { color: #fbbf24; }
+        .bg-ryukyu-yellow { background-color: #fbbf24; }
+    </style>
+</head>
+
+<body class="text-slate-800 antialiased">
+
+<header class="bg-white fixed top-0 left-0 w-full z-50 shadow-md">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-xl font-bold text-ryukyu-navy">琉球総合開発株式会社</div>
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+            <a href="#home" class="hover:text-ryukyu-yellow">ホーム</a>
+            <a href="#service" class="hover:text-ryukyu-yellow">事業内容</a>
+            <a href="#works" class="hover:text-ryukyu-yellow">施工事例</a>
+            <a href="#reason" class="hover:text-ryukyu-yellow">選ばれる理由</a>
+            <a href="#faq" class="hover:text-ryukyu-yellow">FAQ</a>
+            <a href="#company" class="hover:text-ryukyu-yellow">会社概要</a>
+            <a href="#contact" class="bg-ryukyu-yellow text-ryukyu-navy px-4 py-2 rounded font-bold hover:bg-yellow-400 transition">お問い合わせ</a>
+        </nav>
+        <button id="menuBtn" class="md:hidden text-2xl text-ryukyu-navy">☰</button>
+    </div>
+
+    <nav id="menuNav" class="hidden bg-white border-t md:hidden">
+        <a href="#home" class="block px-6 py-3 border-b hover:bg-gray-100">ホーム</a>
+        <a href="#service" class="block px-6 py-3 border-b hover:bg-gray-100">事業内容</a>
+        <a href="#works" class="block px-6 py-3 border-b hover:bg-gray-100">施工事例</a>
+        <a href="#reason" class="block px-6 py-3 border-b hover:bg-gray-100">選ばれる理由</a>
+        <a href="#faq" class="block px-6 py-3 border-b hover:bg-gray-100">FAQ</a>
+        <a href="#company" class="block px-6 py-3 border-b hover:bg-gray-100">会社概要</a>
+        <a href="#contact" class="block px-6 py-3 hover:bg-gray-100">お問い合わせ</a>
+    </nav>
+</header>
+
+<script>
+    document.getElementById("menuBtn").onclick = () => {
+        document.getElementById("menuNav").classList.toggle("hidden");
+    };
+    document.querySelectorAll('#menuNav a').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById("menuNav").classList.add('hidden');
+        });
+    });
+</script>
+
+<div class="pt-16 md:pt-20"></div>
+
+<section id="home" class="relative h-[70vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center bg-ryukyu-navy mt-20 md:mt-0">
+    <img src="work_after_01.jpg" class="absolute top-0 left-0 w-full h-full object-cover opacity-30" alt="施工イメージ After">
+    <div class="relative text-center text-white px-6">
+        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">沖縄の未来を創る、<br><span class="text-ryukyu-yellow">確かな現場力</span>。</h1>
+        <p class="mb-8 text-base md:text-lg text-gray-200">技術者の誇りと最新の施工管理。建設・土木・リフォーム・解体、すべての現場に「安心」をお届けします。</p>
+        <a href="#contact" class="bg-ryukyu-yellow text-ryukyu-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition shadow-lg inline-block">無料お見積り・相談</a>
+    </div>
+</section>
+
+<section id="service" class="py-16 md:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">事業内容</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="p-6 border rounded shadow-sm bg-gray-50">
+                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">建築工事</h3>
+                <p class="text-slate-600">新築・増改築・改修など幅広い施工に対応。</p>
+            </div>
+            <div class="p-6 border rounded shadow-sm bg-gray-50">
+                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">土木・外構工事</h3>
+                <p class="text-slate-600">造成・外構・舗装・擁壁工事などを一括対応。</p>
+            </div>
+            <div class="p-6 border rounded shadow-sm bg-gray-50">
+                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">解体工事</h3>
+                <p class="text-slate-600">木造・RC・鉄骨まで安全かつ迅速に解体。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="works" class="py-16 md:py-20 bg-gray-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">施工事例（ビフォーアフター）</h2>
+
+        <div class="grid md:grid-cols-2 gap-12">
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <p class="font-bold mb-2 text-lg text-ryukyu-navy">古民家 → リノベーション</p>
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="relative pt-[66.66%] bg-gray-200 overflow-hidden rounded">
+                        <div class="absolute top-2 left-2 bg-slate-700 text-white text-xs px-2 py-1 rounded z-10 font-bold">BEFORE</div>
+                        <img src="work_before_01.jpg" alt="古民家 Before" class="absolute top-0 left-0 w-full h-full object-cover">
+                    </div>
+                    <div class="relative pt-[66.66%] bg-gray-200 overflow-hidden rounded">
+                        <div class="absolute top-2 left-2 bg-ryukyu-yellow text-ryukyu-navy text-xs px-2 py-1 rounded z-10 font-bold">AFTER</div>
+                        <img src="work_after_01.jpg" alt="古民家 After" class="absolute top-0 left-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 mt-3">築50年の木造住宅をスケルトン状態まで解体し、耐震補強を行って再生。モダンなLDKへと生まれ変わりました。</p>
+            </div>
+
+            <div class="bg-white p-4 rounded-lg shadow-md">
+                <p class="font-bold mb-2 text-lg text-ryukyu-navy">庭木撤去 → 駐車場拡張</p>
+                <div class="grid grid-cols-2 gap-2">
+                    <div class="relative pt-[66.66%] bg-gray-200 overflow-hidden rounded">
+                        <div class="absolute top-2 left-2 bg-slate-700 text-white text-xs px-2 py-1 rounded z-10 font-bold">BEFORE</div>
+                        <img src="work_before_02.jpg" alt="Before 庭木" class="absolute top-0 left-0 w-full h-full object-cover">
+                    </div>
+                    <div class="relative pt-[66.66%] bg-gray-200 overflow-hidden rounded">
+                        <div class="absolute top-2 left-2 bg-ryukyu-yellow text-ryukyu-navy text-xs px-2 py-1 rounded z-10 font-bold">AFTER</div>
+                        <img src="work_after_02.jpg" alt="After 駐車場" class="absolute top-0 left-0 w-full h-full object-cover">
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 mt-3">
+                    庭木を整備し、土間コンクリートを打設。車3台が停められる広々とした駐車場へ。
+                </p>
+            </div>
+
+        </div>
+
+        <div class="text-center mt-14">
+            <a href="#contact" class="inline-block bg-ryukyu-yellow text-ryukyu-navy px-10 py-4 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">
+                無料相談・簡単お見積りはこちら
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="reason" class="py-16 md:py-20 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">選ばれる3つの理由</h2>
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="p-4 border-t-4 border-ryukyu-navy shadow-sm">
+                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">① 高い技術力</h3>
+                <p class="text-slate-600">経験豊富な職人による高品質施工。</p>
+            </div>
+            <div class="p-4 border-t-4 border-ryukyu-navy shadow-sm">
+                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">② スピード対応</h3>
+                <p class="text-slate-600">見積もり〜着工まで迅速に対応。</p>
+            </div>
+            <div class="p-4 border-t-4 border-ryukyu-navy shadow-sm">
+                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">③ 地元密着</h3>
+                <p class="text-slate-600">沖縄全域で施工、地域に根ざした企業。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="faq" class="py-16 md:py-20 bg-gray-100">
+    <div class="max-w-3xl mx-auto px-6"> 
+        <h2 class="text-3xl font-bold text-center mb-10">よくある質問</h2>
+        <div class="space-y-6 bg-white p-6 rounded shadow">
+            <div class="border-b pb-4">
+                <p class="font-bold text-ryukyu-navy">Q. 見積もりは無料ですか？</p>
+                <p class="text-slate-600">A. はい、現地調査も含めて完全無料です。</p>
+            </div>
+            <div class="border-b pb-4">
+                <p class="font-bold text-ryukyu-navy">Q. 小さな工事でも依頼できますか？</p>
+                <p class="text-slate-600">A. もちろん可能です。フェンス1枚から対応します。</p>
+            </div>
+            <div class="border-b pb-4">
+                <p class="font-bold text-ryukyu-navy">Q. 対応エリアを教えてください。</p>
+                <p class="text-slate-600">A. 沖縄本島全域に対応しております。</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="company" class="py-16 md:py-20 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-10">会社概要</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+            <div class="bg-gray-50 p-6 rounded shadow-md">
+                <p class="text-ryukyu-navy"><strong>会社名：</strong> 琉球総合開発株式会社</p>
+                <p class="mt-2 text-ryukyu-navy"><strong>代表者：</strong> 代表取締役 新垣</p>
+                <p class="mt-2 text-ryukyu-navy"><strong>所在地：</strong> 〒901-2214 沖縄県宜野湾市我如古4丁目4-1</p>
+                <p class="mt-2 text-ryukyu-navy"><strong>事業内容：</strong> 建築工事 / 土木工事 / 外構工事 / 解体工事</p>
+            </div>
+            <div class="h-64 bg-gray-200 flex items-center justify-center text-slate-600 font-bold rounded shadow-md overflow-hidden">
+                Googleマップ埋め込み位置<br>(前さんの指示により、表示をスキップ)
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="py-16 md:py-20 bg-ryukyu-navy text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+        <h2 class="text-3xl font-bold mb-6">お問い合わせ</h2>
+        <p class="mb-8 text-gray-300">無料お見積り・現地調査をご希望の方はこちらからお気軽にご連絡ください。</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-slate-800 p-6 rounded-lg shadow-xl">
+                <p class="text-lg font-bold text-ryukyu-yellow mb-3">お電話でのお問い合わせ</p>
+                <a href="tel:098XXXXXXX" class="text-3xl font-extrabold text-white hover:text-ryukyu-yellow transition block">098-XXX-XXXX</a>
+                <p class="text-sm text-gray-400 mt-2">受付 9:00〜18:00（日曜定休）</p>
+            </div>
+
+            <div class="bg-slate-800 p-6 rounded-lg shadow-xl border-2 border-green-500">
+                <p class="text-lg font-bold text-green-500 mb-3">公式LINEで無料相談</p>
+                <a href="https://line.me/R/ti/p/YOUR_LINE_ID" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-green-600 transition shadow-lg inline-flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zM8 15c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z"/><path d="M8 2.5c3.052 0 5.618 1.835 5.618 4.412 0 2.578-2.566 4.413-5.618 4.413-3.053 0-5.619-1.835-5.619-4.413C2.381 4.335 4.947 2.5 8 2.5z"/></svg>
+                    LINEで相談する
+                </a>
+                <div class="w-32 h-32 bg-white p-1 rounded mx-auto mt-4">
+                    <img src="line_qr.png" alt="LINE QRコード" class="w-full h-full object-contain">
+                </div>
+                <p class="text-sm text-ryukyu-yellow mt-2 font-bold">24時間受付中！</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-gray-800 text-white py-6 text-center text-sm">
+    <div class="max-w-6xl mx-auto px-6">
+        © 2025 琉球総合開発株式会社. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>
