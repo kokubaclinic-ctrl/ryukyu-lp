@@ -5,6 +5,7 @@
   <title>琉球総合開発株式会社｜建設・土木・解体・外構・リフォーム</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="沖縄の建設・土木工事、解体工事、外構工事、リフォーム・増改築なら琉球総合開発株式会社へ。地域密着のスピード対応と自社施工による適正価格で安全・安心の施工をご提供します。">
+  
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +64,7 @@
       padding: 0 20px;
     }
 
-    /* ========= 共通見出し ========= */
+    /* ========= 共通パーツ ========= */
     .section-header {
       text-align: center;
       margin-bottom: 60px;
@@ -94,7 +95,7 @@
       margin: 0 auto;
     }
 
-    /* ボタン共通 */
+    /* ボタン */
     .btn {
       display: inline-flex;
       align-items: center;
@@ -105,6 +106,7 @@
       font-size: 15px;
       box-shadow: 0 4px 15px rgba(255, 183, 3, 0.4);
       cursor: pointer;
+      border: none;
     }
     .btn-primary {
       background: var(--accent);
@@ -173,7 +175,7 @@
       border-radius: 4px;
     }
 
-    /* ========= HERO (背景画像固定) ========= */
+    /* ========= HERO（指定URL固定） ========= */
     .hero {
       position: relative;
       height: 650px;
@@ -190,11 +192,11 @@
     .hero-bg {
       position: absolute;
       top: 0; left: 0; width: 100%; height: 100%;
-      /* ★指定のUnsplash画像URLで固定★ */
+      /* ★指定URL固定（変更禁止）★ */
       background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
       background-size: cover;
       background-position: center;
-      opacity: 0.5; /* 少し暗くして文字を見やすく */
+      opacity: 0.5; /* 黒レイヤー効果 */
       transform: scale(1.05);
     }
 
@@ -231,7 +233,7 @@
       line-height: 2;
     }
 
-    /* ========= 事業内容 (4ブロック・左右交互) ========= */
+    /* ========= 事業内容（指定URL 4ブロック） ========= */
     #service {
       background: var(--light-bg);
     }
@@ -245,6 +247,7 @@
       margin-bottom: 50px;
     }
     
+    /* 偶数番目は画像を右、テキストを左に */
     .service-card:nth-child(even) {
       flex-direction: row-reverse; 
     }
@@ -260,8 +263,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      position: absolute;
-      top: 0; left: 0;
+      /* アスペクト比固定 */
+      aspect-ratio: 4 / 3;
     }
 
     .service-info {
@@ -307,7 +310,7 @@
       margin-right: 6px;
     }
 
-    /* ========= 施工事例 (Before/After) ========= */
+    /* ========= 施工事例（ローカル画像） ========= */
     #works {
       background: #fff;
     }
@@ -376,7 +379,7 @@
       line-height: 1.6;
     }
 
-    /* ========= 選ばれる理由 (番号透かしデザイン) ========= */
+    /* ========= 選ばれる理由 ========= */
     #reason {
       background: var(--main-bg);
       color: #fff;
@@ -434,7 +437,7 @@
       line-height: 1.8;
     }
 
-    /* ========= FAQ (白アコーディオン) ========= */
+    /* ========= FAQ ========= */
     #faq { background: #f8f9fa; }
 
     .faq-container {
@@ -488,7 +491,7 @@
       background: #fafafa;
     }
 
-    /* ========= 会社概要 (Map静止画) ========= */
+    /* ========= 会社概要 ========= */
     #company { background: #fff; }
 
     .company-wrapper {
@@ -520,25 +523,18 @@
     .company-map {
       flex: 1;
       min-width: 320px;
+      display: flex;
+      flex-direction: column;
     }
 
-    .map-placeholder {
+    /* 地図画像スタイル */
+    .company-map-image {
       width: 100%;
       height: 350px;
-      background: #eef1f5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      object-fit: cover;
       border-radius: 16px;
-      color: #8899a6;
-      font-weight: 700;
-      border: 2px dashed #cbd5e1;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .map-placeholder::before {
-      content: "📍";
-      font-size: 40px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      background: #eee; /* 画像ロード前の背景色 */
     }
 
     /* ========= お問い合わせ ========= */
@@ -556,7 +552,6 @@
       margin-top: 40px;
     }
 
-    /* 左カラム：電話とLINE */
     .contact-methods {
       display: grid;
       gap: 24px;
@@ -606,7 +601,6 @@
       margin: 0 auto;
     }
 
-    /* 右カラム：フォーム */
     .form-box {
       background: #fff;
       padding: 40px;
@@ -720,7 +714,7 @@
     </div>
   </section>
 
-  <!-- 事業内容 (4ブロック完全版) -->
+  <!-- 事業内容（Unsplash画像 4ブロック固定） -->
   <section id="service">
     <div class="container">
       <div class="section-header">
@@ -729,10 +723,11 @@
         <p class="section-lead">各分野のスペシャリストが、お客様の課題を解決します。</p>
       </div>
 
-      <!-- ① 建設・土木工事 (画像：work_after_02.jpg / 駐車場＝土木イメージ) -->
+      <!-- ① 建設・土木工事 -->
       <div class="service-card">
         <div class="service-img">
-          <img src="work_after_02.jpg" alt="土木工事">
+          <!-- 指定URL -->
+          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=1000&auto=format&fit=crop" alt="建設・土木工事">
         </div>
         <div class="service-info">
           <h3>01. 建設・土木工事</h3>
@@ -746,10 +741,11 @@
         </div>
       </div>
 
-      <!-- ② 解体工事 (画像：work_before_01.jpg / 古い家＝解体イメージ) -->
+      <!-- ② 解体工事 -->
       <div class="service-card">
         <div class="service-img">
-          <img src="work_before_01.jpg" alt="解体工事">
+          <!-- 指定URL -->
+          <img src="https://images.unsplash.com/photo-1503708928676-1cb796a0891e?q=80&w=1000&auto=format&fit=crop" alt="解体工事">
         </div>
         <div class="service-info">
           <h3>02. 解体工事</h3>
@@ -763,10 +759,11 @@
         </div>
       </div>
 
-      <!-- ③ リフォーム・増改築 (画像：work_after_01.jpg / 内装イメージ) -->
+      <!-- ③ リフォーム・増改築 -->
       <div class="service-card">
         <div class="service-img">
-          <img src="work_after_01.jpg" alt="リフォーム">
+          <!-- 指定URL -->
+          <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=1000&auto=format&fit=crop" alt="リフォーム">
         </div>
         <div class="service-info">
           <h3>03. リフォーム・増改築</h3>
@@ -780,10 +777,11 @@
         </div>
       </div>
 
-      <!-- ④ 外構・エクステリア (画像：work_before_02.jpg / 庭・外構イメージ) -->
+      <!-- ④ 外構・エクステリア -->
       <div class="service-card">
         <div class="service-img">
-          <img src="work_before_02.jpg" alt="外構工事">
+          <!-- 指定URL -->
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop" alt="外構工事">
         </div>
         <div class="service-info">
           <h3>04. 外構・エクステリア</h3>
@@ -799,8 +797,7 @@
 
     </div>
   </section>
-
-  <!-- 施工事例 -->
+<!-- 施工事例（ローカル画像 work_xx_xx.jpg を使用） -->
   <section id="works">
     <div class="container">
       <div class="section-header">
@@ -843,7 +840,8 @@
       </div>
     </div>
   </section>
-<!-- 選ばれる理由 -->
+
+  <!-- 選ばれる理由 -->
   <section id="reason">
     <div class="container">
       <div class="section-header">
@@ -870,7 +868,7 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ（Q1のみ OPEN） -->
   <section id="faq">
     <div class="container">
       <div class="section-header">
@@ -878,27 +876,38 @@
         <h2 class="section-title">よくある質問</h2>
       </div>
       <div class="faq-container">
+        
+        <!-- Q1: 指定内容・Open状態 -->
         <details open>
+          <summary>HPに掲載されていない作業も相談できますか？</summary>
+          <div class="answer">
+            はい、ぜひご相談ください！<br>
+            ホームページに掲載されていない細かい作業や、特殊な工事も多数実績がございます。「こんなこともできる？」とお気軽にお問い合わせいただければ、担当者が柔軟に対応・ご提案いたします。
+          </div>
+        </details>
+
+        <!-- Q2 -->
+        <details>
           <summary>見積もりは無料ですか？</summary>
           <div class="answer">はい、現地調査とお見積もりは完全に無料です。相見積もりも歓迎ですので、お気軽にご相談ください。</div>
         </details>
+
+        <!-- Q3 -->
         <details>
           <summary>対応エリアはどこまでですか？</summary>
           <div class="answer">沖縄本島全域に対応しています。離島の場合は規模によりますので、一度ご相談ください。</div>
         </details>
+
+        <!-- Q4 -->
         <details>
           <summary>住みながらのリフォームは可能ですか？</summary>
           <div class="answer">はい、可能です。生活スペースを確保しながら工事を進める工程をご提案します。</div>
-        </details>
-        <details>
-          <summary>小さな工事でも頼めますか？</summary>
-          <div class="answer">もちろんです。「ブロック塀を少し直したい」「庭木を1本切りたい」といった工事も喜んで承ります。</div>
         </details>
       </div>
     </div>
   </section>
 
-  <!-- 会社概要 -->
+  <!-- 会社概要（地図は map.png のIMGタグ） -->
   <section id="company">
     <div class="container">
       <div class="section-header">
@@ -916,17 +925,14 @@
           </dl>
         </div>
         <div class="company-map">
-          <!-- マップ画像用プレースホルダー -->
-          <div class="map-placeholder">
-            Google Map 静止画<br>
-            （後ほど画像を配置）
-          </div>
+          <!-- マップ用画像タグ -->
+          <img src="map.png" alt="琉球総合開発株式会社 周辺地図" class="company-map-image">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- お問い合わせ -->
+  <!-- お問い合わせ（フォーム付き） -->
   <section id="contact">
     <div class="container">
       <div class="section-header">
@@ -948,15 +954,16 @@
             <p style="font-size:13px; margin-bottom:15px; color:#ccc;">友だち追加して写真を送るだけ！</p>
             <a href="#" class="line-btn">LINEで相談する</a>
             <div>
+              <!-- LINE QR画像 -->
               <img src="line_qr.png" alt="LINE QR" class="line-qr-img">
             </div>
           </div>
         </div>
 
-        <!-- 右側：フォーム (Netlify対応) -->
+        <!-- 右側：フォーム -->
         <div class="form-box">
           <div class="form-title">お問い合わせフォーム</div>
-          <!-- data-netlify="true" が重要 -->
+          <!-- Netlify属性入り（GitHub Pagesでは無視されるだけなので安全） -->
           <form name="contact" method="POST" data-netlify="true">
             <input type="hidden" name="form-name" value="contact" />
             
