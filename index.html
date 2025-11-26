@@ -1,227 +1,994 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>琉球総合開発株式会社 | 沖縄の建設・土木・リフォーム・解体</title>
-    <meta name="description" content="沖縄県全域対応。建設、土木、リフォーム、解体のことなら琉球総合開発株式会社へ。技術者の誇りと品質にこだわり、現場の「安心」をお届けします。">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .pt-\[66\.66\%] { padding-top: 66.66%; }
-        /* カスタムカラーの定義 */
-        .bg-ryukyu-navy { background-color: #0f172a; }
-        .text-ryukyu-yellow { color: #fbbf24; }
-        .bg-ryukyu-yellow { background-color: #fbbf24; }
-    </style>
+  <meta charset="UTF-8">
+  <title>琉球総合開発株式会社｜建設・土木・解体・外構・リフォーム</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="沖縄の建設・土木工事、解体工事、外構工事、リフォーム・増改築なら琉球総合開発株式会社へ。地域密着のスピード対応と自社施工による適正価格で安全・安心の施工をご提供します。">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ========= ベース設定 ========= */
+    :root {
+      --main-bg: #0b1a2f; /* 深いネイビー */
+      --accent: #ffb703;  /* 建設イエロー */
+      --accent-hover: #ffca3a;
+      --text-main: #333333;
+      --text-sub: #666666;
+      --light-bg: #f8f9fa;
+      --white: #ffffff;
+      --nav-height: 70px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--text-main);
+      background: var(--white);
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    section {
+      padding: 100px 20px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ========= 共通見出し ========= */
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-subtitle {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      color: var(--accent);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .section-title {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-lead {
+      font-size: 15px;
+      color: var(--text-sub);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* ボタン共通 */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 32px;
+      font-weight: 700;
+      border-radius: 50px;
+      font-size: 15px;
+      box-shadow: 0 4px 15px rgba(255, 183, 3, 0.4);
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #000;
+    }
+    .btn-primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+    }
+
+    /* ========= ヘッダー ========= */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-height);
+      background: rgba(11, 26, 47, 0.95);
+      backdrop-filter: blur(10px);
+      color: #fff;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo span {
+      background: var(--accent);
+      color: #000;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 24px;
+    }
+    
+    nav a {
+      font-size: 14px;
+      font-weight: 700;
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .nav-contact {
+      background: var(--accent);
+      color: #000 !important;
+      padding: 8px 16px;
+      border-radius: 4px;
+    }
+
+    /* ========= HERO (背景画像固定) ========= */
+    .hero {
+      position: relative;
+      height: 650px;
+      margin-top: var(--nav-height);
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      /* ★指定のUnsplash画像URLで固定★ */
+      background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80'); 
+      background-size: cover;
+      background-position: center;
+      opacity: 0.5; /* 少し暗くして文字を見やすく */
+      transform: scale(1.05);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 20px;
+      max-width: 800px;
+    }
+
+    .hero-tag {
+      font-size: 14px;
+      letter-spacing: 0.3em;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .hero h1 {
+      font-size: 46px;
+      font-weight: 900;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+    .hero h1 span {
+      border-bottom: 5px solid var(--accent);
+    }
+
+    .hero p {
+      font-size: 16px;
+      margin-bottom: 40px;
+      color: #e0e0e0;
+      line-height: 2;
+    }
+
+    /* ========= 事業内容 (4ブロック・左右交互) ========= */
+    #service {
+      background: var(--light-bg);
+    }
+
+    .service-card {
+      display: flex;
+      background: #fff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08);
+      margin-bottom: 50px;
+    }
+    
+    .service-card:nth-child(even) {
+      flex-direction: row-reverse; 
+    }
+
+    .service-img {
+      flex: 1;
+      min-height: 320px;
+      background: #ddd;
+      position: relative;
+    }
+    
+    .service-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0; left: 0;
+    }
+
+    .service-info {
+      flex: 1;
+      padding: 50px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service-info h3 {
+      font-size: 24px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      border-left: 6px solid var(--accent);
+      padding-left: 16px;
+    }
+
+    .service-info p {
+      margin-bottom: 20px;
+      font-size: 15px;
+      color: var(--text-sub);
+    }
+
+    .service-info ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .service-info li {
+      font-size: 13px;
+      background: #f0f2f5;
+      padding: 6px 14px;
+      border-radius: 4px;
+      color: #444;
+      font-weight: 700;
+    }
+    .service-info li::before {
+      content: "✔";
+      color: var(--accent);
+      margin-right: 6px;
+    }
+
+    /* ========= 施工事例 (Before/After) ========= */
+    #works {
+      background: #fff;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+    }
+
+    .work-item {
+      background: #fff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+      border-radius: 16px;
+      padding: 20px;
+      transition: transform 0.3s;
+    }
+    .work-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .work-title {
+      font-weight: 700;
+      font-size: 18px;
+      margin-bottom: 16px;
+      text-align: center;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .ba-container {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    .ba-box {
+      flex: 1;
+      position: relative;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .ba-box img {
+      width: 100%;
+      aspect-ratio: 4 / 3; 
+      object-fit: cover;
+      display: block;
+    }
+
+    .label {
+      position: absolute;
+      top: 0; left: 0;
+      font-size: 11px;
+      font-weight: 900;
+      padding: 4px 10px;
+      color: #fff;
+      border-bottom-right-radius: 8px;
+    }
+    .label.before { background: #333; }
+    .label.after { background: #d00000; }
+
+    .work-desc {
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 1.6;
+    }
+
+    /* ========= 選ばれる理由 (番号透かしデザイン) ========= */
+    #reason {
+      background: var(--main-bg);
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    #reason .section-title { color: #fff; }
+    #reason .section-lead { color: #ccc; }
+
+    .reason-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .reason-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+    .reason-card:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    .reason-num {
+      position: absolute;
+      bottom: -20px;
+      right: -10px;
+      font-size: 100px;
+      font-weight: 900;
+      color: rgba(255,255,255,0.05);
+      line-height: 1;
+      font-family: sans-serif;
+      z-index: 0;
+    }
+
+    .reason-card h3 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: var(--accent);
+      position: relative;
+      z-index: 1;
+    }
+
+    .reason-card p {
+      font-size: 14px;
+      color: #ddd;
+      position: relative;
+      z-index: 1;
+      line-height: 1.8;
+    }
+
+    /* ========= FAQ (白アコーディオン) ========= */
+    #faq { background: #f8f9fa; }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    details {
+      background: #fff;
+      margin-bottom: 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+      overflow: hidden;
+      border: 1px solid #eee;
+    }
+
+    summary {
+      padding: 24px;
+      font-weight: 700;
+      cursor: pointer;
+      position: relative;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: var(--text-main);
+    }
+    
+    summary::-webkit-details-marker { display: none; }
+
+    summary::after {
+      content: '+';
+      font-size: 20px;
+      color: var(--accent);
+      font-weight: 900;
+      transition: transform 0.3s;
+    }
+    
+    details[open] summary::after {
+      content: '-';
+      transform: rotate(180deg);
+    }
+
+    .answer {
+      padding: 0 24px 24px;
+      font-size: 15px;
+      color: var(--text-sub);
+      border-top: 1px solid #f0f0f0;
+      padding-top: 20px;
+      line-height: 1.8;
+      background: #fafafa;
+    }
+
+    /* ========= 会社概要 (Map静止画) ========= */
+    #company { background: #fff; }
+
+    .company-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .company-info { flex: 1; min-width: 320px; }
+    
+    dl.company-dl {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 20px 0;
+      font-size: 15px;
+    }
+    dl.company-dl dt { 
+      font-weight: 700; 
+      border-bottom: 1px solid #eee; 
+      padding-bottom: 20px;
+      color: #333;
+    }
+    dl.company-dl dd { 
+      border-bottom: 1px solid #eee; 
+      padding-bottom: 20px;
+      color: #555;
+    }
+
+    .company-map {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .map-placeholder {
+      width: 100%;
+      height: 350px;
+      background: #eef1f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 16px;
+      color: #8899a6;
+      font-weight: 700;
+      border: 2px dashed #cbd5e1;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .map-placeholder::before {
+      content: "📍";
+      font-size: 40px;
+    }
+
+    /* ========= お問い合わせ ========= */
+    #contact {
+      background: var(--main-bg);
+      color: #fff;
+    }
+    #contact .section-title { color: #fff; }
+    #contact .section-lead { color: #ccc; }
+
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 50px;
+      margin-top: 40px;
+    }
+
+    /* 左カラム：電話とLINE */
+    .contact-methods {
+      display: grid;
+      gap: 24px;
+      align-content: start;
+    }
+
+    .contact-box {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+    }
+
+    .contact-box h3 {
+      font-size: 16px;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .phone-num {
+      font-size: 32px;
+      font-weight: 900;
+      color: #fff;
+      margin: 10px 0;
+      letter-spacing: 0.05em;
+    }
+
+    .line-btn {
+      background: #06c755;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      padding: 12px 30px;
+      border-radius: 50px;
+      display: inline-block;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(6, 199, 85, 0.3);
+    }
+    
+    .line-qr-img {
+      width: 140px;
+      height: 140px;
+      background: #fff;
+      padding: 8px;
+      border-radius: 12px;
+      margin: 0 auto;
+    }
+
+    /* 右カラム：フォーム */
+    .form-box {
+      background: #fff;
+      padding: 40px;
+      border-radius: 16px;
+      color: #333;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .form-title {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #eee;
+      padding-bottom: 10px;
+    }
+
+    .form-group {
+      margin-bottom: 24px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .form-group label span {
+      background: #ff4d4f;
+      color: #fff;
+      font-size: 11px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      margin-left: 6px;
+      vertical-align: middle;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 14px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      background: #f9f9f9;
+      transition: border-color 0.3s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--accent);
+      background: #fff;
+    }
+    
+    textarea.form-control {
+      height: 150px;
+      resize: vertical;
+    }
+
+    /* ========= フッター ========= */
+    footer {
+      background: #050d18;
+      color: #666;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 12px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* ========= レスポンシブ ========= */
+    @media (max-width: 900px) {
+      .hero { height: auto; padding: 120px 20px 80px; }
+      .hero h1 { font-size: 32px; }
+      .contact-wrapper { grid-template-columns: 1fr; }
+      .service-card, .service-card:nth-child(even) { flex-direction: column; }
+      .service-img { min-height: 250px; }
+      .reason-num { font-size: 80px; bottom: -15px; }
+    }
+
+    @media (max-width: 600px) {
+      .header-inner { flex-direction: column; padding: 10px; justify-content: center; }
+      nav ul { font-size: 12px; gap: 14px; margin-top: 10px; }
+      .nav-contact { display: none; }
+      section { padding: 60px 20px; }
+      .phone-num { font-size: 26px; }
+    }
+  </style>
 </head>
+<body>
 
-<body class="text-slate-800 antialiased">
-
-<header class="bg-white fixed top-0 left-0 w-full z-50 shadow-md">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-xl font-bold text-ryukyu-navy">琉球総合開発株式会社</div>
-        <nav class="hidden md:flex space-x-6 text-sm font-medium">
-            <a href="#home" class="hover:text-ryukyu-yellow">ホーム</a>
-            <a href="#service" class="hover:text-ryukyu-yellow">事業内容</a>
-            <a href="#works" class="hover:text-ryukyu-yellow">施工事例</a>
-            <a href="#reason" class="hover:text-ryukyu-yellow">選ばれる理由</a>
-            <a href="#faq" class="hover:text-ryukyu-yellow">FAQ</a>
-            <a href="#company" class="hover:text-ryukyu-yellow">会社概要</a>
-            <a href="#contact" class="bg-ryukyu-yellow text-ryukyu-navy px-4 py-2 rounded font-bold hover:bg-yellow-400 transition">お問い合わせ</a>
-        </nav>
-        <button id="menuBtn" class="md:hidden text-2xl text-ryukyu-navy">☰</button>
+  <!-- ヘッダー -->
+  <header>
+    <div class="header-inner">
+      <div class="logo"><span>建</span> 琉球総合開発株式会社</div>
+      <nav>
+        <ul>
+          <li><a href="#service">事業内容</a></li>
+          <li><a href="#works">施工事例</a></li>
+          <li><a href="#company">会社概要</a></li>
+          <li><a href="#contact" class="nav-contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <nav id="menuNav" class="hidden bg-white border-t md:hidden">
-        <a href="#home" class="block px-6 py-3 border-b hover:bg-gray-100">ホーム</a>
-        <a href="#service" class="block px-6 py-3 border-b hover:bg-gray-100">事業内容</a>
-        <a href="#works" class="block px-6 py-3 border-b hover:bg-gray-100">施工事例</a>
-        <a href="#reason" class="block px-6 py-3 border-b hover:bg-gray-100">選ばれる理由</a>
-        <a href="#faq" class="block px-6 py-3 border-b hover:bg-gray-100">FAQ</a>
-        <a href="#company" class="block px-6 py-3 border-b hover:bg-gray-100">会社概要</a>
-        <a href="#contact" class="block px-6 py-3 hover:bg-gray-100">お問い合わせ</a>
-    </nav>
-</header>
-
-<script>
-    document.getElementById("menuBtn").onclick = () => {
-        document.getElementById("menuNav").classList.toggle("hidden");
-    };
-    document.querySelectorAll('#menuNav a').forEach(link => {
-        link.addEventListener('click', () => {
-            document.getElementById("menuNav").classList.add('hidden');
-        });
-    });
-</script>
-
-<div class="pt-16 md:pt-20"></div>
-
-<section id="home" class="relative h-[70vh] min-h-[500px] sm:min-h-[600px] flex items-center justify-center bg-ryukyu-navy mt-20 md:mt-0">
-    <img src="work_after_01.jpg" class="absolute top-0 left-0 w-full h-full object-cover opacity-30" alt="施工イメージ After">
-    <div class="relative text-center text-white px-6">
-        <h1 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight">沖縄の未来を創る、<br><span class="text-ryukyu-yellow">確かな現場力</span>。</h1>
-        <p class="mb-8 text-base md:text-lg text-gray-200">技術者の誇りと最新の施工管理。建設・土木・リフォーム・解体、すべての現場に「安心」をお届けします。</p>
-        <a href="#contact" class="bg-ryukyu-yellow text-ryukyu-navy px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition shadow-lg inline-block">無料お見積り・相談</a>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-tag">OKINAWA CONSTRUCTION</span>
+      <h1>沖縄の未来を創る、<br><span>確かな現場力。</span></h1>
+      <p>建設・土木・解体・リフォーム。<br>技術と信頼で、お客様の理想をカタチにします。</p>
+      <a href="#contact" class="btn btn-primary">無料お見積り・相談</a>
     </div>
-</section>
+  </section>
 
-<section id="service" class="py-16 md:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">事業内容</h2>
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-6 border rounded shadow-sm bg-gray-50">
-                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">建築工事</h3>
-                <p class="text-slate-600">新築・増改築・改修など幅広い施工に対応。</p>
-            </div>
-            <div class="p-6 border rounded shadow-sm bg-gray-50">
-                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">土木・外構工事</h3>
-                <p class="text-slate-600">造成・外構・舗装・擁壁工事などを一括対応。</p>
-            </div>
-            <div class="p-6 border rounded shadow-sm bg-gray-50">
-                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">解体工事</h3>
-                <p class="text-slate-600">木造・RC・鉄骨まで安全かつ迅速に解体。</p>
-            </div>
+  <!-- 事業内容 (4ブロック完全版) -->
+  <section id="service">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">SERVICE</span>
+        <h2 class="section-title">事業内容</h2>
+        <p class="section-lead">各分野のスペシャリストが、お客様の課題を解決します。</p>
+      </div>
+
+      <!-- ① 建設・土木工事 (画像：work_after_02.jpg / 駐車場＝土木イメージ) -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="work_after_02.jpg" alt="土木工事">
         </div>
+        <div class="service-info">
+          <h3>01. 建設・土木工事</h3>
+          <p>道路整備、造成、擁壁工事など、街づくりの基盤となるインフラ整備を担います。熟練の技術と最新の重機で、安全かつスピーディな施工を実現します。</p>
+          <ul>
+            <li>宅地造成</li>
+            <li>擁壁工事</li>
+            <li>公共工事</li>
+            <li>基礎工事</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ② 解体工事 (画像：work_before_01.jpg / 古い家＝解体イメージ) -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="work_before_01.jpg" alt="解体工事">
+        </div>
+        <div class="service-info">
+          <h3>02. 解体工事</h3>
+          <p>木造・RC（鉄筋コンクリート）解体から内装解体まで。近隣への騒音・粉塵対策を徹底し、マニフェストに基づいた適正な廃棄物処理を行います。</p>
+          <ul>
+            <li>建物解体</li>
+            <li>内装スケルトン</li>
+            <li>整地・更地渡し</li>
+            <li>アスベスト対策</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ③ リフォーム・増改築 (画像：work_after_01.jpg / 内装イメージ) -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="work_after_01.jpg" alt="リフォーム">
+        </div>
+        <div class="service-info">
+          <h3>03. リフォーム・増改築</h3>
+          <p>古くなった住まいを、現代のライフスタイルに合わせて再生させます。水回りの交換から、間取り変更を伴うフルリノベーションまで対応可能です。</p>
+          <ul>
+            <li>フルリノベーション</li>
+            <li>水回りリフォーム</li>
+            <li>外壁塗装</li>
+            <li>増築工事</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- ④ 外構・エクステリア (画像：work_before_02.jpg / 庭・外構イメージ) -->
+      <div class="service-card">
+        <div class="service-img">
+          <img src="work_before_02.jpg" alt="外構工事">
+        </div>
+        <div class="service-info">
+          <h3>04. 外構・エクステリア</h3>
+          <p>駐車場の拡張、カーポート設置、ブロック塀やフェンス工事など。機能性とデザインを両立させ、台風にも強い外構プランをご提案します。</p>
+          <ul>
+            <li>駐車場工事</li>
+            <li>ブロック・フェンス</li>
+            <li>カーポート</li>
+            <li>造園</li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-</section>
+  </section>
 
-<section id="works" class="py-16 md:py-20 bg-gray-100">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">施工事例（ビフォーアフター）</h2>
+  <!-- 施工事例 -->
+  <section id="works">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">WORKS</span>
+        <h2 class="section-title">施工事例</h2>
+      </div>
 
-        <div class="grid md:grid-cols-2 gap-12">
-
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <p class="font-bold mb-2 text-lg text-ryukyu-navy">古民家 → リノベーション</p>
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="relative pt-[66.66%] bg-gray-200 overflow-hidden rounded">
-                        <div class="absolute top-2 left-2 bg-slate-700 text-white text-xs px-2 py-1 rounded z-10 font-bold">BEFORE</div>
-                        <img src="work_before_01.jpg" alt="古民家 Before" class="absolute top-0 left-0 w-full h-full object-cover">
-                    </div>
-                    <div class="relative pt-[66.66%] bg-gray-200 overflow-hidden rounded">
-                        <div class="absolute top-2 left-2 bg-ryukyu-yellow text-ryukyu-navy text-xs px-2 py-1 rounded z-10 font-bold">AFTER</div>
-                        <img src="work_after_01.jpg" alt="古民家 After" class="absolute top-0 left-0 w-full h-full object-cover">
-                    </div>
-                </div>
-                <p class="text-sm text-slate-600 mt-3">築50年の木造住宅をスケルトン状態まで解体し、耐震補強を行って再生。モダンなLDKへと生まれ変わりました。</p>
+      <div class="works-grid">
+        <!-- 事例1 -->
+        <div class="work-item">
+          <div class="work-title">古民家リノベーション</div>
+          <div class="ba-container">
+            <div class="ba-box">
+              <span class="label before">BEFORE</span>
+              <img src="work_before_01.jpg" alt="施工前">
             </div>
-
-            <div class="bg-white p-4 rounded-lg shadow-md">
-                <p class="font-bold mb-2 text-lg text-ryukyu-navy">庭木撤去 → 駐車場拡張</p>
-                <div class="grid grid-cols-2 gap-2">
-                    <div class="relative pt-[66.66%] bg-gray-200 overflow-hidden rounded">
-                        <div class="absolute top-2 left-2 bg-slate-700 text-white text-xs px-2 py-1 rounded z-10 font-bold">BEFORE</div>
-                        <img src="work_before_02.jpg" alt="Before 庭木" class="absolute top-0 left-0 w-full h-full object-cover">
-                    </div>
-                    <div class="relative pt-[66.66%] bg-gray-200 overflow-hidden rounded">
-                        <div class="absolute top-2 left-2 bg-ryukyu-yellow text-ryukyu-navy text-xs px-2 py-1 rounded z-10 font-bold">AFTER</div>
-                        <img src="work_after_02.jpg" alt="After 駐車場" class="absolute top-0 left-0 w-full h-full object-cover">
-                    </div>
-                </div>
-                <p class="text-sm text-slate-600 mt-3">
-                    庭木を整備し、土間コンクリートを打設。車3台が停められる広々とした駐車場へ。
-                </p>
+            <div class="ba-box">
+              <span class="label after">AFTER</span>
+              <img src="work_after_01.jpg" alt="施工後">
             </div>
-
+          </div>
+          <p class="work-desc">老朽化した古民家をスケルトン解体し、耐震補強を行ってモダンに再生しました。</p>
         </div>
 
-        <div class="text-center mt-14">
-            <a href="#contact" class="inline-block bg-ryukyu-yellow text-ryukyu-navy px-10 py-4 rounded-lg font-bold hover:bg-yellow-400 transition shadow-lg">
-                無料相談・簡単お見積りはこちら
-            </a>
+        <!-- 事例2 -->
+        <div class="work-item">
+          <div class="work-title">駐車場拡張工事</div>
+          <div class="ba-container">
+            <div class="ba-box">
+              <span class="label before">BEFORE</span>
+              <img src="work_before_02.jpg" alt="施工前">
+            </div>
+            <div class="ba-box">
+              <span class="label after">AFTER</span>
+              <img src="work_after_02.jpg" alt="施工後">
+            </div>
+          </div>
+          <p class="work-desc">庭木を撤去し、土間コンクリートを打設。車3台分のスペースを確保しました。</p>
         </div>
+      </div>
     </div>
-</section>
-
-<section id="reason" class="py-16 md:py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-12">選ばれる3つの理由</h2>
-        <div class="grid md:grid-cols-3 gap-10">
-            <div class="p-4 border-t-4 border-ryukyu-navy shadow-sm">
-                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">① 高い技術力</h3>
-                <p class="text-slate-600">経験豊富な職人による高品質施工。</p>
-            </div>
-            <div class="p-4 border-t-4 border-ryukyu-navy shadow-sm">
-                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">② スピード対応</h3>
-                <p class="text-slate-600">見積もり〜着工まで迅速に対応。</p>
-            </div>
-            <div class="p-4 border-t-4 border-ryukyu-navy shadow-sm">
-                <h3 class="font-bold mb-2 text-xl text-ryukyu-navy">③ 地元密着</h3>
-                <p class="text-slate-600">沖縄全域で施工、地域に根ざした企業。</p>
-            </div>
+  </section>
+<!-- 選ばれる理由 -->
+  <section id="reason">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">REASON</span>
+        <h2 class="section-title">選ばれる理由</h2>
+      </div>
+      <div class="reason-grid">
+        <div class="reason-card">
+          <div class="reason-num">01</div>
+          <h3>地域密着のスピード対応</h3>
+          <p>沖縄の地理を知り尽くしているからこそできる、迅速な対応。台風後の緊急対応もお任せください。</p>
         </div>
-    </div>
-</section>
-
-<section id="faq" class="py-16 md:py-20 bg-gray-100">
-    <div class="max-w-3xl mx-auto px-6"> 
-        <h2 class="text-3xl font-bold text-center mb-10">よくある質問</h2>
-        <div class="space-y-6 bg-white p-6 rounded shadow">
-            <div class="border-b pb-4">
-                <p class="font-bold text-ryukyu-navy">Q. 見積もりは無料ですか？</p>
-                <p class="text-slate-600">A. はい、現地調査も含めて完全無料です。</p>
-            </div>
-            <div class="border-b pb-4">
-                <p class="font-bold text-ryukyu-navy">Q. 小さな工事でも依頼できますか？</p>
-                <p class="text-slate-600">A. もちろん可能です。フェンス1枚から対応します。</p>
-            </div>
-            <div class="border-b pb-4">
-                <p class="font-bold text-ryukyu-navy">Q. 対応エリアを教えてください。</p>
-                <p class="text-slate-600">A. 沖縄本島全域に対応しております。</p>
-            </div>
+        <div class="reason-card">
+          <div class="reason-num">02</div>
+          <h3>自社施工で適正価格</h3>
+          <p>下請け任せにせず、自社の職人と重機で施工。中間マージンをカットし、適正価格を実現します。</p>
         </div>
-    </div>
-</section>
-
-<section id="company" class="py-16 md:py-20 bg-white">
-    <div class="max-w-4xl mx-auto px-6">
-        <h2 class="text-3xl font-bold text-center mb-10">会社概要</h2>
-        <div class="grid md:grid-cols-2 gap-10">
-            <div class="bg-gray-50 p-6 rounded shadow-md">
-                <p class="text-ryukyu-navy"><strong>会社名：</strong> 琉球総合開発株式会社</p>
-                <p class="mt-2 text-ryukyu-navy"><strong>代表者：</strong> 代表取締役 新垣</p>
-                <p class="mt-2 text-ryukyu-navy"><strong>所在地：</strong> 〒901-2214 沖縄県宜野湾市我如古4丁目4-1</p>
-                <p class="mt-2 text-ryukyu-navy"><strong>事業内容：</strong> 建築工事 / 土木工事 / 外構工事 / 解体工事</p>
-            </div>
-            <div class="h-64 bg-gray-200 flex items-center justify-center text-slate-600 font-bold rounded shadow-md overflow-hidden">
-                Googleマップ埋め込み位置<br>(前さんの指示により、表示をスキップ)
-            </div>
+        <div class="reason-card">
+          <div class="reason-num">03</div>
+          <h3>近隣への徹底配慮</h3>
+          <p>工事中の騒音・粉塵対策はもちろん、毎日の清掃やご近所への挨拶回りも徹底して行います。</p>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="contact" class="py-16 md:py-20 bg-ryukyu-navy text-white">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold mb-6">お問い合わせ</h2>
-        <p class="mb-8 text-gray-300">無料お見積り・現地調査をご希望の方はこちらからお気軽にご連絡ください。</p>
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">FAQ</span>
+        <h2 class="section-title">よくある質問</h2>
+      </div>
+      <div class="faq-container">
+        <details open>
+          <summary>見積もりは無料ですか？</summary>
+          <div class="answer">はい、現地調査とお見積もりは完全に無料です。相見積もりも歓迎ですので、お気軽にご相談ください。</div>
+        </details>
+        <details>
+          <summary>対応エリアはどこまでですか？</summary>
+          <div class="answer">沖縄本島全域に対応しています。離島の場合は規模によりますので、一度ご相談ください。</div>
+        </details>
+        <details>
+          <summary>住みながらのリフォームは可能ですか？</summary>
+          <div class="answer">はい、可能です。生活スペースを確保しながら工事を進める工程をご提案します。</div>
+        </details>
+        <details>
+          <summary>小さな工事でも頼めますか？</summary>
+          <div class="answer">もちろんです。「ブロック塀を少し直したい」「庭木を1本切りたい」といった工事も喜んで承ります。</div>
+        </details>
+      </div>
+    </div>
+  </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-slate-800 p-6 rounded-lg shadow-xl">
-                <p class="text-lg font-bold text-ryukyu-yellow mb-3">お電話でのお問い合わせ</p>
-                <a href="tel:098XXXXXXX" class="text-3xl font-extrabold text-white hover:text-ryukyu-yellow transition block">098-XXX-XXXX</a>
-                <p class="text-sm text-gray-400 mt-2">受付 9:00〜18:00（日曜定休）</p>
-            </div>
-
-            <div class="bg-slate-800 p-6 rounded-lg shadow-xl border-2 border-green-500">
-                <p class="text-lg font-bold text-green-500 mb-3">公式LINEで無料相談</p>
-                <a href="https://line.me/R/ti/p/YOUR_LINE_ID" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-lg font-bold text-lg hover:bg-green-600 transition shadow-lg inline-flex items-center gap-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M8 0c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8zM8 15c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7z"/><path d="M8 2.5c3.052 0 5.618 1.835 5.618 4.412 0 2.578-2.566 4.413-5.618 4.413-3.053 0-5.619-1.835-5.619-4.413C2.381 4.335 4.947 2.5 8 2.5z"/></svg>
-                    LINEで相談する
-                </a>
-                <div class="w-32 h-32 bg-white p-1 rounded mx-auto mt-4">
-                    <img src="line_qr.png" alt="LINE QRコード" class="w-full h-full object-contain">
-                </div>
-                <p class="text-sm text-ryukyu-yellow mt-2 font-bold">24時間受付中！</p>
-            </div>
+  <!-- 会社概要 -->
+  <section id="company">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">COMPANY</span>
+        <h2 class="section-title">会社概要</h2>
+      </div>
+      <div class="company-wrapper">
+        <div class="company-info">
+          <dl class="company-dl">
+            <dt>会社名</dt><dd>琉球総合開発株式会社</dd>
+            <dt>代表者</dt><dd>代表取締役 新垣</dd>
+            <dt>所在地</dt><dd>〒901-2214<br>沖縄県宜野湾市我如古4丁目4-1</dd>
+            <dt>事業内容</dt><dd>建設工事 / 土木工事 / 解体工事 / 外構・リフォーム</dd>
+            <dt>営業時間</dt><dd>9:00 - 18:00（日曜定休）</dd>
+          </dl>
         </div>
+        <div class="company-map">
+          <!-- マップ画像用プレースホルダー -->
+          <div class="map-placeholder">
+            Google Map 静止画<br>
+            （後ほど画像を配置）
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<footer class="bg-gray-800 text-white py-6 text-center text-sm">
-    <div class="max-w-6xl mx-auto px-6">
-        © 2025 琉球総合開発株式会社. All Rights Reserved.
+  <!-- お問い合わせ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-subtitle">CONTACT</span>
+        <h2 class="section-title">お問い合わせ</h2>
+        <p class="section-lead">お電話、LINE、または下記フォームよりお気軽にご連絡ください。<br>高齢者の方やLINEをお使いでない方も、フォームから簡単にご相談いただけます。</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <!-- 左側：電話・LINE -->
+        <div class="contact-methods">
+          <div class="contact-box">
+            <h3>お電話でのご相談</h3>
+            <div class="phone-num">098-XXX-XXXX</div>
+            <p>受付 9:00〜18:00（日曜定休）</p>
+          </div>
+          <div class="contact-box">
+            <h3>公式LINE</h3>
+            <p style="font-size:13px; margin-bottom:15px; color:#ccc;">友だち追加して写真を送るだけ！</p>
+            <a href="#" class="line-btn">LINEで相談する</a>
+            <div>
+              <img src="line_qr.png" alt="LINE QR" class="line-qr-img">
+            </div>
+          </div>
+        </div>
+
+        <!-- 右側：フォーム (Netlify対応) -->
+        <div class="form-box">
+          <div class="form-title">お問い合わせフォーム</div>
+          <!-- data-netlify="true" が重要 -->
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            
+            <div class="form-group">
+              <label>お名前<span>必須</span></label>
+              <input type="text" name="name" class="form-control" placeholder="例：山田 太郎" required>
+            </div>
+            <div class="form-group">
+              <label>電話番号<span>必須</span></label>
+              <input type="tel" name="tel" class="form-control" placeholder="例：090-1234-5678" required>
+            </div>
+            <div class="form-group">
+              <label>メールアドレス</label>
+              <input type="email" name="email" class="form-control" placeholder="例：example@mail.com">
+            </div>
+            <div class="form-group">
+              <label>ご相談内容</label>
+              <textarea name="message" class="form-control" placeholder="工事の内容やご希望をご記入ください"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">送信する</button>
+          </form>
+        </div>
+      </div>
     </div>
-</footer>
+  </section>
+
+  <!-- フッター -->
+  <footer>
+    <div class="container">
+      © 2025 Ryukyu Sogo Kaihatsu Co., Ltd. All Rights Reserved.
+    </div>
+  </footer>
 
 </body>
 </html>
