@@ -1,0 +1,25 @@
+name: TEMP FX JPY Risk Phase5B 20260826
+on:
+  push:
+    branches: ['tmp/xauusd-v04-backtest-20260826']
+    paths:
+      - 'tmp/fx_jpy_risk_phase5b_20260826.py'
+      - '.github/workflows/tmp-fx-jpy-risk-phase5b-20260826.yml'
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp/xauusd-v04-backtest-20260826
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm install --no-save dukascopy-node
+      - run: pip install -q pandas numpy requests
+      - run: node tmp/fx_trend_download_20260826.js
+      - run: python tmp/fx_jpy_risk_phase5b_20260826.py
