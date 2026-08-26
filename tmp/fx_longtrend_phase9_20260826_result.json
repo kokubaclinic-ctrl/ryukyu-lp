@@ -1,0 +1,278 @@
+{
+  "status": "FX_LONGTREND_PHASE9",
+  "source": "Dukascopy H1->daily free",
+  "protocol": "GLOBAL daily trend factors selected 2014-21 across 26 pairs; factor gate 2022-24; 2025-26 untouched; entries only on state change",
+  "loaded_pairs": 26,
+  "candidate_count": 21,
+  "chosen": [
+    {
+      "cfg": {
+        "name": "MOM20_R1.5",
+        "family": "MOM",
+        "lb": 20,
+        "risk_atr": 1.5
+      },
+      "metrics": {
+        "train": {
+          "n": 3673,
+          "avg_R": -0.0656,
+          "pf": 0.859,
+          "win_pct": 30.8,
+          "t": -2.64
+        },
+        "val": {
+          "n": 2237,
+          "avg_R": -0.029,
+          "pf": 0.932,
+          "win_pct": 33.1,
+          "t": -0.99
+        },
+        "test": {
+          "n": 2156,
+          "avg_R": -0.0612,
+          "pf": 0.862,
+          "win_pct": 33.1,
+          "t": -2.14
+        },
+        "holdout": {
+          "n": 1351,
+          "avg_R": -0.1304,
+          "pf": 0.694,
+          "win_pct": 30.7,
+          "t": -4.13
+        }
+      },
+      "score": -999
+    },
+    {
+      "cfg": {
+        "name": "EMA20_60_R1.5",
+        "family": "EMA",
+        "fast": 20,
+        "slow": 60,
+        "risk_atr": 1.5
+      },
+      "metrics": {
+        "train": {
+          "n": 681,
+          "avg_R": -0.3188,
+          "pf": 0.742,
+          "win_pct": 30.2,
+          "t": -2.4
+        },
+        "val": {
+          "n": 401,
+          "avg_R": -0.1666,
+          "pf": 0.854,
+          "win_pct": 30.7,
+          "t": -0.93
+        },
+        "test": {
+          "n": 443,
+          "avg_R": -0.3892,
+          "pf": 0.644,
+          "win_pct": 30.7,
+          "t": -3.36
+        },
+        "holdout": {
+          "n": 167,
+          "avg_R": -0.0253,
+          "pf": 0.977,
+          "win_pct": 27.5,
+          "t": -0.1
+        }
+      },
+      "score": -999
+    },
+    {
+      "cfg": {
+        "name": "DON20_10_R1.5",
+        "family": "DON",
+        "entry": 20,
+        "exit": 10,
+        "risk_atr": 1.5
+      },
+      "metrics": {
+        "train": {
+          "n": 1118,
+          "avg_R": -0.1157,
+          "pf": 0.872,
+          "win_pct": 36.2,
+          "t": -1.61
+        },
+        "val": {
+          "n": 635,
+          "avg_R": -0.1487,
+          "pf": 0.838,
+          "win_pct": 35.6,
+          "t": -1.65
+        },
+        "test": {
+          "n": 692,
+          "avg_R": -0.106,
+          "pf": 0.87,
+          "win_pct": 36.1,
+          "t": -1.39
+        },
+        "holdout": {
+          "n": 356,
+          "avg_R": -0.471,
+          "pf": 0.516,
+          "win_pct": 27.0,
+          "t": -4.65
+        }
+      },
+      "score": -999
+    }
+  ],
+  "selected": [
+    {
+      "cfg": {
+        "name": "MOM20_R1.5",
+        "family": "MOM",
+        "lb": 20,
+        "risk_atr": 1.5
+      },
+      "metrics": {
+        "train": {
+          "n": 3673,
+          "avg_R": -0.0656,
+          "pf": 0.859,
+          "win_pct": 30.8,
+          "t": -2.64
+        },
+        "val": {
+          "n": 2237,
+          "avg_R": -0.029,
+          "pf": 0.932,
+          "win_pct": 33.1,
+          "t": -0.99
+        },
+        "test": {
+          "n": 2156,
+          "avg_R": -0.0612,
+          "pf": 0.862,
+          "win_pct": 33.1,
+          "t": -2.14
+        },
+        "holdout": {
+          "n": 1351,
+          "avg_R": -0.1304,
+          "pf": 0.694,
+          "win_pct": 30.7,
+          "t": -4.13
+        }
+      },
+      "score": -999,
+      "test_pass": false
+    },
+    {
+      "cfg": {
+        "name": "EMA20_60_R1.5",
+        "family": "EMA",
+        "fast": 20,
+        "slow": 60,
+        "risk_atr": 1.5
+      },
+      "metrics": {
+        "train": {
+          "n": 681,
+          "avg_R": -0.3188,
+          "pf": 0.742,
+          "win_pct": 30.2,
+          "t": -2.4
+        },
+        "val": {
+          "n": 401,
+          "avg_R": -0.1666,
+          "pf": 0.854,
+          "win_pct": 30.7,
+          "t": -0.93
+        },
+        "test": {
+          "n": 443,
+          "avg_R": -0.3892,
+          "pf": 0.644,
+          "win_pct": 30.7,
+          "t": -3.36
+        },
+        "holdout": {
+          "n": 167,
+          "avg_R": -0.0253,
+          "pf": 0.977,
+          "win_pct": 27.5,
+          "t": -0.1
+        }
+      },
+      "score": -999,
+      "test_pass": false
+    },
+    {
+      "cfg": {
+        "name": "DON20_10_R1.5",
+        "family": "DON",
+        "entry": 20,
+        "exit": 10,
+        "risk_atr": 1.5
+      },
+      "metrics": {
+        "train": {
+          "n": 1118,
+          "avg_R": -0.1157,
+          "pf": 0.872,
+          "win_pct": 36.2,
+          "t": -1.61
+        },
+        "val": {
+          "n": 635,
+          "avg_R": -0.1487,
+          "pf": 0.838,
+          "win_pct": 35.6,
+          "t": -1.65
+        },
+        "test": {
+          "n": 692,
+          "avg_R": -0.106,
+          "pf": 0.87,
+          "win_pct": 36.1,
+          "t": -1.39
+        },
+        "holdout": {
+          "n": 356,
+          "avg_R": -0.471,
+          "pf": 0.516,
+          "win_pct": 27.0,
+          "t": -4.65
+        }
+      },
+      "score": -999,
+      "test_pass": false
+    }
+  ],
+  "portfolio": {
+    "test_0.004": {
+      "n": 0
+    },
+    "holdout_0.004": {
+      "n": 0
+    },
+    "test_0.006": {
+      "n": 0
+    },
+    "holdout_0.006": {
+      "n": 0
+    },
+    "test_0.008": {
+      "n": 0
+    },
+    "holdout_0.008": {
+      "n": 0
+    },
+    "test_0.01": {
+      "n": 0
+    },
+    "holdout_0.01": {
+      "n": 0
+    }
+  }
+}
