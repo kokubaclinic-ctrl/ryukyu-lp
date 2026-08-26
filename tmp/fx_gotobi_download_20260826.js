@@ -1,0 +1,2 @@
+const fs=require('fs');const {getHistoricalRates}=require('dukascopy-node');
+(async()=>{const csv=await getHistoricalRates({instrument:'usdjpy',dates:{from:new Date('2014-01-01T00:00:00Z'),to:new Date('2026-08-01T00:00:00Z')},timeframe:'m5',format:'csv',batchSize:64,pauseBetweenBatchesMs:5,retryCount:5,pauseBetweenRetriesMs:300,retryOnEmpty:false,failAfterRetryCount:false});fs.writeFileSync('/tmp/usdjpy_gotobi_m5.csv',csv);console.log('saved',csv.length)})().catch(e=>{console.error(e);process.exit(1)});
