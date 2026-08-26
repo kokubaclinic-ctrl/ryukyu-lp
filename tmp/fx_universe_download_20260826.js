@@ -1,0 +1,5 @@
+const fs=require('fs');
+const {getHistoricalRates}=require('dukascopy-node');
+const pairs=['eurusd','usdjpy','gbpusd','audusd','nzdusd','usdcad','usdchf','eurjpy','gbpjpy','audjpy','nzdjpy','cadjpy','chfjpy','eurgbp','euraud','eurcad','eurnzd','gbpaud','gbpcad','gbpnzd','audcad','audnzd','audchf','nzdcad','nzdchf','cadchf'];
+async function main(){for(const p of pairs){console.log('download',p);try{const csv=await getHistoricalRates({instrument:p,dates:{from:new Date('2014-01-01T00:00:00Z'),to:new Date('2026-08-01T00:00:00Z')},timeframe:'h1',format:'csv',batchSize:64,pauseBetweenBatchesMs:10,retryCount:4,pauseBetweenRetriesMs:300,retryOnEmpty:false,failAfterRetryCount:false});fs.writeFileSync(`/tmp/${p}_u_h1.csv`,csv);console.log('saved',p,csv.length)}catch(e){console.error('FAIL',p,e.message)}}}
+main().catch(e=>{console.error(e);process.exit(1)});
