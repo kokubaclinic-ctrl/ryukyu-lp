@@ -34,7 +34,6 @@ def segment_return(data,t0,t1,sign,costmult):
   i=at(d,t0);j=at(d,t1)
   if i is None or j is None or j<=i:return None
   e=float(d.open.iloc[i]);x=float(d.open.iloc[j]);fc_bps=ORIENT[p]*math.log(x/e)*10000.0
-  # roundtrip cost converted from pip quote to bps of notional
   cbps=COST[p]*costmult*PIP[p]/e*10000.0
   r=sign*fc_bps-cbps;vals.append(r);details.append((p,r,fc_bps,cbps))
  return float(np.mean(vals)),details
@@ -55,30 +54,25 @@ def split_metric(df,col):
  return out
 
 def equity(df,yr0,yr1,leverage,cap=500000):
- x=df[(df.date.dt.year>=yr0)&(df.date.dt.year<=yr1)].copy();
+ x=df[(df.date.dt.year>=yr0)&(df.date.dt.year<=yr1)].copy()
  if len(x)==0:return {'n':0}
- # all four legs are sequential; sum net bps per day then apply total notional/equity leverage.
  x['ret']=x['daily_bps']/10000.0*leverage;eq=cap;peak=cap;md=0;vals=[]
  for _,r in x.iterrows():
-  eq*=max(.01,1+float(r.ret));peak=max(peak,eq);md=max(md,(peak-eq)/peak);vals.append((r.date,eq))
- q=pd.DataFrame(vals,columns=['date','eq']);q['pnl']=q.eq.diff().fillna(q.eq.iloc[0]-cap);m=q.set_index('date').pnl.resample('MS').sum();m=m.reindex(pd.date_range(f'{yr0}-01-01',f'{yr1}-12-01',freq='MS',tz='UTC'),fill_value=0)
+  eq*=max(.01,1+float(r['ret']));peak=max(peak,eq);md=max(md,(peak-eq)/peak);vals.append((r['date'],eq))
+ q=pd.DataFrame(vals,columns=['date','equity']);q['pnl']=q['equity'].diff().fillna(q['equity'].iloc[0]-cap);m=q.set_index('date')['pnl'].resample('MS').sum();m=m.reindex(pd.date_range(f'{yr0}-01-01',f'{yr1}-12-01',freq='MS',tz='UTC'),fill_value=0)
  return {'days':len(x),'leverage':leverage,'final_equity':round(float(eq)),'total_return_pct':round(float((eq/cap-1)*100),2),'avg_monthly_jpy':round(float(m.mean())),'median_monthly_jpy':round(float(m.median())),'positive_month_pct':round(float((m>0).mean()*100),1),'p10_month_jpy':round(float(m.quantile(.1))),'p90_month_jpy':round(float(m.quantile(.9))),'max_dd_pct':round(float(md*100),2)}
 
 def build(data,costmult):
  rows=[]
- # Tokyo business date anchors. Require weekdays only; missing-market holidays drop automatically.
  for day in pd.date_range('2014-01-06','2026-07-31',freq='B'):
-  # 09:55 Tokyo local
   tfix=pd.Timestamp(day.date()).tz_localize('Asia/Tokyo')+pd.Timedelta(hours=9,minutes=55);tfix=tfix.tz_convert('UTC')
   tpre=prev_ny_17(tfix);teu=next_ny(tfix,2)
-  # European anchors based on local date at London/Frankfurt after Europe open
   ld=teu.tz_convert('Europe/London').date();bd=teu.tz_convert('Europe/Berlin').date()
   tecb=(pd.Timestamp(bd).tz_localize('Europe/Berlin')+pd.Timedelta(hours=14,minutes=15)).tz_convert('UTC')
   tlon=(pd.Timestamp(ld).tz_localize('Europe/London')+pd.Timedelta(hours=16)).tz_convert('UTC')
   tend=next_ny(tlon,17)
   segs=[('preT',tpre,tfix,-1),('postT',tfix,teu,1),('preE',teu,tecb,-1),('postL',tlon,tend,1)]
-  rr={'date':tfix}
-  ok=True
+  rr={'date':tfix};ok=True
   for name,a,b,sgn in segs:
    z=segment_return(data,a,b,sgn,costmult)
    if z is None:ok=False;break
