@@ -1,0 +1,26 @@
+name: tmp-fx-gotobi-phase12-20260826
+on:
+  push:
+    branches: [tmp/xauusd-v04-backtest-20260826]
+    paths:
+      - 'tmp/fx_gotobi_download_20260826.js'
+      - 'tmp/fx_gotobi_phase12_20260826.py'
+      - '.github/workflows/tmp-fx-gotobi-phase12-20260826.yml'
+jobs:
+  research:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp/xauusd-v04-backtest-20260826
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm install --no-save dukascopy-node
+      - run: pip install -q pandas numpy holidays
+      - run: node tmp/fx_gotobi_download_20260826.js
+      - run: python tmp/fx_gotobi_phase12_20260826.py
