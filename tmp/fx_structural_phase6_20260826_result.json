@@ -1,0 +1,1284 @@
+{
+  "status": "FX_STRUCTURAL_PHASE6",
+  "source": "Dukascopy H1 free",
+  "protocol": "GLOBAL config per structural factor selected 2014-21; factor inclusion by 2022-24 TEST; unchanged 2025-26 holdout",
+  "loaded_pairs": [
+    "audcad",
+    "audchf",
+    "audjpy",
+    "audnzd",
+    "audusd",
+    "cadchf",
+    "cadjpy",
+    "chfjpy",
+    "euraud",
+    "eurcad",
+    "eurgbp",
+    "eurjpy",
+    "eurnzd",
+    "eurusd",
+    "gbpaud",
+    "gbpcad",
+    "gbpjpy",
+    "gbpnzd",
+    "gbpusd",
+    "nzdcad",
+    "nzdchf",
+    "nzdjpy",
+    "nzdusd",
+    "usdcad",
+    "usdchf",
+    "usdjpy"
+  ],
+  "best_local": {
+    "cfg": {
+      "hold": 2,
+      "filter": "NONE",
+      "stop": 1.5
+    },
+    "metric": {
+      "train": {
+        "n": 59198,
+        "mean_R": -0.111,
+        "pf": 0.735,
+        "win_pct": 42.4,
+        "t": -28.51,
+        "positive_month_pct": 3.3,
+        "trades_per_month": 986.6
+      },
+      "val": {
+        "n": 34226,
+        "mean_R": -0.1506,
+        "pf": 0.654,
+        "win_pct": 41.1,
+        "t": -30.57,
+        "positive_month_pct": 0.0,
+        "trades_per_month": 950.7
+      },
+      "test": {
+        "n": 35573,
+        "mean_R": -0.1421,
+        "pf": 0.674,
+        "win_pct": 41.4,
+        "t": -28.82,
+        "positive_month_pct": 2.8,
+        "trades_per_month": 988.1
+      },
+      "holdout": {
+        "n": 19071,
+        "mean_R": -0.1572,
+        "pf": 0.626,
+        "win_pct": 41.5,
+        "t": -25.6,
+        "positive_month_pct": 0.0,
+        "trades_per_month": 794.6
+      }
+    },
+    "score": -999
+  },
+  "best_sessions": {
+    "LONDON": {
+      "cfg": {
+        "session": "LONDON",
+        "mode": "CONT",
+        "hold": 2,
+        "filter": "NONE",
+        "stop": 1.5
+      },
+      "metric": {
+        "train": {
+          "n": 29859,
+          "mean_R": -0.1175,
+          "pf": 0.705,
+          "win_pct": 43.2,
+          "t": -23.66,
+          "positive_month_pct": 5.0,
+          "trades_per_month": 497.6
+        },
+        "val": {
+          "n": 17245,
+          "mean_R": -0.129,
+          "pf": 0.684,
+          "win_pct": 43.4,
+          "t": -20.16,
+          "positive_month_pct": 8.3,
+          "trades_per_month": 479.0
+        },
+        "test": {
+          "n": 17950,
+          "mean_R": -0.1197,
+          "pf": 0.691,
+          "win_pct": 43.9,
+          "t": -19.74,
+          "positive_month_pct": 5.6,
+          "trades_per_month": 498.6
+        },
+        "holdout": {
+          "n": 9608,
+          "mean_R": -0.1364,
+          "pf": 0.621,
+          "win_pct": 43.4,
+          "t": -18.64,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 400.3
+        }
+      },
+      "score": -999
+    },
+    "NEWYORK": {
+      "cfg": {
+        "session": "NEWYORK",
+        "mode": "CONT",
+        "hold": 2,
+        "filter": "NONE",
+        "stop": 1.5
+      },
+      "metric": {
+        "train": {
+          "n": 29882,
+          "mean_R": -0.1278,
+          "pf": 0.716,
+          "win_pct": 42.3,
+          "t": -23.63,
+          "positive_month_pct": 8.3,
+          "trades_per_month": 498.0
+        },
+        "val": {
+          "n": 17257,
+          "mean_R": -0.1191,
+          "pf": 0.744,
+          "win_pct": 43.3,
+          "t": -16.19,
+          "positive_month_pct": 5.6,
+          "trades_per_month": 479.4
+        },
+        "test": {
+          "n": 17960,
+          "mean_R": -0.1391,
+          "pf": 0.703,
+          "win_pct": 42.1,
+          "t": -19.49,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 498.9
+        },
+        "holdout": {
+          "n": 9619,
+          "mean_R": -0.1556,
+          "pf": 0.664,
+          "win_pct": 42.5,
+          "t": -16.33,
+          "positive_month_pct": 10.5,
+          "trades_per_month": 400.8
+        }
+      },
+      "score": -999
+    },
+    "TOKYO": {
+      "cfg": {
+        "session": "TOKYO",
+        "mode": "CONT",
+        "hold": 2,
+        "filter": "NONE",
+        "stop": 1.5
+      },
+      "metric": {
+        "train": {
+          "n": 29878,
+          "mean_R": -0.0994,
+          "pf": 0.636,
+          "win_pct": 40.8,
+          "t": -28.24,
+          "positive_month_pct": 5.0,
+          "trades_per_month": 498.0
+        },
+        "val": {
+          "n": 17267,
+          "mean_R": -0.1072,
+          "pf": 0.616,
+          "win_pct": 40.8,
+          "t": -22.84,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 479.6
+        },
+        "test": {
+          "n": 17947,
+          "mean_R": -0.1073,
+          "pf": 0.632,
+          "win_pct": 40.6,
+          "t": -22.44,
+          "positive_month_pct": 5.6,
+          "trades_per_month": 498.5
+        },
+        "holdout": {
+          "n": 9618,
+          "mean_R": -0.1076,
+          "pf": 0.629,
+          "win_pct": 41.2,
+          "t": -16.56,
+          "positive_month_pct": 5.3,
+          "trades_per_month": 400.8
+        }
+      },
+      "score": -999
+    },
+    "SYDNEY": {
+      "cfg": {
+        "session": "SYDNEY",
+        "mode": "CONT",
+        "hold": 2,
+        "filter": "NONE",
+        "stop": 1.5
+      },
+      "metric": {
+        "train": {
+          "n": 29731,
+          "mean_R": -0.1006,
+          "pf": 0.643,
+          "win_pct": 41.4,
+          "t": -25.45,
+          "positive_month_pct": 5.0,
+          "trades_per_month": 495.5
+        },
+        "val": {
+          "n": 17185,
+          "mean_R": -0.1295,
+          "pf": 0.569,
+          "win_pct": 41.0,
+          "t": -26.79,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 477.4
+        },
+        "test": {
+          "n": 17834,
+          "mean_R": -0.1021,
+          "pf": 0.649,
+          "win_pct": 42.7,
+          "t": -20.1,
+          "positive_month_pct": 5.6,
+          "trades_per_month": 495.4
+        },
+        "holdout": {
+          "n": 9575,
+          "mean_R": -0.1061,
+          "pf": 0.651,
+          "win_pct": 43.6,
+          "t": -16.05,
+          "positive_month_pct": 5.3,
+          "trades_per_month": 399.0
+        }
+      },
+      "score": -999
+    }
+  },
+  "best_csmom": {
+    "cfg": {
+      "lb": 480,
+      "freq": "DAILY",
+      "hold": 24,
+      "stop": 1.5
+    },
+    "metric": {
+      "train": {
+        "n": 393,
+        "mean_R": 0.0464,
+        "pf": 1.069,
+        "win_pct": 34.6,
+        "t": 0.51,
+        "positive_month_pct": 32.8,
+        "trades_per_month": 6.5
+      },
+      "val": {
+        "n": 234,
+        "mean_R": 0.015,
+        "pf": 1.023,
+        "win_pct": 35.5,
+        "t": 0.11,
+        "positive_month_pct": 30.6,
+        "trades_per_month": 6.5
+      },
+      "test": {
+        "n": 296,
+        "mean_R": 0.0262,
+        "pf": 1.036,
+        "win_pct": 30.7,
+        "t": 0.22,
+        "positive_month_pct": 38.9,
+        "trades_per_month": 8.2
+      },
+      "holdout": {
+        "n": 147,
+        "mean_R": -0.1014,
+        "pf": 0.855,
+        "win_pct": 32.7,
+        "t": -0.78,
+        "positive_month_pct": 46.7,
+        "trades_per_month": 6.1
+      }
+    },
+    "score": 0.00715
+  },
+  "selected_factors": [
+    {
+      "name": "LOCAL",
+      "best": {
+        "cfg": {
+          "hold": 2,
+          "filter": "NONE",
+          "stop": 1.5
+        },
+        "metric": {
+          "train": {
+            "n": 59198,
+            "mean_R": -0.111,
+            "pf": 0.735,
+            "win_pct": 42.4,
+            "t": -28.51,
+            "positive_month_pct": 3.3,
+            "trades_per_month": 986.6
+          },
+          "val": {
+            "n": 34226,
+            "mean_R": -0.1506,
+            "pf": 0.654,
+            "win_pct": 41.1,
+            "t": -30.57,
+            "positive_month_pct": 0.0,
+            "trades_per_month": 950.7
+          },
+          "test": {
+            "n": 35573,
+            "mean_R": -0.1421,
+            "pf": 0.674,
+            "win_pct": 41.4,
+            "t": -28.82,
+            "positive_month_pct": 2.8,
+            "trades_per_month": 988.1
+          },
+          "holdout": {
+            "n": 19071,
+            "mean_R": -0.1572,
+            "pf": 0.626,
+            "win_pct": 41.5,
+            "t": -25.6,
+            "positive_month_pct": 0.0,
+            "trades_per_month": 794.6
+          }
+        },
+        "score": -999
+      },
+      "base_metric": {
+        "train": {
+          "n": 59198,
+          "mean_R": -0.111,
+          "pf": 0.735,
+          "win_pct": 42.4,
+          "t": -28.51,
+          "positive_month_pct": 3.3,
+          "trades_per_month": 986.6
+        },
+        "val": {
+          "n": 34226,
+          "mean_R": -0.1506,
+          "pf": 0.654,
+          "win_pct": 41.1,
+          "t": -30.57,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 950.7
+        },
+        "test": {
+          "n": 35573,
+          "mean_R": -0.1421,
+          "pf": 0.674,
+          "win_pct": 41.4,
+          "t": -28.82,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 988.1
+        },
+        "holdout": {
+          "n": 19071,
+          "mean_R": -0.1572,
+          "pf": 0.626,
+          "win_pct": 41.5,
+          "t": -25.6,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 794.6
+        }
+      },
+      "stress_metric": {
+        "train": {
+          "n": 59198,
+          "mean_R": -0.1537,
+          "pf": 0.654,
+          "win_pct": 40.4,
+          "t": -39.43,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 986.6
+        },
+        "val": {
+          "n": 34226,
+          "mean_R": -0.202,
+          "pf": 0.568,
+          "win_pct": 38.6,
+          "t": -40.95,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 950.7
+        },
+        "test": {
+          "n": 35573,
+          "mean_R": -0.1896,
+          "pf": 0.593,
+          "win_pct": 39.3,
+          "t": -38.35,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 988.1
+        },
+        "holdout": {
+          "n": 19071,
+          "mean_R": -0.2096,
+          "pf": 0.537,
+          "win_pct": 39.1,
+          "t": -34.0,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 794.6
+        }
+      },
+      "test_pass": false
+    },
+    {
+      "name": "LONDON",
+      "best": {
+        "cfg": {
+          "session": "LONDON",
+          "mode": "CONT",
+          "hold": 2,
+          "filter": "NONE",
+          "stop": 1.5
+        },
+        "metric": {
+          "train": {
+            "n": 29859,
+            "mean_R": -0.1175,
+            "pf": 0.705,
+            "win_pct": 43.2,
+            "t": -23.66,
+            "positive_month_pct": 5.0,
+            "trades_per_month": 497.6
+          },
+          "val": {
+            "n": 17245,
+            "mean_R": -0.129,
+            "pf": 0.684,
+            "win_pct": 43.4,
+            "t": -20.16,
+            "positive_month_pct": 8.3,
+            "trades_per_month": 479.0
+          },
+          "test": {
+            "n": 17950,
+            "mean_R": -0.1197,
+            "pf": 0.691,
+            "win_pct": 43.9,
+            "t": -19.74,
+            "positive_month_pct": 5.6,
+            "trades_per_month": 498.6
+          },
+          "holdout": {
+            "n": 9608,
+            "mean_R": -0.1364,
+            "pf": 0.621,
+            "win_pct": 43.4,
+            "t": -18.64,
+            "positive_month_pct": 0.0,
+            "trades_per_month": 400.3
+          }
+        },
+        "score": -999
+      },
+      "base_metric": {
+        "train": {
+          "n": 29859,
+          "mean_R": -0.1175,
+          "pf": 0.705,
+          "win_pct": 43.2,
+          "t": -23.66,
+          "positive_month_pct": 5.0,
+          "trades_per_month": 497.6
+        },
+        "val": {
+          "n": 17245,
+          "mean_R": -0.129,
+          "pf": 0.684,
+          "win_pct": 43.4,
+          "t": -20.16,
+          "positive_month_pct": 8.3,
+          "trades_per_month": 479.0
+        },
+        "test": {
+          "n": 17950,
+          "mean_R": -0.1197,
+          "pf": 0.691,
+          "win_pct": 43.9,
+          "t": -19.74,
+          "positive_month_pct": 5.6,
+          "trades_per_month": 498.6
+        },
+        "holdout": {
+          "n": 9608,
+          "mean_R": -0.1364,
+          "pf": 0.621,
+          "win_pct": 43.4,
+          "t": -18.64,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 400.3
+        }
+      },
+      "stress_metric": {
+        "train": {
+          "n": 29859,
+          "mean_R": -0.1633,
+          "pf": 0.616,
+          "win_pct": 40.8,
+          "t": -32.83,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 497.6
+        },
+        "val": {
+          "n": 17245,
+          "mean_R": -0.1848,
+          "pf": 0.582,
+          "win_pct": 40.8,
+          "t": -28.82,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 479.0
+        },
+        "test": {
+          "n": 17950,
+          "mean_R": -0.1701,
+          "pf": 0.593,
+          "win_pct": 41.4,
+          "t": -27.97,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 498.6
+        },
+        "holdout": {
+          "n": 9608,
+          "mean_R": -0.1896,
+          "pf": 0.517,
+          "win_pct": 40.3,
+          "t": -25.78,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 400.3
+        }
+      },
+      "test_pass": false
+    },
+    {
+      "name": "NEWYORK",
+      "best": {
+        "cfg": {
+          "session": "NEWYORK",
+          "mode": "CONT",
+          "hold": 2,
+          "filter": "NONE",
+          "stop": 1.5
+        },
+        "metric": {
+          "train": {
+            "n": 29882,
+            "mean_R": -0.1278,
+            "pf": 0.716,
+            "win_pct": 42.3,
+            "t": -23.63,
+            "positive_month_pct": 8.3,
+            "trades_per_month": 498.0
+          },
+          "val": {
+            "n": 17257,
+            "mean_R": -0.1191,
+            "pf": 0.744,
+            "win_pct": 43.3,
+            "t": -16.19,
+            "positive_month_pct": 5.6,
+            "trades_per_month": 479.4
+          },
+          "test": {
+            "n": 17960,
+            "mean_R": -0.1391,
+            "pf": 0.703,
+            "win_pct": 42.1,
+            "t": -19.49,
+            "positive_month_pct": 2.8,
+            "trades_per_month": 498.9
+          },
+          "holdout": {
+            "n": 9619,
+            "mean_R": -0.1556,
+            "pf": 0.664,
+            "win_pct": 42.5,
+            "t": -16.33,
+            "positive_month_pct": 10.5,
+            "trades_per_month": 400.8
+          }
+        },
+        "score": -999
+      },
+      "base_metric": {
+        "train": {
+          "n": 29882,
+          "mean_R": -0.1278,
+          "pf": 0.716,
+          "win_pct": 42.3,
+          "t": -23.63,
+          "positive_month_pct": 8.3,
+          "trades_per_month": 498.0
+        },
+        "val": {
+          "n": 17257,
+          "mean_R": -0.1191,
+          "pf": 0.744,
+          "win_pct": 43.3,
+          "t": -16.19,
+          "positive_month_pct": 5.6,
+          "trades_per_month": 479.4
+        },
+        "test": {
+          "n": 17960,
+          "mean_R": -0.1391,
+          "pf": 0.703,
+          "win_pct": 42.1,
+          "t": -19.49,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 498.9
+        },
+        "holdout": {
+          "n": 9619,
+          "mean_R": -0.1556,
+          "pf": 0.664,
+          "win_pct": 42.5,
+          "t": -16.33,
+          "positive_month_pct": 10.5,
+          "trades_per_month": 400.8
+        }
+      },
+      "stress_metric": {
+        "train": {
+          "n": 29882,
+          "mean_R": -0.1685,
+          "pf": 0.645,
+          "win_pct": 40.9,
+          "t": -31.13,
+          "positive_month_pct": 1.7,
+          "trades_per_month": 498.0
+        },
+        "val": {
+          "n": 17257,
+          "mean_R": -0.1688,
+          "pf": 0.658,
+          "win_pct": 41.6,
+          "t": -22.91,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 479.4
+        },
+        "test": {
+          "n": 17960,
+          "mean_R": -0.1844,
+          "pf": 0.627,
+          "win_pct": 40.3,
+          "t": -25.78,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 498.9
+        },
+        "holdout": {
+          "n": 9619,
+          "mean_R": -0.2069,
+          "pf": 0.582,
+          "win_pct": 40.3,
+          "t": -21.64,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 400.8
+        }
+      },
+      "test_pass": false
+    },
+    {
+      "name": "TOKYO",
+      "best": {
+        "cfg": {
+          "session": "TOKYO",
+          "mode": "CONT",
+          "hold": 2,
+          "filter": "NONE",
+          "stop": 1.5
+        },
+        "metric": {
+          "train": {
+            "n": 29878,
+            "mean_R": -0.0994,
+            "pf": 0.636,
+            "win_pct": 40.8,
+            "t": -28.24,
+            "positive_month_pct": 5.0,
+            "trades_per_month": 498.0
+          },
+          "val": {
+            "n": 17267,
+            "mean_R": -0.1072,
+            "pf": 0.616,
+            "win_pct": 40.8,
+            "t": -22.84,
+            "positive_month_pct": 2.8,
+            "trades_per_month": 479.6
+          },
+          "test": {
+            "n": 17947,
+            "mean_R": -0.1073,
+            "pf": 0.632,
+            "win_pct": 40.6,
+            "t": -22.44,
+            "positive_month_pct": 5.6,
+            "trades_per_month": 498.5
+          },
+          "holdout": {
+            "n": 9618,
+            "mean_R": -0.1076,
+            "pf": 0.629,
+            "win_pct": 41.2,
+            "t": -16.56,
+            "positive_month_pct": 5.3,
+            "trades_per_month": 400.8
+          }
+        },
+        "score": -999
+      },
+      "base_metric": {
+        "train": {
+          "n": 29878,
+          "mean_R": -0.0994,
+          "pf": 0.636,
+          "win_pct": 40.8,
+          "t": -28.24,
+          "positive_month_pct": 5.0,
+          "trades_per_month": 498.0
+        },
+        "val": {
+          "n": 17267,
+          "mean_R": -0.1072,
+          "pf": 0.616,
+          "win_pct": 40.8,
+          "t": -22.84,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 479.6
+        },
+        "test": {
+          "n": 17947,
+          "mean_R": -0.1073,
+          "pf": 0.632,
+          "win_pct": 40.6,
+          "t": -22.44,
+          "positive_month_pct": 5.6,
+          "trades_per_month": 498.5
+        },
+        "holdout": {
+          "n": 9618,
+          "mean_R": -0.1076,
+          "pf": 0.629,
+          "win_pct": 41.2,
+          "t": -16.56,
+          "positive_month_pct": 5.3,
+          "trades_per_month": 400.8
+        }
+      },
+      "stress_metric": {
+        "train": {
+          "n": 29878,
+          "mean_R": -0.1363,
+          "pf": 0.54,
+          "win_pct": 37.8,
+          "t": -38.66,
+          "positive_month_pct": 5.0,
+          "trades_per_month": 498.0
+        },
+        "val": {
+          "n": 17267,
+          "mean_R": -0.1517,
+          "pf": 0.505,
+          "win_pct": 37.3,
+          "t": -32.27,
+          "positive_month_pct": 0.0,
+          "trades_per_month": 479.6
+        },
+        "test": {
+          "n": 17947,
+          "mean_R": -0.1483,
+          "pf": 0.533,
+          "win_pct": 37.7,
+          "t": -30.94,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 498.5
+        },
+        "holdout": {
+          "n": 9618,
+          "mean_R": -0.1535,
+          "pf": 0.519,
+          "win_pct": 37.5,
+          "t": -23.54,
+          "positive_month_pct": 5.3,
+          "trades_per_month": 400.8
+        }
+      },
+      "test_pass": false
+    },
+    {
+      "name": "SYDNEY",
+      "best": {
+        "cfg": {
+          "session": "SYDNEY",
+          "mode": "CONT",
+          "hold": 2,
+          "filter": "NONE",
+          "stop": 1.5
+        },
+        "metric": {
+          "train": {
+            "n": 29731,
+            "mean_R": -0.1006,
+            "pf": 0.643,
+            "win_pct": 41.4,
+            "t": -25.45,
+            "positive_month_pct": 5.0,
+            "trades_per_month": 495.5
+          },
+          "val": {
+            "n": 17185,
+            "mean_R": -0.1295,
+            "pf": 0.569,
+            "win_pct": 41.0,
+            "t": -26.79,
+            "positive_month_pct": 2.8,
+            "trades_per_month": 477.4
+          },
+          "test": {
+            "n": 17834,
+            "mean_R": -0.1021,
+            "pf": 0.649,
+            "win_pct": 42.7,
+            "t": -20.1,
+            "positive_month_pct": 5.6,
+            "trades_per_month": 495.4
+          },
+          "holdout": {
+            "n": 9575,
+            "mean_R": -0.1061,
+            "pf": 0.651,
+            "win_pct": 43.6,
+            "t": -16.05,
+            "positive_month_pct": 5.3,
+            "trades_per_month": 399.0
+          }
+        },
+        "score": -999
+      },
+      "base_metric": {
+        "train": {
+          "n": 29731,
+          "mean_R": -0.1006,
+          "pf": 0.643,
+          "win_pct": 41.4,
+          "t": -25.45,
+          "positive_month_pct": 5.0,
+          "trades_per_month": 495.5
+        },
+        "val": {
+          "n": 17185,
+          "mean_R": -0.1295,
+          "pf": 0.569,
+          "win_pct": 41.0,
+          "t": -26.79,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 477.4
+        },
+        "test": {
+          "n": 17834,
+          "mean_R": -0.1021,
+          "pf": 0.649,
+          "win_pct": 42.7,
+          "t": -20.1,
+          "positive_month_pct": 5.6,
+          "trades_per_month": 495.4
+        },
+        "holdout": {
+          "n": 9575,
+          "mean_R": -0.1061,
+          "pf": 0.651,
+          "win_pct": 43.6,
+          "t": -16.05,
+          "positive_month_pct": 5.3,
+          "trades_per_month": 399.0
+        }
+      },
+      "stress_metric": {
+        "train": {
+          "n": 29731,
+          "mean_R": -0.1362,
+          "pf": 0.551,
+          "win_pct": 38.5,
+          "t": -34.43,
+          "positive_month_pct": 5.0,
+          "trades_per_month": 495.5
+        },
+        "val": {
+          "n": 17185,
+          "mean_R": -0.1725,
+          "pf": 0.472,
+          "win_pct": 37.8,
+          "t": -35.61,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 477.4
+        },
+        "test": {
+          "n": 17834,
+          "mean_R": -0.1419,
+          "pf": 0.55,
+          "win_pct": 39.6,
+          "t": -27.86,
+          "positive_month_pct": 2.8,
+          "trades_per_month": 495.4
+        },
+        "holdout": {
+          "n": 9575,
+          "mean_R": -0.1514,
+          "pf": 0.543,
+          "win_pct": 40.3,
+          "t": -22.85,
+          "positive_month_pct": 5.3,
+          "trades_per_month": 399.0
+        }
+      },
+      "test_pass": false
+    },
+    {
+      "name": "CSMOM",
+      "best": {
+        "cfg": {
+          "lb": 480,
+          "freq": "DAILY",
+          "hold": 24,
+          "stop": 1.5
+        },
+        "metric": {
+          "train": {
+            "n": 393,
+            "mean_R": 0.0464,
+            "pf": 1.069,
+            "win_pct": 34.6,
+            "t": 0.51,
+            "positive_month_pct": 32.8,
+            "trades_per_month": 6.5
+          },
+          "val": {
+            "n": 234,
+            "mean_R": 0.015,
+            "pf": 1.023,
+            "win_pct": 35.5,
+            "t": 0.11,
+            "positive_month_pct": 30.6,
+            "trades_per_month": 6.5
+          },
+          "test": {
+            "n": 296,
+            "mean_R": 0.0262,
+            "pf": 1.036,
+            "win_pct": 30.7,
+            "t": 0.22,
+            "positive_month_pct": 38.9,
+            "trades_per_month": 8.2
+          },
+          "holdout": {
+            "n": 147,
+            "mean_R": -0.1014,
+            "pf": 0.855,
+            "win_pct": 32.7,
+            "t": -0.78,
+            "positive_month_pct": 46.7,
+            "trades_per_month": 6.1
+          }
+        },
+        "score": 0.00715
+      },
+      "base_metric": {
+        "train": {
+          "n": 393,
+          "mean_R": 0.0464,
+          "pf": 1.069,
+          "win_pct": 34.6,
+          "t": 0.51,
+          "positive_month_pct": 32.8,
+          "trades_per_month": 6.5
+        },
+        "val": {
+          "n": 234,
+          "mean_R": 0.015,
+          "pf": 1.023,
+          "win_pct": 35.5,
+          "t": 0.11,
+          "positive_month_pct": 30.6,
+          "trades_per_month": 6.5
+        },
+        "test": {
+          "n": 296,
+          "mean_R": 0.0262,
+          "pf": 1.036,
+          "win_pct": 30.7,
+          "t": 0.22,
+          "positive_month_pct": 38.9,
+          "trades_per_month": 8.2
+        },
+        "holdout": {
+          "n": 147,
+          "mean_R": -0.1014,
+          "pf": 0.855,
+          "win_pct": 32.7,
+          "t": -0.78,
+          "positive_month_pct": 46.7,
+          "trades_per_month": 6.1
+        }
+      },
+      "stress_metric": {
+        "train": {
+          "n": 393,
+          "mean_R": 0.0105,
+          "pf": 1.015,
+          "win_pct": 34.1,
+          "t": 0.12,
+          "positive_month_pct": 29.3,
+          "trades_per_month": 6.5
+        },
+        "val": {
+          "n": 234,
+          "mean_R": -0.0286,
+          "pf": 0.958,
+          "win_pct": 34.2,
+          "t": -0.22,
+          "positive_month_pct": 27.8,
+          "trades_per_month": 6.5
+        },
+        "test": {
+          "n": 296,
+          "mean_R": -0.0053,
+          "pf": 0.993,
+          "win_pct": 30.7,
+          "t": -0.04,
+          "positive_month_pct": 36.1,
+          "trades_per_month": 8.2
+        },
+        "holdout": {
+          "n": 147,
+          "mean_R": -0.1408,
+          "pf": 0.807,
+          "win_pct": 32.0,
+          "t": -1.07,
+          "positive_month_pct": 40.0,
+          "trades_per_month": 6.1
+        }
+      },
+      "test_pass": true
+    }
+  ],
+  "portfolio": {
+    "test_base_0.004": {
+      "n": 296,
+      "trades_per_month": 8.2,
+      "avg_actual_risk_pct": 0.4,
+      "avg_monthly_jpy": 431,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 38.9,
+      "p10_month_jpy": -13792,
+      "p90_month_jpy": 12333,
+      "max_dd_pct": 19.47,
+      "avg_R": 0.0262,
+      "pf_R": 1.036
+    },
+    "holdout_base_0.004": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.4,
+      "avg_monthly_jpy": -1242,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 29.2,
+      "p10_month_jpy": -9244,
+      "p90_month_jpy": 4080,
+      "max_dd_pct": 9.34,
+      "avg_R": -0.1014,
+      "pf_R": 0.855
+    },
+    "holdout_stress_0.004": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.4,
+      "avg_monthly_jpy": -1724,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 25.0,
+      "p10_month_jpy": -10288,
+      "p90_month_jpy": 3358,
+      "max_dd_pct": 10.41,
+      "avg_R": -0.1408,
+      "pf_R": 0.807
+    },
+    "test_base_0.005": {
+      "n": 296,
+      "trades_per_month": 8.2,
+      "avg_actual_risk_pct": 0.5,
+      "avg_monthly_jpy": 539,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 38.9,
+      "p10_month_jpy": -17240,
+      "p90_month_jpy": 15416,
+      "max_dd_pct": 23.42,
+      "avg_R": 0.0262,
+      "pf_R": 1.036
+    },
+    "holdout_base_0.005": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.5,
+      "avg_monthly_jpy": -1552,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 29.2,
+      "p10_month_jpy": -11555,
+      "p90_month_jpy": 5100,
+      "max_dd_pct": 11.66,
+      "avg_R": -0.1014,
+      "pf_R": 0.855
+    },
+    "holdout_stress_0.005": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.5,
+      "avg_monthly_jpy": -2155,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 25.0,
+      "p10_month_jpy": -12860,
+      "p90_month_jpy": 4198,
+      "max_dd_pct": 13.0,
+      "avg_R": -0.1408,
+      "pf_R": 0.807
+    },
+    "test_base_0.006": {
+      "n": 296,
+      "trades_per_month": 8.2,
+      "avg_actual_risk_pct": 0.6,
+      "avg_monthly_jpy": 647,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 38.9,
+      "p10_month_jpy": -20688,
+      "p90_month_jpy": 18500,
+      "max_dd_pct": 27.09,
+      "avg_R": 0.0262,
+      "pf_R": 1.036
+    },
+    "holdout_base_0.006": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.6,
+      "avg_monthly_jpy": -1863,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 29.2,
+      "p10_month_jpy": -13866,
+      "p90_month_jpy": 6120,
+      "max_dd_pct": 13.98,
+      "avg_R": -0.1014,
+      "pf_R": 0.855
+    },
+    "holdout_stress_0.006": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.6,
+      "avg_monthly_jpy": -2586,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 25.0,
+      "p10_month_jpy": -15432,
+      "p90_month_jpy": 5037,
+      "max_dd_pct": 15.59,
+      "avg_R": -0.1408,
+      "pf_R": 0.807
+    },
+    "test_base_0.007": {
+      "n": 296,
+      "trades_per_month": 8.2,
+      "avg_actual_risk_pct": 0.7,
+      "avg_monthly_jpy": 755,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 38.9,
+      "p10_month_jpy": -24136,
+      "p90_month_jpy": 21583,
+      "max_dd_pct": 30.51,
+      "avg_R": 0.0262,
+      "pf_R": 1.036
+    },
+    "holdout_base_0.007": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.7,
+      "avg_monthly_jpy": -2173,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 29.2,
+      "p10_month_jpy": -16177,
+      "p90_month_jpy": 7140,
+      "max_dd_pct": 16.28,
+      "avg_R": -0.1014,
+      "pf_R": 0.855
+    },
+    "holdout_stress_0.007": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.7,
+      "avg_monthly_jpy": -3017,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 25.0,
+      "p10_month_jpy": -18004,
+      "p90_month_jpy": 5877,
+      "max_dd_pct": 18.18,
+      "avg_R": -0.1408,
+      "pf_R": 0.807
+    },
+    "test_base_0.008": {
+      "n": 296,
+      "trades_per_month": 8.2,
+      "avg_actual_risk_pct": 0.8,
+      "avg_monthly_jpy": 862,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 38.9,
+      "p10_month_jpy": -27584,
+      "p90_month_jpy": 24666,
+      "max_dd_pct": 33.7,
+      "avg_R": 0.0262,
+      "pf_R": 1.036
+    },
+    "holdout_base_0.008": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.8,
+      "avg_monthly_jpy": -2484,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 29.2,
+      "p10_month_jpy": -18488,
+      "p90_month_jpy": 8161,
+      "max_dd_pct": 18.58,
+      "avg_R": -0.1014,
+      "pf_R": 0.855
+    },
+    "holdout_stress_0.008": {
+      "n": 147,
+      "trades_per_month": 6.1,
+      "avg_actual_risk_pct": 0.8,
+      "avg_monthly_jpy": -3448,
+      "median_monthly_jpy": 0,
+      "positive_month_pct": 25.0,
+      "p10_month_jpy": -20576,
+      "p90_month_jpy": 6716,
+      "max_dd_pct": 20.77,
+      "avg_R": -0.1408,
+      "pf_R": 0.807
+    }
+  }
+}
