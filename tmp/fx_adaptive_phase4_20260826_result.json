@@ -1,0 +1,883 @@
+{
+  "status": "FX_ADAPTIVE_PHASE4",
+  "protocol": "expert library fixed; selector hyperparameters chosen on 2019-2024 only; 2025-2026 holdout untouched",
+  "experts": [
+    {
+      "name": "TS_FAST",
+      "kind": "MOM",
+      "lb": 24,
+      "th": 1.0,
+      "hold": 24,
+      "stop": 1.5,
+      "sign": 1
+    },
+    {
+      "name": "TS_SLOW",
+      "kind": "MOM",
+      "lb": 120,
+      "th": 1.25,
+      "hold": 48,
+      "stop": 2.0,
+      "sign": 1
+    },
+    {
+      "name": "DON72",
+      "kind": "DON",
+      "lb": 72,
+      "hold": 24,
+      "stop": 1.5,
+      "sign": 1
+    },
+    {
+      "name": "PB240",
+      "kind": "PB",
+      "lb": 240,
+      "th": 1.0,
+      "pb": 0.75,
+      "hold": 12,
+      "stop": 1.5,
+      "sign": 1
+    },
+    {
+      "name": "REV_FAST",
+      "kind": "MOM",
+      "lb": 24,
+      "th": 1.5,
+      "hold": 12,
+      "stop": 1.5,
+      "sign": -1
+    }
+  ],
+  "best_config": {
+    "window": 36,
+    "topk": 2,
+    "minmean": 0.0,
+    "dev": {
+      "n": 579,
+      "months": 72,
+      "trades_per_month": 8.0,
+      "mean_month_R": 1.309,
+      "median_month_R": 0.368,
+      "positive_month_pct": 54.2,
+      "std_month_R": 5.826,
+      "max_dd_R": 32.73,
+      "score": -0.14769439472881696
+    }
+  },
+  "all_dev_configs": [
+    {
+      "window": 12,
+      "topk": 2,
+      "minmean": 0.0,
+      "dev": {
+        "n": 599,
+        "months": 72,
+        "trades_per_month": 8.3,
+        "mean_month_R": 0.246,
+        "median_month_R": -0.362,
+        "positive_month_pct": 41.7,
+        "std_month_R": 4.862,
+        "max_dd_R": 30.34,
+        "score": -0.9695774255854638
+      }
+    },
+    {
+      "window": 12,
+      "topk": 2,
+      "minmean": 0.03,
+      "dev": {
+        "n": 599,
+        "months": 72,
+        "trades_per_month": 8.3,
+        "mean_month_R": 0.246,
+        "median_month_R": -0.362,
+        "positive_month_pct": 41.7,
+        "std_month_R": 4.862,
+        "max_dd_R": 30.34,
+        "score": -0.9695774255854638
+      }
+    },
+    {
+      "window": 12,
+      "topk": 2,
+      "minmean": 0.06,
+      "dev": {
+        "n": 599,
+        "months": 72,
+        "trades_per_month": 8.3,
+        "mean_month_R": 0.246,
+        "median_month_R": -0.362,
+        "positive_month_pct": 41.7,
+        "std_month_R": 4.862,
+        "max_dd_R": 30.34,
+        "score": -0.9695774255854638
+      }
+    },
+    {
+      "window": 12,
+      "topk": 3,
+      "minmean": 0.0,
+      "dev": {
+        "n": 887,
+        "months": 72,
+        "trades_per_month": 12.3,
+        "mean_month_R": 0.276,
+        "median_month_R": -0.254,
+        "positive_month_pct": 47.2,
+        "std_month_R": 5.618,
+        "max_dd_R": 45.48,
+        "score": -1.1286743473419565
+      }
+    },
+    {
+      "window": 12,
+      "topk": 3,
+      "minmean": 0.03,
+      "dev": {
+        "n": 887,
+        "months": 72,
+        "trades_per_month": 12.3,
+        "mean_month_R": 0.276,
+        "median_month_R": -0.254,
+        "positive_month_pct": 47.2,
+        "std_month_R": 5.618,
+        "max_dd_R": 45.48,
+        "score": -1.1286743473419565
+      }
+    },
+    {
+      "window": 12,
+      "topk": 3,
+      "minmean": 0.06,
+      "dev": {
+        "n": 887,
+        "months": 72,
+        "trades_per_month": 12.3,
+        "mean_month_R": 0.276,
+        "median_month_R": -0.254,
+        "positive_month_pct": 47.2,
+        "std_month_R": 5.618,
+        "max_dd_R": 45.48,
+        "score": -1.1286743473419565
+      }
+    },
+    {
+      "window": 12,
+      "topk": 4,
+      "minmean": 0.0,
+      "dev": {
+        "n": 1095,
+        "months": 72,
+        "trades_per_month": 15.2,
+        "mean_month_R": 0.521,
+        "median_month_R": 0.285,
+        "positive_month_pct": 51.4,
+        "std_month_R": 6.316,
+        "max_dd_R": 52.23,
+        "score": -1.0582636788693642
+      }
+    },
+    {
+      "window": 12,
+      "topk": 4,
+      "minmean": 0.03,
+      "dev": {
+        "n": 1095,
+        "months": 72,
+        "trades_per_month": 15.2,
+        "mean_month_R": 0.521,
+        "median_month_R": 0.285,
+        "positive_month_pct": 51.4,
+        "std_month_R": 6.316,
+        "max_dd_R": 52.23,
+        "score": -1.0582636788693642
+      }
+    },
+    {
+      "window": 12,
+      "topk": 4,
+      "minmean": 0.06,
+      "dev": {
+        "n": 1078,
+        "months": 72,
+        "trades_per_month": 15.0,
+        "mean_month_R": 0.504,
+        "median_month_R": 0.118,
+        "positive_month_pct": 50.0,
+        "std_month_R": 6.312,
+        "max_dd_R": 52.23,
+        "score": -1.074211598588105
+      }
+    },
+    {
+      "window": 24,
+      "topk": 2,
+      "minmean": 0.0,
+      "dev": {
+        "n": 612,
+        "months": 72,
+        "trades_per_month": 8.5,
+        "mean_month_R": 0.476,
+        "median_month_R": -0.509,
+        "positive_month_pct": 41.7,
+        "std_month_R": 5.228,
+        "max_dd_R": 33.5,
+        "score": -0.8307977339113972
+      }
+    },
+    {
+      "window": 24,
+      "topk": 2,
+      "minmean": 0.03,
+      "dev": {
+        "n": 612,
+        "months": 72,
+        "trades_per_month": 8.5,
+        "mean_month_R": 0.476,
+        "median_month_R": -0.509,
+        "positive_month_pct": 41.7,
+        "std_month_R": 5.228,
+        "max_dd_R": 33.5,
+        "score": -0.8307977339113972
+      }
+    },
+    {
+      "window": 24,
+      "topk": 2,
+      "minmean": 0.06,
+      "dev": {
+        "n": 612,
+        "months": 72,
+        "trades_per_month": 8.5,
+        "mean_month_R": 0.476,
+        "median_month_R": -0.509,
+        "positive_month_pct": 41.7,
+        "std_month_R": 5.228,
+        "max_dd_R": 33.5,
+        "score": -0.8307977339113972
+      }
+    },
+    {
+      "window": 24,
+      "topk": 3,
+      "minmean": 0.0,
+      "dev": {
+        "n": 924,
+        "months": 72,
+        "trades_per_month": 12.8,
+        "mean_month_R": 0.356,
+        "median_month_R": -0.109,
+        "positive_month_pct": 48.6,
+        "std_month_R": 6.301,
+        "max_dd_R": 38.0,
+        "score": -1.2193946400966282
+      }
+    },
+    {
+      "window": 24,
+      "topk": 3,
+      "minmean": 0.03,
+      "dev": {
+        "n": 924,
+        "months": 72,
+        "trades_per_month": 12.8,
+        "mean_month_R": 0.356,
+        "median_month_R": -0.109,
+        "positive_month_pct": 48.6,
+        "std_month_R": 6.301,
+        "max_dd_R": 38.0,
+        "score": -1.2193946400966282
+      }
+    },
+    {
+      "window": 24,
+      "topk": 3,
+      "minmean": 0.06,
+      "dev": {
+        "n": 924,
+        "months": 72,
+        "trades_per_month": 12.8,
+        "mean_month_R": 0.356,
+        "median_month_R": -0.109,
+        "positive_month_pct": 48.6,
+        "std_month_R": 6.301,
+        "max_dd_R": 38.0,
+        "score": -1.2193946400966282
+      }
+    },
+    {
+      "window": 24,
+      "topk": 4,
+      "minmean": 0.0,
+      "dev": {
+        "n": 1104,
+        "months": 72,
+        "trades_per_month": 15.3,
+        "mean_month_R": -0.33,
+        "median_month_R": -0.31,
+        "positive_month_pct": 48.6,
+        "std_month_R": 5.788,
+        "max_dd_R": 60.47,
+        "score": -1.7771131320810722
+      }
+    },
+    {
+      "window": 24,
+      "topk": 4,
+      "minmean": 0.03,
+      "dev": {
+        "n": 1104,
+        "months": 72,
+        "trades_per_month": 15.3,
+        "mean_month_R": -0.33,
+        "median_month_R": -0.31,
+        "positive_month_pct": 48.6,
+        "std_month_R": 5.788,
+        "max_dd_R": 60.47,
+        "score": -1.7771131320810722
+      }
+    },
+    {
+      "window": 24,
+      "topk": 4,
+      "minmean": 0.06,
+      "dev": {
+        "n": 1088,
+        "months": 72,
+        "trades_per_month": 15.1,
+        "mean_month_R": -0.258,
+        "median_month_R": -0.31,
+        "positive_month_pct": 48.6,
+        "std_month_R": 5.703,
+        "max_dd_R": 60.47,
+        "score": -1.6840582378204112
+      }
+    },
+    {
+      "window": 36,
+      "topk": 2,
+      "minmean": 0.0,
+      "dev": {
+        "n": 579,
+        "months": 72,
+        "trades_per_month": 8.0,
+        "mean_month_R": 1.309,
+        "median_month_R": 0.368,
+        "positive_month_pct": 54.2,
+        "std_month_R": 5.826,
+        "max_dd_R": 32.73,
+        "score": -0.14769439472881696
+      }
+    },
+    {
+      "window": 36,
+      "topk": 2,
+      "minmean": 0.03,
+      "dev": {
+        "n": 579,
+        "months": 72,
+        "trades_per_month": 8.0,
+        "mean_month_R": 1.309,
+        "median_month_R": 0.368,
+        "positive_month_pct": 54.2,
+        "std_month_R": 5.826,
+        "max_dd_R": 32.73,
+        "score": -0.14769439472881696
+      }
+    },
+    {
+      "window": 36,
+      "topk": 2,
+      "minmean": 0.06,
+      "dev": {
+        "n": 579,
+        "months": 72,
+        "trades_per_month": 8.0,
+        "mean_month_R": 1.309,
+        "median_month_R": 0.368,
+        "positive_month_pct": 54.2,
+        "std_month_R": 5.826,
+        "max_dd_R": 32.73,
+        "score": -0.14769439472881696
+      }
+    },
+    {
+      "window": 36,
+      "topk": 3,
+      "minmean": 0.0,
+      "dev": {
+        "n": 828,
+        "months": 72,
+        "trades_per_month": 11.5,
+        "mean_month_R": 0.856,
+        "median_month_R": -0.591,
+        "positive_month_pct": 48.6,
+        "std_month_R": 6.979,
+        "max_dd_R": 53.38,
+        "score": -0.8887520207207669
+      }
+    },
+    {
+      "window": 36,
+      "topk": 3,
+      "minmean": 0.03,
+      "dev": {
+        "n": 828,
+        "months": 72,
+        "trades_per_month": 11.5,
+        "mean_month_R": 0.856,
+        "median_month_R": -0.591,
+        "positive_month_pct": 48.6,
+        "std_month_R": 6.979,
+        "max_dd_R": 53.38,
+        "score": -0.8887520207207669
+      }
+    },
+    {
+      "window": 36,
+      "topk": 3,
+      "minmean": 0.06,
+      "dev": {
+        "n": 797,
+        "months": 72,
+        "trades_per_month": 11.1,
+        "mean_month_R": 0.732,
+        "median_month_R": -0.591,
+        "positive_month_pct": 48.6,
+        "std_month_R": 6.432,
+        "max_dd_R": 53.38,
+        "score": -0.8756487585798882
+      }
+    },
+    {
+      "window": 36,
+      "topk": 4,
+      "minmean": 0.0,
+      "dev": {
+        "n": 1010,
+        "months": 72,
+        "trades_per_month": 14.0,
+        "mean_month_R": 0.998,
+        "median_month_R": -0.568,
+        "positive_month_pct": 47.2,
+        "std_month_R": 8.099,
+        "max_dd_R": 39.07,
+        "score": -1.0271840317644905
+      }
+    },
+    {
+      "window": 36,
+      "topk": 4,
+      "minmean": 0.03,
+      "dev": {
+        "n": 1001,
+        "months": 72,
+        "trades_per_month": 13.9,
+        "mean_month_R": 1.09,
+        "median_month_R": -0.568,
+        "positive_month_pct": 47.2,
+        "std_month_R": 8.001,
+        "max_dd_R": 39.07,
+        "score": -0.9104450931006114
+      }
+    },
+    {
+      "window": 36,
+      "topk": 4,
+      "minmean": 0.06,
+      "dev": {
+        "n": 947,
+        "months": 72,
+        "trades_per_month": 13.2,
+        "mean_month_R": 0.961,
+        "median_month_R": -0.568,
+        "positive_month_pct": 47.2,
+        "std_month_R": 7.433,
+        "max_dd_R": 39.07,
+        "score": -0.896727416735767
+      }
+    }
+  ],
+  "holdout_R": {
+    "n": 67,
+    "months": 19,
+    "trades_per_month": 3.5,
+    "mean_month_R": -1.107,
+    "median_month_R": -1.049,
+    "positive_month_pct": 10.5,
+    "std_month_R": 2.524,
+    "max_dd_R": 26.09,
+    "score": -1.7377123540387873
+  },
+  "holdout_yen": {
+    "base_0.004": {
+      "n": 67,
+      "trades_per_month": 3.5,
+      "avg_monthly_jpy": -2214,
+      "median_monthly_jpy": -2097,
+      "positive_month_pct": 10.5,
+      "p10": -7704,
+      "p90": 1196,
+      "max_dd_pct": 10.23,
+      "avg_R": -0.3139,
+      "pf_R": 0.556
+    },
+    "stress_0.004": {
+      "n": 62,
+      "trades_per_month": 3.3,
+      "avg_monthly_jpy": -1773,
+      "median_monthly_jpy": -2044,
+      "positive_month_pct": 15.8,
+      "p10": -7868,
+      "p90": 5919,
+      "max_dd_pct": 8.56,
+      "avg_R": -0.2717,
+      "pf_R": 0.626
+    },
+    "base_0.005": {
+      "n": 67,
+      "trades_per_month": 3.5,
+      "avg_monthly_jpy": -2767,
+      "median_monthly_jpy": -2621,
+      "positive_month_pct": 10.5,
+      "p10": -9630,
+      "p90": 1495,
+      "max_dd_pct": 12.72,
+      "avg_R": -0.3139,
+      "pf_R": 0.556
+    },
+    "stress_0.005": {
+      "n": 62,
+      "trades_per_month": 3.3,
+      "avg_monthly_jpy": -2217,
+      "median_monthly_jpy": -2555,
+      "positive_month_pct": 15.8,
+      "p10": -9835,
+      "p90": 7399,
+      "max_dd_pct": 10.65,
+      "avg_R": -0.2717,
+      "pf_R": 0.626
+    },
+    "base_0.006": {
+      "n": 67,
+      "trades_per_month": 3.5,
+      "avg_monthly_jpy": -3320,
+      "median_monthly_jpy": -3146,
+      "positive_month_pct": 10.5,
+      "p10": -11556,
+      "p90": 1794,
+      "max_dd_pct": 15.19,
+      "avg_R": -0.3139,
+      "pf_R": 0.556
+    },
+    "stress_0.006": {
+      "n": 62,
+      "trades_per_month": 3.3,
+      "avg_monthly_jpy": -2660,
+      "median_monthly_jpy": -3066,
+      "positive_month_pct": 15.8,
+      "p10": -11803,
+      "p90": 8879,
+      "max_dd_pct": 12.71,
+      "avg_R": -0.2717,
+      "pf_R": 0.626
+    },
+    "base_0.007": {
+      "n": 67,
+      "trades_per_month": 3.5,
+      "avg_monthly_jpy": -3874,
+      "median_monthly_jpy": -3670,
+      "positive_month_pct": 10.5,
+      "p10": -13482,
+      "p90": 2093,
+      "max_dd_pct": 17.64,
+      "avg_R": -0.3139,
+      "pf_R": 0.556
+    },
+    "stress_0.007": {
+      "n": 62,
+      "trades_per_month": 3.3,
+      "avg_monthly_jpy": -3103,
+      "median_monthly_jpy": -3577,
+      "positive_month_pct": 15.8,
+      "p10": -13770,
+      "p90": 10358,
+      "max_dd_pct": 14.76,
+      "avg_R": -0.2717,
+      "pf_R": 0.626
+    },
+    "base_0.008": {
+      "n": 67,
+      "trades_per_month": 3.5,
+      "avg_monthly_jpy": -4427,
+      "median_monthly_jpy": -4194,
+      "positive_month_pct": 10.5,
+      "p10": -15408,
+      "p90": 2392,
+      "max_dd_pct": 20.06,
+      "avg_R": -0.3139,
+      "pf_R": 0.556
+    },
+    "stress_0.008": {
+      "n": 62,
+      "trades_per_month": 3.3,
+      "avg_monthly_jpy": -3546,
+      "median_monthly_jpy": -4088,
+      "positive_month_pct": 15.8,
+      "p10": -15737,
+      "p90": 11838,
+      "max_dd_pct": 16.79,
+      "avg_R": -0.2717,
+      "pf_R": 0.626
+    }
+  },
+  "selection_log": [
+    {
+      "month": "2025-01-01",
+      "chosen": [
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ],
+        [
+          "eurjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2025-02-01",
+      "chosen": [
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ],
+        [
+          "eurjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2025-03-01",
+      "chosen": [
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ],
+        [
+          "eurjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2025-04-01",
+      "chosen": [
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ],
+        [
+          "eurjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2025-05-01",
+      "chosen": [
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ],
+        [
+          "eurjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2025-06-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ]
+      ]
+    },
+    {
+      "month": "2025-07-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ]
+      ]
+    },
+    {
+      "month": "2025-08-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ]
+      ]
+    },
+    {
+      "month": "2025-09-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ]
+      ]
+    },
+    {
+      "month": "2025-10-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "gbpjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2025-11-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "gbpjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2025-12-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "audusd",
+          "REV_FAST"
+        ]
+      ]
+    },
+    {
+      "month": "2026-01-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "audusd",
+          "REV_FAST"
+        ]
+      ]
+    },
+    {
+      "month": "2026-02-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "gbpjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2026-03-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ]
+      ]
+    },
+    {
+      "month": "2026-04-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ]
+      ]
+    },
+    {
+      "month": "2026-05-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "usdjpy",
+          "TS_SLOW"
+        ]
+      ]
+    },
+    {
+      "month": "2026-06-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "gbpjpy",
+          "PB240"
+        ]
+      ]
+    },
+    {
+      "month": "2026-07-01",
+      "chosen": [
+        [
+          "eurjpy",
+          "PB240"
+        ],
+        [
+          "gbpjpy",
+          "PB240"
+        ]
+      ]
+    }
+  ]
+}
