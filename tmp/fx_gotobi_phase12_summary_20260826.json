@@ -1,0 +1,21 @@
+{
+  "status": "USDJPY_GOTOBI_PHASE12_SUMMARY",
+  "verdict": "KEEP_AS_AUXILIARY_EDGE",
+  "rule": "Japanese bank-business Gotobi dates (5/10/15/20/25/30 shifted to prior bank business day); long USDJPY 9 hours before 09:55 JST Tokyo fix; fixed 60 pip SL; exit at 09:55; 1.0 pip round-trip synthetic cost; no swap credited.",
+  "splits": {
+    "train_2014_2019": {"n":353,"trades_per_month":4.9,"avg_R":0.0784,"pf":1.497,"win_pct":59.2,"mean_net_pips":4.71,"positive_month_pct":61.1},
+    "validation_2020_2022": {"n":184,"trades_per_month":5.1,"avg_R":0.0853,"pf":1.824,"win_pct":62.0,"mean_net_pips":5.12,"positive_month_pct":72.2},
+    "test_2023_2024": {"n":121,"trades_per_month":5.0,"avg_R":0.0108,"pf":1.046,"win_pct":52.1,"mean_net_pips":0.65,"positive_month_pct":50.0},
+    "holdout_2025_2026": {"n":97,"trades_per_month":5.1,"avg_R":0.1140,"pf":1.621,"win_pct":53.6,"mean_net_pips":6.84,"positive_month_pct":52.6}
+  },
+  "same_window_non_gotobi_control": {
+    "test_2023_2024": {"avg_R":-0.0599,"pf":0.753,"mean_net_pips":-3.59},
+    "holdout_2025_2026": {"avg_R":-0.0188,"pf":0.921,"mean_net_pips":-1.13}
+  },
+  "holdout_500k_jpy": {
+    "risk_0.4pct": {"avg_monthly_jpy":1181,"max_dd_pct":2.84},
+    "risk_0.6pct": {"avg_monthly_jpy":1784,"max_dd_pct":4.23},
+    "risk_0.8pct": {"avg_monthly_jpy":2395,"max_dd_pct":5.61},
+    "risk_1.0pct": {"avg_monthly_jpy":3014,"max_dd_pct":6.97}
+  }
+}
