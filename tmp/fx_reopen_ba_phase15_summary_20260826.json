@@ -1,0 +1,17 @@
+{
+  "status": "FX_REOPEN_BIDASK_PHASE15_SUMMARY",
+  "verdict": "REJECT_AS_RETAIL_EA_EDGE",
+  "reason": "The attractive BID-only reopen-gap fade disappears when actual Dukascopy BID/ASK execution is used at 17:00 New York rollover.",
+  "execution": "signal on mid-price gap; long ASK-open to BID-close; short BID-open to ASK-close; no synthetic spread; H1",
+  "threshold_1pip_no_extra_slippage": {
+    "validation_2019_2021": {"n": 363, "trades_per_month": 10.1, "mean_net_pips": -4.641, "pf": 0.178, "win_pct": 19.0, "avg_open_spread_pips": 7.22, "p90_open_spread_pips": 13.26},
+    "test_2022_2024": {"n": 372, "trades_per_month": 10.3, "mean_net_pips": -6.672, "pf": 0.015, "win_pct": 4.8, "avg_open_spread_pips": 10.18, "p90_open_spread_pips": 16.90},
+    "holdout_2025_2026": {"n": 418, "trades_per_month": 22.0, "mean_net_pips": -4.005, "pf": 0.251, "win_pct": 16.3, "avg_open_spread_pips": 8.41, "p90_open_spread_pips": 16.24}
+  },
+  "threshold_5pip_no_extra_slippage": {
+    "validation_2019_2021": {"n": 26, "mean_net_pips": -15.077, "pf": 0.091},
+    "test_2022_2024": {"n": 40, "mean_net_pips": -9.038, "pf": 0.001},
+    "holdout_2025_2026": {"n": 87, "mean_net_pips": 1.744, "pf": 1.401, "positive_month_pct": 26.3}
+  },
+  "note": "The 5-pip holdout-only positive result is not acceptable because validation/test are strongly negative and it is not a stable OOS plateau. Extra 0.25/0.5 pip slippage per side worsens results further."
+}
