@@ -1,0 +1,4128 @@
+{
+  "status": "FX_REOPEN_GAP_PHASE13",
+  "source": "Dukascopy free H1",
+  "mechanism": "fade 17:00 New York daily reopen gap for one hour",
+  "paper_rule": "thresholds 1/2/5 pips; one-hour exit; no parameter optimization",
+  "warning": "H1 source may not represent executable bid/ask at rollover; any survivor requires bid/ask tick validation",
+  "results": {
+    "1.0": {
+      "1": {
+        "pooled": {
+          "train": {
+            "n": 576,
+            "trades_per_month": 9.8,
+            "mean_net_pips": 0.069,
+            "median_net_pips": 0.45,
+            "pf": 1.025,
+            "win_pct": 53.8,
+            "t": 0.11,
+            "positive_month_pct": 59.3,
+            "positive_year_pct": 60.0,
+            "avg_gap_pips": 2.12
+          },
+          "val": {
+            "n": 589,
+            "trades_per_month": 16.4,
+            "mean_net_pips": 0.636,
+            "median_net_pips": 0.8,
+            "pf": 1.409,
+            "win_pct": 60.8,
+            "t": 1.28,
+            "positive_month_pct": 83.3,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 2.67
+          },
+          "test": {
+            "n": 806,
+            "trades_per_month": 22.4,
+            "mean_net_pips": 0.134,
+            "median_net_pips": -0.0,
+            "pf": 1.089,
+            "win_pct": 49.5,
+            "t": 0.83,
+            "positive_month_pct": 38.9,
+            "positive_year_pct": 33.3,
+            "avg_gap_pips": 2.62
+          },
+          "holdout": {
+            "n": 621,
+            "trades_per_month": 32.7,
+            "mean_net_pips": 1.976,
+            "median_net_pips": 0.9,
+            "pf": 2.852,
+            "win_pct": 59.9,
+            "t": 6.49,
+            "positive_month_pct": 84.2,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 4.46
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 36,
+              "trades_per_month": 0.6,
+              "mean_net_pips": 1.428,
+              "median_net_pips": 1.4,
+              "pf": 2.469,
+              "win_pct": 61.1,
+              "t": 2.13,
+              "positive_month_pct": 32.8,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 1.64
+            },
+            "val": {
+              "n": 60,
+              "trades_per_month": 1.7,
+              "mean_net_pips": 2.065,
+              "median_net_pips": 1.5,
+              "pf": 6.556,
+              "win_pct": 71.7,
+              "t": 4.93,
+              "positive_month_pct": 61.1,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 2.24
+            },
+            "test": {
+              "n": 59,
+              "trades_per_month": 1.7,
+              "mean_net_pips": 1.108,
+              "median_net_pips": 1.0,
+              "pf": 2.607,
+              "win_pct": 62.7,
+              "t": 2.81,
+              "positive_month_pct": 48.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 2.16
+            },
+            "holdout": {
+              "n": 64,
+              "trades_per_month": 3.6,
+              "mean_net_pips": 3.186,
+              "median_net_pips": 2.1,
+              "pf": 10.062,
+              "win_pct": 84.4,
+              "t": 3.36,
+              "positive_month_pct": 50.0,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 4.09
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 127,
+              "trades_per_month": 2.2,
+              "mean_net_pips": -0.688,
+              "median_net_pips": 0.9,
+              "pf": 0.862,
+              "win_pct": 55.1,
+              "t": -0.27,
+              "positive_month_pct": 49.2,
+              "positive_year_pct": 60.0,
+              "avg_gap_pips": 2.48
+            },
+            "val": {
+              "n": 160,
+              "trades_per_month": 4.4,
+              "mean_net_pips": -0.686,
+              "median_net_pips": 0.35,
+              "pf": 0.792,
+              "win_pct": 55.0,
+              "t": -0.39,
+              "positive_month_pct": 52.8,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 3.45
+            },
+            "test": {
+              "n": 144,
+              "trades_per_month": 4.1,
+              "mean_net_pips": 0.299,
+              "median_net_pips": 0.5,
+              "pf": 1.27,
+              "win_pct": 55.6,
+              "t": 1.0,
+              "positive_month_pct": 40.0,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 1.99
+            },
+            "holdout": {
+              "n": 116,
+              "trades_per_month": 6.1,
+              "mean_net_pips": 1.438,
+              "median_net_pips": 0.5,
+              "pf": 1.982,
+              "win_pct": 56.0,
+              "t": 2.14,
+              "positive_month_pct": 63.2,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.97
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 119,
+              "trades_per_month": 2.0,
+              "mean_net_pips": -0.35,
+              "median_net_pips": 0.3,
+              "pf": 0.874,
+              "win_pct": 52.9,
+              "t": -0.51,
+              "positive_month_pct": 42.4,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 2.13
+            },
+            "val": {
+              "n": 106,
+              "trades_per_month": 3.0,
+              "mean_net_pips": 1.354,
+              "median_net_pips": 1.15,
+              "pf": 2.952,
+              "win_pct": 68.9,
+              "t": 3.57,
+              "positive_month_pct": 68.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 2.11
+            },
+            "test": {
+              "n": 124,
+              "trades_per_month": 3.4,
+              "mean_net_pips": 0.271,
+              "median_net_pips": 0.45,
+              "pf": 1.228,
+              "win_pct": 58.1,
+              "t": 0.76,
+              "positive_month_pct": 50.0,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 2.41
+            },
+            "holdout": {
+              "n": 96,
+              "trades_per_month": 5.1,
+              "mean_net_pips": 1.552,
+              "median_net_pips": 0.8,
+              "pf": 2.896,
+              "win_pct": 59.4,
+              "t": 3.1,
+              "positive_month_pct": 63.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.4
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 82,
+              "trades_per_month": 1.6,
+              "mean_net_pips": -0.12,
+              "median_net_pips": 0.3,
+              "pf": 0.95,
+              "win_pct": 53.7,
+              "t": -0.17,
+              "positive_month_pct": 35.3,
+              "positive_year_pct": 60.0,
+              "avg_gap_pips": 2.03
+            },
+            "val": {
+              "n": 91,
+              "trades_per_month": 2.5,
+              "mean_net_pips": 0.949,
+              "median_net_pips": 0.6,
+              "pf": 1.845,
+              "win_pct": 56.0,
+              "t": 2.08,
+              "positive_month_pct": 52.8,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 2.64
+            },
+            "test": {
+              "n": 199,
+              "trades_per_month": 5.5,
+              "mean_net_pips": -0.471,
+              "median_net_pips": -0.5,
+              "pf": 0.703,
+              "win_pct": 41.2,
+              "t": -1.79,
+              "positive_month_pct": 27.8,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 2.4
+            },
+            "holdout": {
+              "n": 136,
+              "trades_per_month": 7.2,
+              "mean_net_pips": 1.436,
+              "median_net_pips": 0.25,
+              "pf": 2.35,
+              "win_pct": 53.7,
+              "t": 2.94,
+              "positive_month_pct": 57.9,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.8
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 159,
+              "trades_per_month": 2.7,
+              "mean_net_pips": 0.389,
+              "median_net_pips": 0.2,
+              "pf": 1.253,
+              "win_pct": 50.3,
+              "t": 0.98,
+              "positive_month_pct": 40.7,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 2.12
+            },
+            "val": {
+              "n": 96,
+              "trades_per_month": 2.7,
+              "mean_net_pips": 0.82,
+              "median_net_pips": 0.4,
+              "pf": 1.662,
+              "win_pct": 56.2,
+              "t": 1.71,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 2.81
+            },
+            "test": {
+              "n": 149,
+              "trades_per_month": 4.1,
+              "mean_net_pips": 0.262,
+              "median_net_pips": -0.4,
+              "pf": 1.16,
+              "win_pct": 43.0,
+              "t": 0.63,
+              "positive_month_pct": 41.7,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 3.25
+            },
+            "holdout": {
+              "n": 124,
+              "trades_per_month": 6.5,
+              "mean_net_pips": 0.841,
+              "median_net_pips": 0.05,
+              "pf": 1.68,
+              "win_pct": 50.0,
+              "t": 1.51,
+              "positive_month_pct": 63.2,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 4.11
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 53,
+              "trades_per_month": 1.0,
+              "mean_net_pips": 1.232,
+              "median_net_pips": 1.7,
+              "pf": 1.44,
+              "win_pct": 58.5,
+              "t": 0.85,
+              "positive_month_pct": 41.2,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 1.71
+            },
+            "val": {
+              "n": 76,
+              "trades_per_month": 2.1,
+              "mean_net_pips": 0.682,
+              "median_net_pips": 0.9,
+              "pf": 1.712,
+              "win_pct": 64.5,
+              "t": 1.63,
+              "positive_month_pct": 52.8,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 2.01
+            },
+            "test": {
+              "n": 131,
+              "trades_per_month": 3.6,
+              "mean_net_pips": 0.16,
+              "median_net_pips": -0.0,
+              "pf": 1.067,
+              "win_pct": 48.9,
+              "t": 0.27,
+              "positive_month_pct": 36.1,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 3.33
+            },
+            "holdout": {
+              "n": 85,
+              "trades_per_month": 4.5,
+              "mean_net_pips": 4.795,
+              "median_net_pips": 2.8,
+              "pf": 5.364,
+              "win_pct": 71.8,
+              "t": 3.47,
+              "positive_month_pct": 84.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 8.17
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -724,
+            "median_monthly_jpy": -2521,
+            "positive_month_pct": 36.1,
+            "p10_month_jpy": -8557,
+            "p90_month_jpy": 9169,
+            "return_pct": -5.21,
+            "max_dd_pct": 18.21,
+            "avg_R": -0.022,
+            "pf_R": 0.926
+          },
+          "holdout_0.003": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": 5982,
+            "median_monthly_jpy": 2250,
+            "positive_month_pct": 58.3,
+            "p10_month_jpy": -1431,
+            "p90_month_jpy": 21544,
+            "return_pct": 28.71,
+            "max_dd_pct": 4.52,
+            "avg_R": 0.1568,
+            "pf_R": 1.796
+          },
+          "test_0.004": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -970,
+            "median_monthly_jpy": -3380,
+            "positive_month_pct": 36.1,
+            "p10_month_jpy": -11567,
+            "p90_month_jpy": 12659,
+            "return_pct": -6.98,
+            "max_dd_pct": 23.55,
+            "avg_R": -0.022,
+            "pf_R": 0.926
+          },
+          "holdout_0.004": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": 8321,
+            "median_monthly_jpy": 3258,
+            "positive_month_pct": 58.3,
+            "p10_month_jpy": -2106,
+            "p90_month_jpy": 30944,
+            "return_pct": 39.94,
+            "max_dd_pct": 5.99,
+            "avg_R": 0.1568,
+            "pf_R": 1.796
+          },
+          "test_0.006": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -1465,
+            "median_monthly_jpy": -5123,
+            "positive_month_pct": 36.1,
+            "p10_month_jpy": -17826,
+            "p90_month_jpy": 20352,
+            "return_pct": -10.55,
+            "max_dd_pct": 33.26,
+            "avg_R": -0.022,
+            "pf_R": 0.926
+          },
+          "holdout_0.006": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": 13602,
+            "median_monthly_jpy": 5762,
+            "positive_month_pct": 58.3,
+            "p10_month_jpy": -3845,
+            "p90_month_jpy": 53849,
+            "return_pct": 65.29,
+            "max_dd_pct": 8.87,
+            "avg_R": 0.1568,
+            "pf_R": 1.796
+          },
+          "test_0.008": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -1964,
+            "median_monthly_jpy": -6897,
+            "positive_month_pct": 36.1,
+            "p10_month_jpy": -24410,
+            "p90_month_jpy": 29065,
+            "return_pct": -14.14,
+            "max_dd_pct": 41.81,
+            "avg_R": -0.022,
+            "pf_R": 0.926
+          },
+          "holdout_0.008": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": 19799,
+            "median_monthly_jpy": 9052,
+            "positive_month_pct": 58.3,
+            "p10_month_jpy": -6232,
+            "p90_month_jpy": 76751,
+            "return_pct": 95.04,
+            "max_dd_pct": 11.67,
+            "avg_R": 0.1568,
+            "pf_R": 1.796
+          }
+        }
+      },
+      "2": {
+        "pooled": {
+          "train": {
+            "n": 177,
+            "trades_per_month": 3.0,
+            "mean_net_pips": -0.262,
+            "median_net_pips": 0.9,
+            "pf": 0.937,
+            "win_pct": 59.9,
+            "t": -0.14,
+            "positive_month_pct": 40.7,
+            "positive_year_pct": 60.0,
+            "avg_gap_pips": 3.74
+          },
+          "val": {
+            "n": 246,
+            "trades_per_month": 6.8,
+            "mean_net_pips": 0.897,
+            "median_net_pips": 1.3,
+            "pf": 1.424,
+            "win_pct": 68.3,
+            "t": 0.78,
+            "positive_month_pct": 88.9,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 4.41
+          },
+          "test": {
+            "n": 314,
+            "trades_per_month": 8.7,
+            "mean_net_pips": 1.602,
+            "median_net_pips": 1.2,
+            "pf": 2.407,
+            "win_pct": 64.0,
+            "t": 5.3,
+            "positive_month_pct": 72.2,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 4.46
+          },
+          "holdout": {
+            "n": 374,
+            "trades_per_month": 19.7,
+            "mean_net_pips": 3.592,
+            "median_net_pips": 2.3,
+            "pf": 5.24,
+            "win_pct": 72.2,
+            "t": 7.64,
+            "positive_month_pct": 89.5,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 6.45
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 6,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 3.683,
+              "median_net_pips": 4.15,
+              "pf": 21.091,
+              "win_pct": 83.3,
+              "t": 3.08,
+              "positive_month_pct": 8.6,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 2.92
+            },
+            "val": {
+              "n": 21,
+              "trades_per_month": 0.6,
+              "mean_net_pips": 4.567,
+              "median_net_pips": 4.0,
+              "pf": 64.933,
+              "win_pct": 95.2,
+              "t": 6.24,
+              "positive_month_pct": 42.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.76
+            },
+            "test": {
+              "n": 18,
+              "trades_per_month": 0.5,
+              "mean_net_pips": 1.406,
+              "median_net_pips": 1.5,
+              "pf": 2.86,
+              "win_pct": 66.7,
+              "t": 1.67,
+              "positive_month_pct": 20.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.72
+            },
+            "holdout": {
+              "n": 36,
+              "trades_per_month": 2.0,
+              "mean_net_pips": 5.431,
+              "median_net_pips": 3.5,
+              "pf": 178.727,
+              "win_pct": 94.4,
+              "t": 3.49,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 6.16
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 43,
+              "trades_per_month": 0.7,
+              "mean_net_pips": -3.516,
+              "median_net_pips": -1.4,
+              "pf": 0.685,
+              "win_pct": 48.8,
+              "t": -0.48,
+              "positive_month_pct": 18.6,
+              "positive_year_pct": 20.0,
+              "avg_gap_pips": 4.55
+            },
+            "val": {
+              "n": 78,
+              "trades_per_month": 2.2,
+              "mean_net_pips": -1.624,
+              "median_net_pips": 0.55,
+              "pf": 0.692,
+              "win_pct": 59.0,
+              "t": -0.45,
+              "positive_month_pct": 45.7,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 5.58
+            },
+            "test": {
+              "n": 37,
+              "trades_per_month": 1.1,
+              "mean_net_pips": 1.949,
+              "median_net_pips": 1.4,
+              "pf": 4.641,
+              "win_pct": 75.7,
+              "t": 3.18,
+              "positive_month_pct": 38.2,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 3.56
+            },
+            "holdout": {
+              "n": 61,
+              "trades_per_month": 3.4,
+              "mean_net_pips": 3.079,
+              "median_net_pips": 2.2,
+              "pf": 3.207,
+              "win_pct": 70.5,
+              "t": 2.62,
+              "positive_month_pct": 72.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 6.22
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 34,
+              "trades_per_month": 0.7,
+              "mean_net_pips": -0.956,
+              "median_net_pips": 0.65,
+              "pf": 0.712,
+              "win_pct": 55.9,
+              "t": -0.66,
+              "positive_month_pct": 26.1,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.86
+            },
+            "val": {
+              "n": 40,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 1.25,
+              "median_net_pips": 1.0,
+              "pf": 3.564,
+              "win_pct": 75.0,
+              "t": 2.89,
+              "positive_month_pct": 48.5,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.25
+            },
+            "test": {
+              "n": 42,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 2.031,
+              "median_net_pips": 2.05,
+              "pf": 3.834,
+              "win_pct": 78.6,
+              "t": 3.11,
+              "positive_month_pct": 47.2,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.41
+            },
+            "holdout": {
+              "n": 46,
+              "trades_per_month": 2.4,
+              "mean_net_pips": 3.68,
+              "median_net_pips": 2.3,
+              "pf": 12.517,
+              "win_pct": 82.6,
+              "t": 4.42,
+              "positive_month_pct": 68.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 5.55
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 24,
+              "trades_per_month": 0.5,
+              "mean_net_pips": 0.379,
+              "median_net_pips": 1.4,
+              "pf": 1.162,
+              "win_pct": 66.7,
+              "t": 0.25,
+              "positive_month_pct": 22.2,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.65
+            },
+            "val": {
+              "n": 40,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 1.938,
+              "median_net_pips": 1.3,
+              "pf": 3.32,
+              "win_pct": 67.5,
+              "t": 2.49,
+              "positive_month_pct": 46.9,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.13
+            },
+            "test": {
+              "n": 81,
+              "trades_per_month": 2.3,
+              "mean_net_pips": 1.014,
+              "median_net_pips": 0.8,
+              "pf": 2.086,
+              "win_pct": 60.5,
+              "t": 2.3,
+              "positive_month_pct": 54.3,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.76
+            },
+            "holdout": {
+              "n": 75,
+              "trades_per_month": 3.9,
+              "mean_net_pips": 3.3,
+              "median_net_pips": 2.1,
+              "pf": 6.061,
+              "win_pct": 70.7,
+              "t": 4.27,
+              "positive_month_pct": 63.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 5.66
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 59,
+              "trades_per_month": 1.4,
+              "mean_net_pips": 1.473,
+              "median_net_pips": 0.6,
+              "pf": 2.366,
+              "win_pct": 62.7,
+              "t": 2.16,
+              "positive_month_pct": 42.9,
+              "positive_year_pct": 75.0,
+              "avg_gap_pips": 3.29
+            },
+            "val": {
+              "n": 44,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 1.825,
+              "median_net_pips": 1.15,
+              "pf": 2.765,
+              "win_pct": 59.1,
+              "t": 2.17,
+              "positive_month_pct": 33.3,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.52
+            },
+            "test": {
+              "n": 72,
+              "trades_per_month": 2.1,
+              "mean_net_pips": 2.408,
+              "median_net_pips": 1.6,
+              "pf": 3.569,
+              "win_pct": 58.3,
+              "t": 3.65,
+              "positive_month_pct": 34.3,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 5.14
+            },
+            "holdout": {
+              "n": 83,
+              "trades_per_month": 4.4,
+              "mean_net_pips": 1.492,
+              "median_net_pips": 0.6,
+              "pf": 2.258,
+              "win_pct": 56.6,
+              "t": 1.89,
+              "positive_month_pct": 78.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 5.45
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 11,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 1.745,
+              "median_net_pips": 2.4,
+              "pf": 1.771,
+              "win_pct": 72.7,
+              "t": 0.71,
+              "positive_month_pct": 18.6,
+              "positive_year_pct": 75.0,
+              "avg_gap_pips": 3.15
+            },
+            "val": {
+              "n": 23,
+              "trades_per_month": 0.7,
+              "mean_net_pips": 1.896,
+              "median_net_pips": 1.7,
+              "pf": 6.253,
+              "win_pct": 82.6,
+              "t": 3.54,
+              "positive_month_pct": 41.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.37
+            },
+            "test": {
+              "n": 64,
+              "trades_per_month": 1.9,
+              "mean_net_pips": 1.013,
+              "median_net_pips": 0.95,
+              "pf": 1.43,
+              "win_pct": 57.8,
+              "t": 1.02,
+              "positive_month_pct": 39.4,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.33
+            },
+            "holdout": {
+              "n": 73,
+              "trades_per_month": 3.8,
+              "mean_net_pips": 5.748,
+              "median_net_pips": 4.0,
+              "pf": 7.108,
+              "win_pct": 75.3,
+              "t": 3.66,
+              "positive_month_pct": 84.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.3
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": 2640,
+            "median_monthly_jpy": 1233,
+            "positive_month_pct": 72.2,
+            "p10_month_jpy": -4108,
+            "p90_month_jpy": 10833,
+            "return_pct": 19.01,
+            "max_dd_pct": 3.66,
+            "avg_R": 0.187,
+            "pf_R": 1.851
+          },
+          "holdout_0.003": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 8158,
+            "median_monthly_jpy": 5867,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": -688,
+            "p90_month_jpy": 19703,
+            "return_pct": 39.16,
+            "max_dd_pct": 1.24,
+            "avg_R": 0.3326,
+            "pf_R": 3.454
+          },
+          "test_0.004": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": 3619,
+            "median_monthly_jpy": 1727,
+            "positive_month_pct": 72.2,
+            "p10_month_jpy": -5789,
+            "p90_month_jpy": 14831,
+            "return_pct": 26.06,
+            "max_dd_pct": 4.85,
+            "avg_R": 0.187,
+            "pf_R": 1.851
+          },
+          "holdout_0.004": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 11523,
+            "median_monthly_jpy": 8550,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": -1018,
+            "p90_month_jpy": 27982,
+            "return_pct": 55.31,
+            "max_dd_pct": 1.65,
+            "avg_R": 0.3326,
+            "pf_R": 3.454
+          },
+          "test_0.006": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": 5742,
+            "median_monthly_jpy": 2856,
+            "positive_month_pct": 72.2,
+            "p10_month_jpy": -9695,
+            "p90_month_jpy": 23478,
+            "return_pct": 41.34,
+            "max_dd_pct": 7.21,
+            "avg_R": 0.187,
+            "pf_R": 1.851
+          },
+          "holdout_0.006": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 19446,
+            "median_monthly_jpy": 15313,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": -1877,
+            "p90_month_jpy": 47771,
+            "return_pct": 93.34,
+            "max_dd_pct": 2.46,
+            "avg_R": 0.3326,
+            "pf_R": 3.454
+          },
+          "test_0.008": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": 8103,
+            "median_monthly_jpy": 4198,
+            "positive_month_pct": 72.2,
+            "p10_month_jpy": -14427,
+            "p90_month_jpy": 33086,
+            "return_pct": 58.34,
+            "max_dd_pct": 9.52,
+            "avg_R": 0.187,
+            "pf_R": 1.851
+          },
+          "holdout_0.008": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 29274,
+            "median_monthly_jpy": 24365,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": -3076,
+            "p90_month_jpy": 73537,
+            "return_pct": 140.52,
+            "max_dd_pct": 3.27,
+            "avg_R": 0.3326,
+            "pf_R": 3.454
+          }
+        }
+      },
+      "5": {
+        "pooled": {
+          "train": {
+            "n": 28,
+            "trades_per_month": 0.6,
+            "mean_net_pips": -6.646,
+            "median_net_pips": -1.55,
+            "pf": 0.369,
+            "win_pct": 46.4,
+            "t": -1.21,
+            "positive_month_pct": 17.4,
+            "positive_year_pct": 0.0,
+            "avg_gap_pips": 8.99
+          },
+          "val": {
+            "n": 52,
+            "trades_per_month": 1.4,
+            "mean_net_pips": -0.917,
+            "median_net_pips": 3.45,
+            "pf": 0.849,
+            "win_pct": 67.3,
+            "t": -0.17,
+            "positive_month_pct": 38.9,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 9.18
+          },
+          "test": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "mean_net_pips": 5.262,
+            "median_net_pips": 5.2,
+            "pf": 6.316,
+            "win_pct": 78.3,
+            "t": 5.75,
+            "positive_month_pct": 58.3,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 9.74
+          },
+          "holdout": {
+            "n": 145,
+            "trades_per_month": 7.6,
+            "mean_net_pips": 7.689,
+            "median_net_pips": 5.7,
+            "pf": 9.786,
+            "win_pct": 83.4,
+            "t": 7.11,
+            "positive_month_pct": 84.2,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 11.8
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 0
+            },
+            "val": {
+              "n": 2,
+              "trades_per_month": 0.2,
+              "mean_net_pips": 8.85,
+              "median_net_pips": 8.85,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 6.56,
+              "positive_month_pct": 18.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.05
+            },
+            "test": {
+              "n": 3,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 1.6,
+              "median_net_pips": 0.4,
+              "pf": 7.0,
+              "win_pct": 66.7,
+              "t": 0.87,
+              "positive_month_pct": 8.0,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.47
+            },
+            "holdout": {
+              "n": 8,
+              "trades_per_month": 1.6,
+              "mean_net_pips": 13.7,
+              "median_net_pips": 5.55,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 2.17,
+              "positive_month_pct": 80.0,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 16.16
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 14,
+              "trades_per_month": 0.4,
+              "mean_net_pips": -14.443,
+              "median_net_pips": -3.4,
+              "pf": 0.128,
+              "win_pct": 35.7,
+              "t": -1.44,
+              "positive_month_pct": 7.7,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 8.21
+            },
+            "val": {
+              "n": 24,
+              "trades_per_month": 1.1,
+              "mean_net_pips": -7.963,
+              "median_net_pips": 3.1,
+              "pf": 0.377,
+              "win_pct": 58.3,
+              "t": -0.71,
+              "positive_month_pct": 31.8,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 10.79
+            },
+            "test": {
+              "n": 4,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 4.025,
+              "median_net_pips": 3.7,
+              "pf": 3.776,
+              "win_pct": 75.0,
+              "t": 0.97,
+              "positive_month_pct": 9.1,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 9.5
+            },
+            "holdout": {
+              "n": 22,
+              "trades_per_month": 1.8,
+              "mean_net_pips": 7.577,
+              "median_net_pips": 6.5,
+              "pf": 5.274,
+              "win_pct": 81.8,
+              "t": 2.64,
+              "positive_month_pct": 66.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 12.02
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 5,
+              "trades_per_month": 0.1,
+              "mean_net_pips": -6.4,
+              "median_net_pips": -0.7,
+              "pf": 0.379,
+              "win_pct": 40.0,
+              "t": -0.79,
+              "positive_month_pct": 4.9,
+              "positive_year_pct": 25.0,
+              "avg_gap_pips": 10.42
+            },
+            "val": {
+              "n": 2,
+              "trades_per_month": 0.2,
+              "mean_net_pips": -0.05,
+              "median_net_pips": -0.05,
+              "pf": 0.889,
+              "win_pct": 50.0,
+              "t": -0.06,
+              "positive_month_pct": 7.7,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 6.1
+            },
+            "test": {
+              "n": 11,
+              "trades_per_month": 0.4,
+              "mean_net_pips": 5.909,
+              "median_net_pips": 5.3,
+              "pf": 66.0,
+              "win_pct": 90.9,
+              "t": 5.5,
+              "positive_month_pct": 20.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 8.97
+            },
+            "holdout": {
+              "n": 13,
+              "trades_per_month": 0.8,
+              "mean_net_pips": 8.692,
+              "median_net_pips": 5.3,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 4.11,
+              "positive_month_pct": 37.5,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.62
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 2,
+              "trades_per_month": 0.1,
+              "mean_net_pips": -2.0,
+              "median_net_pips": -2.0,
+              "pf": 0.07,
+              "win_pct": 50.0,
+              "t": -0.87,
+              "positive_month_pct": 3.4,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 13.15
+            },
+            "val": {
+              "n": 9,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 5.778,
+              "median_net_pips": 3.4,
+              "pf": 87.667,
+              "win_pct": 77.8,
+              "t": 2.56,
+              "positive_month_pct": 20.0,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 7.69
+            },
+            "test": {
+              "n": 9,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 6.289,
+              "median_net_pips": 7.0,
+              "pf": 10.759,
+              "win_pct": 77.8,
+              "t": 3.2,
+              "positive_month_pct": 17.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 10.64
+            },
+            "holdout": {
+              "n": 25,
+              "trades_per_month": 1.3,
+              "mean_net_pips": 8.608,
+              "median_net_pips": 5.7,
+              "pf": 120.556,
+              "win_pct": 96.0,
+              "t": 5.07,
+              "positive_month_pct": 57.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.2
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 6,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 6.483,
+              "median_net_pips": 5.7,
+              "pf": 6.479,
+              "win_pct": 66.7,
+              "t": 1.48,
+              "positive_month_pct": 7.3,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 7.85
+            },
+            "val": {
+              "n": 11,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 5.627,
+              "median_net_pips": 4.8,
+              "pf": 12.255,
+              "win_pct": 72.7,
+              "t": 2.44,
+              "positive_month_pct": 13.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 8.56
+            },
+            "test": {
+              "n": 19,
+              "trades_per_month": 1.1,
+              "mean_net_pips": 7.626,
+              "median_net_pips": 7.4,
+              "pf": 21.408,
+              "win_pct": 78.9,
+              "t": 4.76,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.03
+            },
+            "holdout": {
+              "n": 29,
+              "trades_per_month": 1.5,
+              "mean_net_pips": 3.307,
+              "median_net_pips": 0.5,
+              "pf": 2.823,
+              "win_pct": 58.6,
+              "t": 1.56,
+              "positive_month_pct": 47.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.79
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 1,
+              "trades_per_month": 1.0,
+              "mean_net_pips": 13.2,
+              "median_net_pips": 13.2,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": null,
+              "positive_month_pct": 100.0,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.2
+            },
+            "val": {
+              "n": 4,
+              "trades_per_month": 0.2,
+              "mean_net_pips": 2.975,
+              "median_net_pips": 3.25,
+              "pf": 10.917,
+              "win_pct": 75.0,
+              "t": 1.73,
+              "positive_month_pct": 16.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 6.15
+            },
+            "test": {
+              "n": 23,
+              "trades_per_month": 0.7,
+              "mean_net_pips": 3.291,
+              "median_net_pips": 2.2,
+              "pf": 2.584,
+              "win_pct": 73.9,
+              "t": 1.59,
+              "positive_month_pct": 38.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.29
+            },
+            "holdout": {
+              "n": 48,
+              "trades_per_month": 2.5,
+              "mean_net_pips": 8.635,
+              "median_net_pips": 6.95,
+              "pf": 13.373,
+              "win_pct": 85.4,
+              "t": 3.85,
+              "positive_month_pct": 63.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 12.56
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 1315,
+            "median_monthly_jpy": 427,
+            "positive_month_pct": 58.3,
+            "p10_month_jpy": -330,
+            "p90_month_jpy": 4802,
+            "return_pct": 9.47,
+            "max_dd_pct": 1.31,
+            "avg_R": 0.4385,
+            "pf_R": 3.746
+          },
+          "holdout_0.003": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 4972,
+            "median_monthly_jpy": 2102,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 14360,
+            "return_pct": 23.87,
+            "max_dd_pct": 0.55,
+            "avg_R": 0.5295,
+            "pf_R": 6.497
+          },
+          "test_0.004": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 1779,
+            "median_monthly_jpy": 581,
+            "positive_month_pct": 58.3,
+            "p10_month_jpy": -443,
+            "p90_month_jpy": 6468,
+            "return_pct": 12.81,
+            "max_dd_pct": 1.75,
+            "avg_R": 0.4385,
+            "pf_R": 3.746
+          },
+          "holdout_0.004": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 6876,
+            "median_monthly_jpy": 2981,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 20002,
+            "return_pct": 33.0,
+            "max_dd_pct": 0.73,
+            "avg_R": 0.5295,
+            "pf_R": 6.497
+          },
+          "test_0.006": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 2746,
+            "median_monthly_jpy": 906,
+            "positive_month_pct": 58.3,
+            "p10_month_jpy": -675,
+            "p90_month_jpy": 9901,
+            "return_pct": 19.77,
+            "max_dd_pct": 2.62,
+            "avg_R": 0.4385,
+            "pf_R": 3.746
+          },
+          "holdout_0.006": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 11105,
+            "median_monthly_jpy": 5059,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 32743,
+            "return_pct": 53.31,
+            "max_dd_pct": 1.09,
+            "avg_R": 0.5295,
+            "pf_R": 6.497
+          },
+          "test_0.008": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 3767,
+            "median_monthly_jpy": 1257,
+            "positive_month_pct": 58.3,
+            "p10_month_jpy": -914,
+            "p90_month_jpy": 13476,
+            "return_pct": 27.13,
+            "max_dd_pct": 3.49,
+            "avg_R": 0.4385,
+            "pf_R": 3.746
+          },
+          "holdout_0.008": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 15968,
+            "median_monthly_jpy": 7628,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 47641,
+            "return_pct": 76.65,
+            "max_dd_pct": 1.46,
+            "avg_R": 0.5295,
+            "pf_R": 6.497
+          }
+        }
+      }
+    },
+    "1.5": {
+      "1": {
+        "pooled": {
+          "train": {
+            "n": 576,
+            "trades_per_month": 9.8,
+            "mean_net_pips": -0.573,
+            "median_net_pips": -0.25,
+            "pf": 0.814,
+            "win_pct": 47.6,
+            "t": -0.94,
+            "positive_month_pct": 33.9,
+            "positive_year_pct": 60.0,
+            "avg_gap_pips": 2.12
+          },
+          "val": {
+            "n": 589,
+            "trades_per_month": 16.4,
+            "mean_net_pips": 0.017,
+            "median_net_pips": 0.3,
+            "pf": 1.009,
+            "win_pct": 53.3,
+            "t": 0.03,
+            "positive_month_pct": 61.1,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 2.67
+          },
+          "test": {
+            "n": 806,
+            "trades_per_month": 22.4,
+            "mean_net_pips": -0.501,
+            "median_net_pips": -0.65,
+            "pf": 0.731,
+            "win_pct": 41.8,
+            "t": -3.09,
+            "positive_month_pct": 27.8,
+            "positive_year_pct": 33.3,
+            "avg_gap_pips": 2.62
+          },
+          "holdout": {
+            "n": 621,
+            "trades_per_month": 32.7,
+            "mean_net_pips": 1.346,
+            "median_net_pips": 0.35,
+            "pf": 1.993,
+            "win_pct": 53.0,
+            "t": 4.41,
+            "positive_month_pct": 52.6,
+            "positive_year_pct": 50.0,
+            "avg_gap_pips": 4.46
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 36,
+              "trades_per_month": 0.6,
+              "mean_net_pips": 1.028,
+              "median_net_pips": 1.0,
+              "pf": 1.911,
+              "win_pct": 61.1,
+              "t": 1.53,
+              "positive_month_pct": 32.8,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 1.64
+            },
+            "val": {
+              "n": 60,
+              "trades_per_month": 1.7,
+              "mean_net_pips": 1.665,
+              "median_net_pips": 1.1,
+              "pf": 4.352,
+              "win_pct": 66.7,
+              "t": 3.98,
+              "positive_month_pct": 55.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 2.24
+            },
+            "test": {
+              "n": 59,
+              "trades_per_month": 1.7,
+              "mean_net_pips": 0.708,
+              "median_net_pips": 0.6,
+              "pf": 1.834,
+              "win_pct": 59.3,
+              "t": 1.8,
+              "positive_month_pct": 42.9,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 2.16
+            },
+            "holdout": {
+              "n": 64,
+              "trades_per_month": 3.6,
+              "mean_net_pips": 2.786,
+              "median_net_pips": 1.7,
+              "pf": 7.579,
+              "win_pct": 79.7,
+              "t": 2.94,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 4.09
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 127,
+              "trades_per_month": 2.2,
+              "mean_net_pips": -1.338,
+              "median_net_pips": 0.25,
+              "pf": 0.746,
+              "win_pct": 51.2,
+              "t": -0.53,
+              "positive_month_pct": 44.1,
+              "positive_year_pct": 40.0,
+              "avg_gap_pips": 2.48
+            },
+            "val": {
+              "n": 160,
+              "trades_per_month": 4.4,
+              "mean_net_pips": -1.336,
+              "median_net_pips": -0.3,
+              "pf": 0.63,
+              "win_pct": 45.6,
+              "t": -0.76,
+              "positive_month_pct": 41.7,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 3.45
+            },
+            "test": {
+              "n": 144,
+              "trades_per_month": 4.1,
+              "mean_net_pips": -0.351,
+              "median_net_pips": -0.15,
+              "pf": 0.752,
+              "win_pct": 44.4,
+              "t": -1.18,
+              "positive_month_pct": 31.4,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 1.99
+            },
+            "holdout": {
+              "n": 116,
+              "trades_per_month": 6.1,
+              "mean_net_pips": 0.788,
+              "median_net_pips": -0.15,
+              "pf": 1.443,
+              "win_pct": 48.3,
+              "t": 1.17,
+              "positive_month_pct": 57.9,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.97
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 119,
+              "trades_per_month": 2.0,
+              "mean_net_pips": -0.9,
+              "median_net_pips": -0.25,
+              "pf": 0.705,
+              "win_pct": 48.7,
+              "t": -1.32,
+              "positive_month_pct": 39.0,
+              "positive_year_pct": 40.0,
+              "avg_gap_pips": 2.13
+            },
+            "val": {
+              "n": 106,
+              "trades_per_month": 3.0,
+              "mean_net_pips": 0.804,
+              "median_net_pips": 0.6,
+              "pf": 1.905,
+              "win_pct": 60.4,
+              "t": 2.12,
+              "positive_month_pct": 57.1,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 2.11
+            },
+            "test": {
+              "n": 124,
+              "trades_per_month": 3.4,
+              "mean_net_pips": -0.279,
+              "median_net_pips": -0.1,
+              "pf": 0.807,
+              "win_pct": 46.0,
+              "t": -0.78,
+              "positive_month_pct": 38.9,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 2.41
+            },
+            "holdout": {
+              "n": 96,
+              "trades_per_month": 5.1,
+              "mean_net_pips": 1.002,
+              "median_net_pips": 0.25,
+              "pf": 1.942,
+              "win_pct": 52.1,
+              "t": 2.0,
+              "positive_month_pct": 63.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.4
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 82,
+              "trades_per_month": 1.6,
+              "mean_net_pips": -0.87,
+              "median_net_pips": -0.45,
+              "pf": 0.687,
+              "win_pct": 41.5,
+              "t": -1.25,
+              "positive_month_pct": 27.5,
+              "positive_year_pct": 40.0,
+              "avg_gap_pips": 2.03
+            },
+            "val": {
+              "n": 91,
+              "trades_per_month": 2.5,
+              "mean_net_pips": 0.199,
+              "median_net_pips": -0.15,
+              "pf": 1.135,
+              "win_pct": 48.4,
+              "t": 0.44,
+              "positive_month_pct": 38.9,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 2.64
+            },
+            "test": {
+              "n": 199,
+              "trades_per_month": 5.5,
+              "mean_net_pips": -1.221,
+              "median_net_pips": -1.25,
+              "pf": 0.406,
+              "win_pct": 33.7,
+              "t": -4.64,
+              "positive_month_pct": 13.9,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 2.4
+            },
+            "holdout": {
+              "n": 136,
+              "trades_per_month": 7.2,
+              "mean_net_pips": 0.686,
+              "median_net_pips": -0.5,
+              "pf": 1.475,
+              "win_pct": 47.1,
+              "t": 1.4,
+              "positive_month_pct": 42.1,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.8
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 159,
+              "trades_per_month": 2.7,
+              "mean_net_pips": -0.361,
+              "median_net_pips": -0.55,
+              "pf": 0.814,
+              "win_pct": 40.9,
+              "t": -0.91,
+              "positive_month_pct": 35.6,
+              "positive_year_pct": 40.0,
+              "avg_gap_pips": 2.12
+            },
+            "val": {
+              "n": 96,
+              "trades_per_month": 2.7,
+              "mean_net_pips": 0.07,
+              "median_net_pips": -0.35,
+              "pf": 1.043,
+              "win_pct": 49.0,
+              "t": 0.15,
+              "positive_month_pct": 36.1,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 2.81
+            },
+            "test": {
+              "n": 149,
+              "trades_per_month": 4.1,
+              "mean_net_pips": -0.488,
+              "median_net_pips": -1.15,
+              "pf": 0.765,
+              "win_pct": 36.9,
+              "t": -1.17,
+              "positive_month_pct": 30.6,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 3.25
+            },
+            "holdout": {
+              "n": 124,
+              "trades_per_month": 6.5,
+              "mean_net_pips": 0.091,
+              "median_net_pips": -0.7,
+              "pf": 1.056,
+              "win_pct": 41.1,
+              "t": 0.16,
+              "positive_month_pct": 57.9,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 4.11
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 53,
+              "trades_per_month": 1.0,
+              "mean_net_pips": 0.732,
+              "median_net_pips": 1.2,
+              "pf": 1.243,
+              "win_pct": 56.6,
+              "t": 0.51,
+              "positive_month_pct": 35.3,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 1.71
+            },
+            "val": {
+              "n": 76,
+              "trades_per_month": 2.1,
+              "mean_net_pips": 0.182,
+              "median_net_pips": 0.4,
+              "pf": 1.159,
+              "win_pct": 60.5,
+              "t": 0.43,
+              "positive_month_pct": 47.2,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 2.01
+            },
+            "test": {
+              "n": 131,
+              "trades_per_month": 3.6,
+              "mean_net_pips": -0.34,
+              "median_net_pips": -0.5,
+              "pf": 0.871,
+              "win_pct": 45.0,
+              "t": -0.57,
+              "positive_month_pct": 33.3,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 3.33
+            },
+            "holdout": {
+              "n": 85,
+              "trades_per_month": 4.5,
+              "mean_net_pips": 4.295,
+              "median_net_pips": 2.3,
+              "pf": 4.435,
+              "win_pct": 67.1,
+              "t": 3.11,
+              "positive_month_pct": 73.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 8.17
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -4014,
+            "median_monthly_jpy": -4903,
+            "positive_month_pct": 25.0,
+            "p10_month_jpy": -10949,
+            "p90_month_jpy": 3032,
+            "return_pct": -28.9,
+            "max_dd_pct": 31.85,
+            "avg_R": -0.145,
+            "pf_R": 0.604
+          },
+          "holdout_0.003": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": 1455,
+            "median_monthly_jpy": 0,
+            "positive_month_pct": 37.5,
+            "p10_month_jpy": -7179,
+            "p90_month_jpy": 13196,
+            "return_pct": 6.98,
+            "max_dd_pct": 10.11,
+            "avg_R": 0.0424,
+            "pf_R": 1.168
+          },
+          "test_0.004": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -5084,
+            "median_monthly_jpy": -6078,
+            "positive_month_pct": 25.0,
+            "p10_month_jpy": -13509,
+            "p90_month_jpy": 4043,
+            "return_pct": -36.61,
+            "max_dd_pct": 40.06,
+            "avg_R": -0.145,
+            "pf_R": 0.604
+          },
+          "holdout_0.004": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": 1951,
+            "median_monthly_jpy": 0,
+            "positive_month_pct": 37.5,
+            "p10_month_jpy": -9988,
+            "p90_month_jpy": 18503,
+            "return_pct": 9.36,
+            "max_dd_pct": 13.27,
+            "avg_R": 0.0424,
+            "pf_R": 1.168
+          },
+          "test_0.006": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -6900,
+            "median_monthly_jpy": -8497,
+            "positive_month_pct": 25.0,
+            "p10_month_jpy": -17107,
+            "p90_month_jpy": 6063,
+            "return_pct": -49.68,
+            "max_dd_pct": 53.69,
+            "avg_R": -0.145,
+            "pf_R": 0.604
+          },
+          "holdout_0.006": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": 2957,
+            "median_monthly_jpy": 0,
+            "positive_month_pct": 37.5,
+            "p10_month_jpy": -16306,
+            "p90_month_jpy": 30684,
+            "return_pct": 14.2,
+            "max_dd_pct": 19.28,
+            "avg_R": 0.0424,
+            "pf_R": 1.168
+          },
+          "test_0.008": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -8353,
+            "median_monthly_jpy": -10653,
+            "positive_month_pct": 25.0,
+            "p10_month_jpy": -19484,
+            "p90_month_jpy": 8078,
+            "return_pct": -60.14,
+            "max_dd_pct": 64.26,
+            "avg_R": -0.145,
+            "pf_R": 0.604
+          },
+          "holdout_0.008": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": 3984,
+            "median_monthly_jpy": 0,
+            "positive_month_pct": 37.5,
+            "p10_month_jpy": -23643,
+            "p90_month_jpy": 45211,
+            "return_pct": 19.12,
+            "max_dd_pct": 24.92,
+            "avg_R": 0.0424,
+            "pf_R": 1.168
+          }
+        }
+      },
+      "2": {
+        "pooled": {
+          "train": {
+            "n": 177,
+            "trades_per_month": 3.0,
+            "mean_net_pips": -0.922,
+            "median_net_pips": 0.25,
+            "pf": 0.793,
+            "win_pct": 53.1,
+            "t": -0.51,
+            "positive_month_pct": 39.0,
+            "positive_year_pct": 60.0,
+            "avg_gap_pips": 3.74
+          },
+          "val": {
+            "n": 246,
+            "trades_per_month": 6.8,
+            "mean_net_pips": 0.264,
+            "median_net_pips": 0.55,
+            "pf": 1.112,
+            "win_pct": 60.6,
+            "t": 0.23,
+            "positive_month_pct": 77.8,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 4.41
+          },
+          "test": {
+            "n": 314,
+            "trades_per_month": 8.7,
+            "mean_net_pips": 0.961,
+            "median_net_pips": 0.6,
+            "pf": 1.691,
+            "win_pct": 57.3,
+            "t": 3.18,
+            "positive_month_pct": 52.8,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 4.46
+          },
+          "holdout": {
+            "n": 374,
+            "trades_per_month": 19.7,
+            "mean_net_pips": 2.966,
+            "median_net_pips": 1.65,
+            "pf": 3.817,
+            "win_pct": 66.0,
+            "t": 6.29,
+            "positive_month_pct": 78.9,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 6.45
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 6,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 3.283,
+              "median_net_pips": 3.75,
+              "pf": 14.133,
+              "win_pct": 83.3,
+              "t": 2.75,
+              "positive_month_pct": 8.6,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 2.92
+            },
+            "val": {
+              "n": 21,
+              "trades_per_month": 0.6,
+              "mean_net_pips": 4.167,
+              "median_net_pips": 3.6,
+              "pf": 40.773,
+              "win_pct": 90.5,
+              "t": 5.7,
+              "positive_month_pct": 39.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.76
+            },
+            "test": {
+              "n": 18,
+              "trades_per_month": 0.5,
+              "mean_net_pips": 1.006,
+              "median_net_pips": 1.1,
+              "pf": 2.131,
+              "win_pct": 66.7,
+              "t": 1.19,
+              "positive_month_pct": 20.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.72
+            },
+            "holdout": {
+              "n": 36,
+              "trades_per_month": 2.0,
+              "mean_net_pips": 5.031,
+              "median_net_pips": 3.1,
+              "pf": 96.316,
+              "win_pct": 94.4,
+              "t": 3.23,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 6.16
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 43,
+              "trades_per_month": 0.7,
+              "mean_net_pips": -4.166,
+              "median_net_pips": -2.05,
+              "pf": 0.638,
+              "win_pct": 48.8,
+              "t": -0.57,
+              "positive_month_pct": 18.6,
+              "positive_year_pct": 20.0,
+              "avg_gap_pips": 4.55
+            },
+            "val": {
+              "n": 78,
+              "trades_per_month": 2.2,
+              "mean_net_pips": -2.274,
+              "median_net_pips": -0.1,
+              "pf": 0.593,
+              "win_pct": 48.7,
+              "t": -0.64,
+              "positive_month_pct": 40.0,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.58
+            },
+            "test": {
+              "n": 37,
+              "trades_per_month": 1.1,
+              "mean_net_pips": 1.299,
+              "median_net_pips": 0.75,
+              "pf": 2.78,
+              "win_pct": 62.2,
+              "t": 2.12,
+              "positive_month_pct": 35.3,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 3.56
+            },
+            "holdout": {
+              "n": 61,
+              "trades_per_month": 3.4,
+              "mean_net_pips": 2.429,
+              "median_net_pips": 1.55,
+              "pf": 2.494,
+              "win_pct": 62.3,
+              "t": 2.07,
+              "positive_month_pct": 72.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 6.22
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 34,
+              "trades_per_month": 0.7,
+              "mean_net_pips": -1.506,
+              "median_net_pips": 0.1,
+              "pf": 0.579,
+              "win_pct": 50.0,
+              "t": -1.04,
+              "positive_month_pct": 26.1,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.86
+            },
+            "val": {
+              "n": 40,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 0.7,
+              "median_net_pips": 0.45,
+              "pf": 2.059,
+              "win_pct": 62.5,
+              "t": 1.62,
+              "positive_month_pct": 39.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.25
+            },
+            "test": {
+              "n": 42,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 1.481,
+              "median_net_pips": 1.5,
+              "pf": 2.74,
+              "win_pct": 69.0,
+              "t": 2.27,
+              "positive_month_pct": 36.1,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.41
+            },
+            "holdout": {
+              "n": 46,
+              "trades_per_month": 2.4,
+              "mean_net_pips": 3.13,
+              "median_net_pips": 1.75,
+              "pf": 8.291,
+              "win_pct": 76.1,
+              "t": 3.76,
+              "positive_month_pct": 68.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 5.55
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 24,
+              "trades_per_month": 0.5,
+              "mean_net_pips": -0.371,
+              "median_net_pips": 0.65,
+              "pf": 0.858,
+              "win_pct": 58.3,
+              "t": -0.25,
+              "positive_month_pct": 20.0,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.65
+            },
+            "val": {
+              "n": 40,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 1.188,
+              "median_net_pips": 0.55,
+              "pf": 2.064,
+              "win_pct": 57.5,
+              "t": 1.53,
+              "positive_month_pct": 37.5,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.13
+            },
+            "test": {
+              "n": 81,
+              "trades_per_month": 2.3,
+              "mean_net_pips": 0.264,
+              "median_net_pips": 0.05,
+              "pf": 1.208,
+              "win_pct": 50.6,
+              "t": 0.6,
+              "positive_month_pct": 37.1,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.76
+            },
+            "holdout": {
+              "n": 75,
+              "trades_per_month": 3.9,
+              "mean_net_pips": 2.55,
+              "median_net_pips": 1.35,
+              "pf": 3.835,
+              "win_pct": 64.0,
+              "t": 3.3,
+              "positive_month_pct": 52.6,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 5.66
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 59,
+              "trades_per_month": 1.4,
+              "mean_net_pips": 0.723,
+              "median_net_pips": -0.15,
+              "pf": 1.517,
+              "win_pct": 49.2,
+              "t": 1.06,
+              "positive_month_pct": 38.1,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.29
+            },
+            "val": {
+              "n": 44,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 1.075,
+              "median_net_pips": 0.4,
+              "pf": 1.794,
+              "win_pct": 56.8,
+              "t": 1.28,
+              "positive_month_pct": 33.3,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.52
+            },
+            "test": {
+              "n": 72,
+              "trades_per_month": 2.1,
+              "mean_net_pips": 1.658,
+              "median_net_pips": 0.85,
+              "pf": 2.315,
+              "win_pct": 55.6,
+              "t": 2.51,
+              "positive_month_pct": 28.6,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.14
+            },
+            "holdout": {
+              "n": 83,
+              "trades_per_month": 4.4,
+              "mean_net_pips": 0.742,
+              "median_net_pips": -0.15,
+              "pf": 1.484,
+              "win_pct": 47.0,
+              "t": 0.94,
+              "positive_month_pct": 57.9,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 5.45
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 11,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 1.245,
+              "median_net_pips": 1.9,
+              "pf": 1.519,
+              "win_pct": 72.7,
+              "t": 0.5,
+              "positive_month_pct": 18.6,
+              "positive_year_pct": 75.0,
+              "avg_gap_pips": 3.15
+            },
+            "val": {
+              "n": 23,
+              "trades_per_month": 0.7,
+              "mean_net_pips": 1.396,
+              "median_net_pips": 1.2,
+              "pf": 4.117,
+              "win_pct": 82.6,
+              "t": 2.61,
+              "positive_month_pct": 41.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.37
+            },
+            "test": {
+              "n": 64,
+              "trades_per_month": 1.9,
+              "mean_net_pips": 0.513,
+              "median_net_pips": 0.45,
+              "pf": 1.199,
+              "win_pct": 54.7,
+              "t": 0.52,
+              "positive_month_pct": 33.3,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.33
+            },
+            "holdout": {
+              "n": 73,
+              "trades_per_month": 3.8,
+              "mean_net_pips": 5.248,
+              "median_net_pips": 3.5,
+              "pf": 5.899,
+              "win_pct": 72.6,
+              "t": 3.34,
+              "positive_month_pct": 73.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.3
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": 922,
+            "median_monthly_jpy": 49,
+            "positive_month_pct": 50.0,
+            "p10_month_jpy": -5611,
+            "p90_month_jpy": 7801,
+            "return_pct": 6.64,
+            "max_dd_pct": 6.26,
+            "avg_R": 0.0697,
+            "pf_R": 1.259
+          },
+          "holdout_0.003": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 5250,
+            "median_monthly_jpy": 2549,
+            "positive_month_pct": 62.5,
+            "p10_month_jpy": -2192,
+            "p90_month_jpy": 15270,
+            "return_pct": 25.2,
+            "max_dd_pct": 1.94,
+            "avg_R": 0.2264,
+            "pf_R": 2.301
+          },
+          "test_0.004": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": 1236,
+            "median_monthly_jpy": 67,
+            "positive_month_pct": 50.0,
+            "p10_month_jpy": -7748,
+            "p90_month_jpy": 10583,
+            "return_pct": 8.9,
+            "max_dd_pct": 8.28,
+            "avg_R": 0.0697,
+            "pf_R": 1.259
+          },
+          "holdout_0.004": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 7269,
+            "median_monthly_jpy": 3645,
+            "positive_month_pct": 62.5,
+            "p10_month_jpy": -3156,
+            "p90_month_jpy": 21374,
+            "return_pct": 34.89,
+            "max_dd_pct": 2.58,
+            "avg_R": 0.2264,
+            "pf_R": 2.301
+          },
+          "test_0.006": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": 1874,
+            "median_monthly_jpy": 105,
+            "positive_month_pct": 50.0,
+            "p10_month_jpy": -12461,
+            "p90_month_jpy": 16444,
+            "return_pct": 13.5,
+            "max_dd_pct": 12.22,
+            "avg_R": 0.0697,
+            "pf_R": 1.259
+          },
+          "holdout_0.006": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 11774,
+            "median_monthly_jpy": 6290,
+            "positive_month_pct": 62.5,
+            "p10_month_jpy": -5517,
+            "p90_month_jpy": 35329,
+            "return_pct": 56.51,
+            "max_dd_pct": 3.86,
+            "avg_R": 0.2264,
+            "pf_R": 2.301
+          },
+          "test_0.008": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": 2526,
+            "median_monthly_jpy": 143,
+            "positive_month_pct": 50.0,
+            "p10_month_jpy": -17806,
+            "p90_month_jpy": 22731,
+            "return_pct": 18.18,
+            "max_dd_pct": 16.03,
+            "avg_R": 0.0697,
+            "pf_R": 1.259
+          },
+          "holdout_0.008": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 16975,
+            "median_monthly_jpy": 9640,
+            "positive_month_pct": 62.5,
+            "p10_month_jpy": -8568,
+            "p90_month_jpy": 52251,
+            "return_pct": 81.48,
+            "max_dd_pct": 5.12,
+            "avg_R": 0.2264,
+            "pf_R": 2.301
+          }
+        }
+      },
+      "5": {
+        "pooled": {
+          "train": {
+            "n": 28,
+            "trades_per_month": 0.6,
+            "mean_net_pips": -7.302,
+            "median_net_pips": -2.2,
+            "pf": 0.33,
+            "win_pct": 42.9,
+            "t": -1.33,
+            "positive_month_pct": 17.4,
+            "positive_year_pct": 0.0,
+            "avg_gap_pips": 8.99
+          },
+          "val": {
+            "n": 52,
+            "trades_per_month": 1.4,
+            "mean_net_pips": -1.581,
+            "median_net_pips": 2.75,
+            "pf": 0.748,
+            "win_pct": 67.3,
+            "t": -0.3,
+            "positive_month_pct": 38.9,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 9.18
+          },
+          "test": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "mean_net_pips": 4.649,
+            "median_net_pips": 4.65,
+            "pf": 5.144,
+            "win_pct": 78.3,
+            "t": 5.09,
+            "positive_month_pct": 58.3,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 9.74
+          },
+          "holdout": {
+            "n": 145,
+            "trades_per_month": 7.6,
+            "mean_net_pips": 7.074,
+            "median_net_pips": 4.95,
+            "pf": 8.128,
+            "win_pct": 81.4,
+            "t": 6.53,
+            "positive_month_pct": 84.2,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 11.8
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 0
+            },
+            "val": {
+              "n": 2,
+              "trades_per_month": 0.2,
+              "mean_net_pips": 8.45,
+              "median_net_pips": 8.45,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 6.26,
+              "positive_month_pct": 18.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.05
+            },
+            "test": {
+              "n": 3,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 1.2,
+              "median_net_pips": 0.0,
+              "pf": 4.0,
+              "win_pct": 66.7,
+              "t": 0.65,
+              "positive_month_pct": 8.0,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.47
+            },
+            "holdout": {
+              "n": 8,
+              "trades_per_month": 1.6,
+              "mean_net_pips": 13.3,
+              "median_net_pips": 5.15,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 2.1,
+              "positive_month_pct": 80.0,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 16.16
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 14,
+              "trades_per_month": 0.4,
+              "mean_net_pips": -15.093,
+              "median_net_pips": -4.05,
+              "pf": 0.111,
+              "win_pct": 35.7,
+              "t": -1.5,
+              "positive_month_pct": 7.7,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 8.21
+            },
+            "val": {
+              "n": 24,
+              "trades_per_month": 1.1,
+              "mean_net_pips": -8.613,
+              "median_net_pips": 2.45,
+              "pf": 0.34,
+              "win_pct": 58.3,
+              "t": -0.77,
+              "positive_month_pct": 31.8,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 10.79
+            },
+            "test": {
+              "n": 4,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 3.375,
+              "median_net_pips": 3.05,
+              "pf": 3.093,
+              "win_pct": 75.0,
+              "t": 0.81,
+              "positive_month_pct": 9.1,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 9.5
+            },
+            "holdout": {
+              "n": 22,
+              "trades_per_month": 1.8,
+              "mean_net_pips": 6.927,
+              "median_net_pips": 5.85,
+              "pf": 4.663,
+              "win_pct": 81.8,
+              "t": 2.41,
+              "positive_month_pct": 66.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 12.02
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 5,
+              "trades_per_month": 0.1,
+              "mean_net_pips": -6.95,
+              "median_net_pips": -1.25,
+              "pf": 0.346,
+              "win_pct": 40.0,
+              "t": -0.86,
+              "positive_month_pct": 4.9,
+              "positive_year_pct": 25.0,
+              "avg_gap_pips": 10.42
+            },
+            "val": {
+              "n": 2,
+              "trades_per_month": 0.2,
+              "mean_net_pips": -0.6,
+              "median_net_pips": -0.6,
+              "pf": 0.172,
+              "win_pct": 50.0,
+              "t": -0.71,
+              "positive_month_pct": 7.7,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 6.1
+            },
+            "test": {
+              "n": 11,
+              "trades_per_month": 0.4,
+              "mean_net_pips": 5.359,
+              "median_net_pips": 4.75,
+              "pf": 39.032,
+              "win_pct": 90.9,
+              "t": 4.99,
+              "positive_month_pct": 20.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 8.97
+            },
+            "holdout": {
+              "n": 13,
+              "trades_per_month": 0.8,
+              "mean_net_pips": 8.142,
+              "median_net_pips": 4.75,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 3.85,
+              "positive_month_pct": 37.5,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.62
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 2,
+              "trades_per_month": 0.1,
+              "mean_net_pips": -2.75,
+              "median_net_pips": -2.75,
+              "pf": 0.0,
+              "win_pct": 0.0,
+              "t": -1.2,
+              "positive_month_pct": 0.0,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 13.15
+            },
+            "val": {
+              "n": 9,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 5.028,
+              "median_net_pips": 2.65,
+              "pf": 22.548,
+              "win_pct": 77.8,
+              "t": 2.23,
+              "positive_month_pct": 20.0,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 7.69
+            },
+            "test": {
+              "n": 9,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 5.539,
+              "median_net_pips": 6.25,
+              "pf": 7.829,
+              "win_pct": 77.8,
+              "t": 2.82,
+              "positive_month_pct": 17.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 10.64
+            },
+            "holdout": {
+              "n": 25,
+              "trades_per_month": 1.3,
+              "mean_net_pips": 7.858,
+              "median_net_pips": 4.95,
+              "pf": 78.039,
+              "win_pct": 96.0,
+              "t": 4.63,
+              "positive_month_pct": 57.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.2
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 6,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 5.733,
+              "median_net_pips": 4.95,
+              "pf": 5.0,
+              "win_pct": 66.7,
+              "t": 1.31,
+              "positive_month_pct": 7.3,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 7.85
+            },
+            "val": {
+              "n": 11,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 4.877,
+              "median_net_pips": 4.05,
+              "pf": 7.923,
+              "win_pct": 72.7,
+              "t": 2.11,
+              "positive_month_pct": 13.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 8.56
+            },
+            "test": {
+              "n": 19,
+              "trades_per_month": 1.1,
+              "mean_net_pips": 6.876,
+              "median_net_pips": 6.65,
+              "pf": 13.936,
+              "win_pct": 78.9,
+              "t": 4.3,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.03
+            },
+            "holdout": {
+              "n": 29,
+              "trades_per_month": 1.5,
+              "mean_net_pips": 2.557,
+              "median_net_pips": -0.25,
+              "pf": 2.182,
+              "win_pct": 48.3,
+              "t": 1.2,
+              "positive_month_pct": 42.1,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.79
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 1,
+              "trades_per_month": 1.0,
+              "mean_net_pips": 12.7,
+              "median_net_pips": 12.7,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": null,
+              "positive_month_pct": 100.0,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.2
+            },
+            "val": {
+              "n": 4,
+              "trades_per_month": 0.2,
+              "mean_net_pips": 2.475,
+              "median_net_pips": 2.75,
+              "pf": 6.824,
+              "win_pct": 75.0,
+              "t": 1.44,
+              "positive_month_pct": 16.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 6.15
+            },
+            "test": {
+              "n": 23,
+              "trades_per_month": 0.7,
+              "mean_net_pips": 2.791,
+              "median_net_pips": 1.7,
+              "pf": 2.264,
+              "win_pct": 73.9,
+              "t": 1.35,
+              "positive_month_pct": 35.5,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.29
+            },
+            "holdout": {
+              "n": 48,
+              "trades_per_month": 2.5,
+              "mean_net_pips": 8.135,
+              "median_net_pips": 6.45,
+              "pf": 11.554,
+              "win_pct": 85.4,
+              "t": 3.62,
+              "positive_month_pct": 63.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 12.56
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 1087,
+            "median_monthly_jpy": 306,
+            "positive_month_pct": 55.6,
+            "p10_month_jpy": -543,
+            "p90_month_jpy": 4358,
+            "return_pct": 7.82,
+            "max_dd_pct": 1.33,
+            "avg_R": 0.3652,
+            "pf_R": 3.051
+          },
+          "holdout_0.003": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 4211,
+            "median_monthly_jpy": 1674,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 12319,
+            "return_pct": 20.21,
+            "max_dd_pct": 0.62,
+            "avg_R": 0.4555,
+            "pf_R": 5.029
+          },
+          "test_0.004": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 1466,
+            "median_monthly_jpy": 414,
+            "positive_month_pct": 55.6,
+            "p10_month_jpy": -730,
+            "p90_month_jpy": 5863,
+            "return_pct": 10.55,
+            "max_dd_pct": 1.78,
+            "avg_R": 0.3652,
+            "pf_R": 3.051
+          },
+          "holdout_0.004": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 5792,
+            "median_monthly_jpy": 2354,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 17054,
+            "return_pct": 27.8,
+            "max_dd_pct": 0.83,
+            "avg_R": 0.4555,
+            "pf_R": 5.029
+          },
+          "test_0.006": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 2250,
+            "median_monthly_jpy": 643,
+            "positive_month_pct": 55.6,
+            "p10_month_jpy": -1114,
+            "p90_month_jpy": 8957,
+            "return_pct": 16.2,
+            "max_dd_pct": 2.67,
+            "avg_R": 0.3652,
+            "pf_R": 3.051
+          },
+          "holdout_0.006": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 9252,
+            "median_monthly_jpy": 3927,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 27572,
+            "return_pct": 44.41,
+            "max_dd_pct": 1.24,
+            "avg_R": 0.4555,
+            "pf_R": 5.029
+          },
+          "test_0.008": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 3070,
+            "median_monthly_jpy": 886,
+            "positive_month_pct": 55.6,
+            "p10_month_jpy": -1511,
+            "p90_month_jpy": 12164,
+            "return_pct": 22.1,
+            "max_dd_pct": 3.56,
+            "avg_R": 0.3652,
+            "pf_R": 3.051
+          },
+          "holdout_0.008": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 13150,
+            "median_monthly_jpy": 5822,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 39621,
+            "return_pct": 63.12,
+            "max_dd_pct": 1.65,
+            "avg_R": 0.4555,
+            "pf_R": 5.029
+          }
+        }
+      }
+    },
+    "2.0": {
+      "1": {
+        "pooled": {
+          "train": {
+            "n": 576,
+            "trades_per_month": 9.8,
+            "mean_net_pips": -1.214,
+            "median_net_pips": -0.95,
+            "pf": 0.646,
+            "win_pct": 41.8,
+            "t": -2.0,
+            "positive_month_pct": 27.1,
+            "positive_year_pct": 40.0,
+            "avg_gap_pips": 2.12
+          },
+          "val": {
+            "n": 589,
+            "trades_per_month": 16.4,
+            "mean_net_pips": -0.602,
+            "median_net_pips": -0.3,
+            "pf": 0.72,
+            "win_pct": 43.3,
+            "t": -1.21,
+            "positive_month_pct": 41.7,
+            "positive_year_pct": 0.0,
+            "avg_gap_pips": 2.67
+          },
+          "test": {
+            "n": 806,
+            "trades_per_month": 22.4,
+            "mean_net_pips": -1.136,
+            "median_net_pips": -1.25,
+            "pf": 0.497,
+            "win_pct": 34.1,
+            "t": -6.98,
+            "positive_month_pct": 19.4,
+            "positive_year_pct": 0.0,
+            "avg_gap_pips": 2.62
+          },
+          "holdout": {
+            "n": 621,
+            "trades_per_month": 32.7,
+            "mean_net_pips": 0.715,
+            "median_net_pips": -0.3,
+            "pf": 1.425,
+            "win_pct": 47.0,
+            "t": 2.34,
+            "positive_month_pct": 36.8,
+            "positive_year_pct": 50.0,
+            "avg_gap_pips": 4.46
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 36,
+              "trades_per_month": 0.6,
+              "mean_net_pips": 0.628,
+              "median_net_pips": 0.6,
+              "pf": 1.479,
+              "win_pct": 52.8,
+              "t": 0.94,
+              "positive_month_pct": 27.6,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 1.64
+            },
+            "val": {
+              "n": 60,
+              "trades_per_month": 1.7,
+              "mean_net_pips": 1.265,
+              "median_net_pips": 0.7,
+              "pf": 2.987,
+              "win_pct": 60.0,
+              "t": 3.02,
+              "positive_month_pct": 55.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 2.24
+            },
+            "test": {
+              "n": 59,
+              "trades_per_month": 1.7,
+              "mean_net_pips": 0.308,
+              "median_net_pips": 0.2,
+              "pf": 1.301,
+              "win_pct": 54.2,
+              "t": 0.78,
+              "positive_month_pct": 37.1,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 2.16
+            },
+            "holdout": {
+              "n": 64,
+              "trades_per_month": 3.6,
+              "mean_net_pips": 2.386,
+              "median_net_pips": 1.3,
+              "pf": 5.504,
+              "win_pct": 70.3,
+              "t": 2.52,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 4.09
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 127,
+              "trades_per_month": 2.2,
+              "mean_net_pips": -1.988,
+              "median_net_pips": -0.4,
+              "pf": 0.645,
+              "win_pct": 46.5,
+              "t": -0.79,
+              "positive_month_pct": 37.3,
+              "positive_year_pct": 40.0,
+              "avg_gap_pips": 2.48
+            },
+            "val": {
+              "n": 160,
+              "trades_per_month": 4.4,
+              "mean_net_pips": -1.986,
+              "median_net_pips": -0.95,
+              "pf": 0.502,
+              "win_pct": 39.4,
+              "t": -1.13,
+              "positive_month_pct": 36.1,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 3.45
+            },
+            "test": {
+              "n": 144,
+              "trades_per_month": 4.1,
+              "mean_net_pips": -1.001,
+              "median_net_pips": -0.8,
+              "pf": 0.446,
+              "win_pct": 33.3,
+              "t": -3.36,
+              "positive_month_pct": 14.3,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 1.99
+            },
+            "holdout": {
+              "n": 116,
+              "trades_per_month": 6.1,
+              "mean_net_pips": 0.138,
+              "median_net_pips": -0.8,
+              "pf": 1.065,
+              "win_pct": 41.4,
+              "t": 0.2,
+              "positive_month_pct": 42.1,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.97
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 119,
+              "trades_per_month": 2.0,
+              "mean_net_pips": -1.45,
+              "median_net_pips": -0.8,
+              "pf": 0.566,
+              "win_pct": 43.7,
+              "t": -2.12,
+              "positive_month_pct": 30.5,
+              "positive_year_pct": 20.0,
+              "avg_gap_pips": 2.13
+            },
+            "val": {
+              "n": 106,
+              "trades_per_month": 3.0,
+              "mean_net_pips": 0.254,
+              "median_net_pips": 0.05,
+              "pf": 1.225,
+              "win_pct": 50.0,
+              "t": 0.67,
+              "positive_month_pct": 34.3,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 2.11
+            },
+            "test": {
+              "n": 124,
+              "trades_per_month": 3.4,
+              "mean_net_pips": -0.829,
+              "median_net_pips": -0.65,
+              "pf": 0.53,
+              "win_pct": 35.5,
+              "t": -2.33,
+              "positive_month_pct": 30.6,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 2.41
+            },
+            "holdout": {
+              "n": 96,
+              "trades_per_month": 5.1,
+              "mean_net_pips": 0.452,
+              "median_net_pips": -0.3,
+              "pf": 1.338,
+              "win_pct": 46.9,
+              "t": 0.9,
+              "positive_month_pct": 57.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.4
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 82,
+              "trades_per_month": 1.6,
+              "mean_net_pips": -1.62,
+              "median_net_pips": -1.2,
+              "pf": 0.499,
+              "win_pct": 35.4,
+              "t": -2.33,
+              "positive_month_pct": 23.5,
+              "positive_year_pct": 20.0,
+              "avg_gap_pips": 2.03
+            },
+            "val": {
+              "n": 91,
+              "trades_per_month": 2.5,
+              "mean_net_pips": -0.551,
+              "median_net_pips": -0.9,
+              "pf": 0.708,
+              "win_pct": 38.5,
+              "t": -1.21,
+              "positive_month_pct": 33.3,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 2.64
+            },
+            "test": {
+              "n": 199,
+              "trades_per_month": 5.5,
+              "mean_net_pips": -1.971,
+              "median_net_pips": -2.0,
+              "pf": 0.237,
+              "win_pct": 24.1,
+              "t": -7.48,
+              "positive_month_pct": 11.1,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 2.4
+            },
+            "holdout": {
+              "n": 136,
+              "trades_per_month": 7.2,
+              "mean_net_pips": -0.064,
+              "median_net_pips": -1.25,
+              "pf": 0.966,
+              "win_pct": 41.9,
+              "t": -0.13,
+              "positive_month_pct": 26.3,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.8
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 159,
+              "trades_per_month": 2.7,
+              "mean_net_pips": -1.111,
+              "median_net_pips": -1.3,
+              "pf": 0.54,
+              "win_pct": 34.0,
+              "t": -2.79,
+              "positive_month_pct": 32.2,
+              "positive_year_pct": 20.0,
+              "avg_gap_pips": 2.12
+            },
+            "val": {
+              "n": 96,
+              "trades_per_month": 2.7,
+              "mean_net_pips": -0.68,
+              "median_net_pips": -1.1,
+              "pf": 0.666,
+              "win_pct": 34.4,
+              "t": -1.42,
+              "positive_month_pct": 22.2,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 2.81
+            },
+            "test": {
+              "n": 149,
+              "trades_per_month": 4.1,
+              "mean_net_pips": -1.238,
+              "median_net_pips": -1.9,
+              "pf": 0.518,
+              "win_pct": 32.9,
+              "t": -2.96,
+              "positive_month_pct": 25.0,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 3.25
+            },
+            "holdout": {
+              "n": 124,
+              "trades_per_month": 6.5,
+              "mean_net_pips": -0.659,
+              "median_net_pips": -1.45,
+              "pf": 0.688,
+              "win_pct": 32.3,
+              "t": -1.18,
+              "positive_month_pct": 31.6,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 4.11
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 53,
+              "trades_per_month": 1.0,
+              "mean_net_pips": 0.232,
+              "median_net_pips": 0.7,
+              "pf": 1.072,
+              "win_pct": 52.8,
+              "t": 0.16,
+              "positive_month_pct": 31.4,
+              "positive_year_pct": 60.0,
+              "avg_gap_pips": 1.71
+            },
+            "val": {
+              "n": 76,
+              "trades_per_month": 2.1,
+              "mean_net_pips": -0.318,
+              "median_net_pips": -0.1,
+              "pf": 0.768,
+              "win_pct": 46.1,
+              "t": -0.76,
+              "positive_month_pct": 36.1,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 2.01
+            },
+            "test": {
+              "n": 131,
+              "trades_per_month": 3.6,
+              "mean_net_pips": -0.84,
+              "median_net_pips": -1.0,
+              "pf": 0.713,
+              "win_pct": 41.2,
+              "t": -1.42,
+              "positive_month_pct": 33.3,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 3.33
+            },
+            "holdout": {
+              "n": 85,
+              "trades_per_month": 4.5,
+              "mean_net_pips": 3.795,
+              "median_net_pips": 1.8,
+              "pf": 3.682,
+              "win_pct": 67.1,
+              "t": 2.75,
+              "positive_month_pct": 73.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 8.17
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -6482,
+            "median_monthly_jpy": -6822,
+            "positive_month_pct": 8.3,
+            "p10_month_jpy": -11171,
+            "p90_month_jpy": -694,
+            "return_pct": -46.67,
+            "max_dd_pct": 46.67,
+            "avg_R": -0.268,
+            "pf_R": 0.398
+          },
+          "holdout_0.003": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": -2309,
+            "median_monthly_jpy": 0,
+            "positive_month_pct": 33.3,
+            "p10_month_jpy": -11362,
+            "p90_month_jpy": 5895,
+            "return_pct": -11.08,
+            "max_dd_pct": 18.93,
+            "avg_R": -0.0719,
+            "pf_R": 0.773
+          },
+          "test_0.004": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -7890,
+            "median_monthly_jpy": -8017,
+            "positive_month_pct": 8.3,
+            "p10_month_jpy": -13393,
+            "p90_month_jpy": -861,
+            "return_pct": -56.8,
+            "max_dd_pct": 56.8,
+            "avg_R": -0.268,
+            "pf_R": 0.398
+          },
+          "holdout_0.004": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": -3030,
+            "median_monthly_jpy": 0,
+            "positive_month_pct": 33.3,
+            "p10_month_jpy": -15059,
+            "p90_month_jpy": 8064,
+            "return_pct": -14.54,
+            "max_dd_pct": 24.42,
+            "avg_R": -0.0719,
+            "pf_R": 0.773
+          },
+          "test_0.006": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -9959,
+            "median_monthly_jpy": -9055,
+            "positive_month_pct": 8.3,
+            "p10_month_jpy": -18701,
+            "p90_month_jpy": -1126,
+            "return_pct": -71.71,
+            "max_dd_pct": 71.71,
+            "avg_R": -0.268,
+            "pf_R": 0.398
+          },
+          "holdout_0.006": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": -4401,
+            "median_monthly_jpy": 0,
+            "positive_month_pct": 33.3,
+            "p10_month_jpy": -22315,
+            "p90_month_jpy": 12727,
+            "return_pct": -21.13,
+            "max_dd_pct": 34.35,
+            "avg_R": -0.0719,
+            "pf_R": 0.773
+          },
+          "test_0.008": {
+            "n": 779,
+            "trades_per_month": 21.6,
+            "avg_monthly_jpy": -11321,
+            "median_monthly_jpy": -9274,
+            "positive_month_pct": 8.3,
+            "p10_month_jpy": -24139,
+            "p90_month_jpy": -1313,
+            "return_pct": -81.51,
+            "max_dd_pct": 81.51,
+            "avg_R": -0.268,
+            "pf_R": 0.398
+          },
+          "holdout_0.008": {
+            "n": 539,
+            "trades_per_month": 22.5,
+            "avg_monthly_jpy": -5683,
+            "median_monthly_jpy": 0,
+            "positive_month_pct": 33.3,
+            "p10_month_jpy": -29385,
+            "p90_month_jpy": 17847,
+            "return_pct": -27.28,
+            "max_dd_pct": 43.01,
+            "avg_R": -0.0719,
+            "pf_R": 0.773
+          }
+        }
+      },
+      "2": {
+        "pooled": {
+          "train": {
+            "n": 177,
+            "trades_per_month": 3.0,
+            "mean_net_pips": -1.582,
+            "median_net_pips": -0.4,
+            "pf": 0.67,
+            "win_pct": 44.6,
+            "t": -0.87,
+            "positive_month_pct": 35.6,
+            "positive_year_pct": 60.0,
+            "avg_gap_pips": 3.74
+          },
+          "val": {
+            "n": 246,
+            "trades_per_month": 6.8,
+            "mean_net_pips": -0.368,
+            "median_net_pips": 0.0,
+            "pf": 0.86,
+            "win_pct": 50.4,
+            "t": -0.32,
+            "positive_month_pct": 55.6,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 4.41
+          },
+          "test": {
+            "n": 314,
+            "trades_per_month": 8.7,
+            "mean_net_pips": 0.321,
+            "median_net_pips": -0.1,
+            "pf": 1.19,
+            "win_pct": 49.4,
+            "t": 1.06,
+            "positive_month_pct": 41.7,
+            "positive_year_pct": 33.3,
+            "avg_gap_pips": 4.46
+          },
+          "holdout": {
+            "n": 374,
+            "trades_per_month": 19.7,
+            "mean_net_pips": 2.339,
+            "median_net_pips": 1.1,
+            "pf": 2.809,
+            "win_pct": 60.7,
+            "t": 4.95,
+            "positive_month_pct": 68.4,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 6.45
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 6,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 2.883,
+              "median_net_pips": 3.35,
+              "pf": 10.105,
+              "win_pct": 83.3,
+              "t": 2.41,
+              "positive_month_pct": 8.6,
+              "positive_year_pct": 80.0,
+              "avg_gap_pips": 2.92
+            },
+            "val": {
+              "n": 21,
+              "trades_per_month": 0.6,
+              "mean_net_pips": 3.767,
+              "median_net_pips": 3.2,
+              "pf": 27.367,
+              "win_pct": 90.5,
+              "t": 5.15,
+              "positive_month_pct": 39.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.76
+            },
+            "test": {
+              "n": 18,
+              "trades_per_month": 0.5,
+              "mean_net_pips": 0.606,
+              "median_net_pips": 0.7,
+              "pf": 1.58,
+              "win_pct": 61.1,
+              "t": 0.72,
+              "positive_month_pct": 20.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.72
+            },
+            "holdout": {
+              "n": 36,
+              "trades_per_month": 2.0,
+              "mean_net_pips": 4.631,
+              "median_net_pips": 2.7,
+              "pf": 58.483,
+              "win_pct": 91.7,
+              "t": 2.97,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 6.16
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 43,
+              "trades_per_month": 0.7,
+              "mean_net_pips": -4.816,
+              "median_net_pips": -2.7,
+              "pf": 0.594,
+              "win_pct": 41.9,
+              "t": -0.66,
+              "positive_month_pct": 16.9,
+              "positive_year_pct": 20.0,
+              "avg_gap_pips": 4.55
+            },
+            "val": {
+              "n": 78,
+              "trades_per_month": 2.2,
+              "mean_net_pips": -2.924,
+              "median_net_pips": -0.75,
+              "pf": 0.507,
+              "win_pct": 43.6,
+              "t": -0.82,
+              "positive_month_pct": 28.6,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 5.58
+            },
+            "test": {
+              "n": 37,
+              "trades_per_month": 1.1,
+              "mean_net_pips": 0.649,
+              "median_net_pips": 0.1,
+              "pf": 1.65,
+              "win_pct": 54.1,
+              "t": 1.06,
+              "positive_month_pct": 26.5,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 3.56
+            },
+            "holdout": {
+              "n": 61,
+              "trades_per_month": 3.4,
+              "mean_net_pips": 1.779,
+              "median_net_pips": 0.9,
+              "pf": 1.943,
+              "win_pct": 55.7,
+              "t": 1.52,
+              "positive_month_pct": 72.2,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 6.22
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 34,
+              "trades_per_month": 0.7,
+              "mean_net_pips": -2.056,
+              "median_net_pips": -0.45,
+              "pf": 0.47,
+              "win_pct": 38.2,
+              "t": -1.42,
+              "positive_month_pct": 19.6,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.86
+            },
+            "val": {
+              "n": 40,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 0.15,
+              "median_net_pips": -0.1,
+              "pf": 1.167,
+              "win_pct": 47.5,
+              "t": 0.35,
+              "positive_month_pct": 30.3,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 3.25
+            },
+            "test": {
+              "n": 42,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 0.931,
+              "median_net_pips": 0.95,
+              "pf": 1.883,
+              "win_pct": 57.1,
+              "t": 1.43,
+              "positive_month_pct": 30.6,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.41
+            },
+            "holdout": {
+              "n": 46,
+              "trades_per_month": 2.4,
+              "mean_net_pips": 2.58,
+              "median_net_pips": 1.2,
+              "pf": 5.565,
+              "win_pct": 69.6,
+              "t": 3.1,
+              "positive_month_pct": 57.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 5.55
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 24,
+              "trades_per_month": 0.5,
+              "mean_net_pips": -1.121,
+              "median_net_pips": -0.1,
+              "pf": 0.618,
+              "win_pct": 45.8,
+              "t": -0.75,
+              "positive_month_pct": 17.8,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.65
+            },
+            "val": {
+              "n": 40,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 0.438,
+              "median_net_pips": -0.2,
+              "pf": 1.3,
+              "win_pct": 47.5,
+              "t": 0.56,
+              "positive_month_pct": 34.4,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.13
+            },
+            "test": {
+              "n": 81,
+              "trades_per_month": 2.3,
+              "mean_net_pips": -0.486,
+              "median_net_pips": -0.7,
+              "pf": 0.71,
+              "win_pct": 38.3,
+              "t": -1.11,
+              "positive_month_pct": 31.4,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 3.76
+            },
+            "holdout": {
+              "n": 75,
+              "trades_per_month": 3.9,
+              "mean_net_pips": 1.8,
+              "median_net_pips": 0.6,
+              "pf": 2.52,
+              "win_pct": 58.7,
+              "t": 2.33,
+              "positive_month_pct": 52.6,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 5.66
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 59,
+              "trades_per_month": 1.4,
+              "mean_net_pips": -0.027,
+              "median_net_pips": -0.9,
+              "pf": 0.985,
+              "win_pct": 42.4,
+              "t": -0.04,
+              "positive_month_pct": 31.0,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 3.29
+            },
+            "val": {
+              "n": 44,
+              "trades_per_month": 1.2,
+              "mean_net_pips": 0.325,
+              "median_net_pips": -0.35,
+              "pf": 1.187,
+              "win_pct": 40.9,
+              "t": 0.39,
+              "positive_month_pct": 30.6,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 4.52
+            },
+            "test": {
+              "n": 72,
+              "trades_per_month": 2.1,
+              "mean_net_pips": 0.908,
+              "median_net_pips": 0.1,
+              "pf": 1.565,
+              "win_pct": 51.4,
+              "t": 1.38,
+              "positive_month_pct": 25.7,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.14
+            },
+            "holdout": {
+              "n": 83,
+              "trades_per_month": 4.4,
+              "mean_net_pips": -0.008,
+              "median_net_pips": -0.9,
+              "pf": 0.996,
+              "win_pct": 37.3,
+              "t": -0.01,
+              "positive_month_pct": 42.1,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 5.45
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 11,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 0.745,
+              "median_net_pips": 1.4,
+              "pf": 1.29,
+              "win_pct": 63.6,
+              "t": 0.3,
+              "positive_month_pct": 16.3,
+              "positive_year_pct": 75.0,
+              "avg_gap_pips": 3.15
+            },
+            "val": {
+              "n": 23,
+              "trades_per_month": 0.7,
+              "mean_net_pips": 0.896,
+              "median_net_pips": 0.7,
+              "pf": 2.573,
+              "win_pct": 65.2,
+              "t": 1.67,
+              "positive_month_pct": 29.0,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 3.37
+            },
+            "test": {
+              "n": 64,
+              "trades_per_month": 1.9,
+              "mean_net_pips": 0.013,
+              "median_net_pips": -0.05,
+              "pf": 1.004,
+              "win_pct": 50.0,
+              "t": 0.01,
+              "positive_month_pct": 30.3,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.33
+            },
+            "holdout": {
+              "n": 73,
+              "trades_per_month": 3.8,
+              "mean_net_pips": 4.748,
+              "median_net_pips": 3.0,
+              "pf": 4.93,
+              "win_pct": 72.6,
+              "t": 3.02,
+              "positive_month_pct": 73.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.3
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": -618,
+            "median_monthly_jpy": -775,
+            "positive_month_pct": 36.1,
+            "p10_month_jpy": -6004,
+            "p90_month_jpy": 4912,
+            "return_pct": -4.45,
+            "max_dd_pct": 11.97,
+            "avg_R": -0.0476,
+            "pf_R": 0.855
+          },
+          "holdout_0.003": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 2632,
+            "median_monthly_jpy": 310,
+            "positive_month_pct": 50.0,
+            "p10_month_jpy": -4126,
+            "p90_month_jpy": 11174,
+            "return_pct": 12.63,
+            "max_dd_pct": 3.29,
+            "avg_R": 0.1202,
+            "pf_R": 1.547
+          },
+          "test_0.004": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": -824,
+            "median_monthly_jpy": -1034,
+            "positive_month_pct": 36.1,
+            "p10_month_jpy": -7981,
+            "p90_month_jpy": 6602,
+            "return_pct": -5.93,
+            "max_dd_pct": 15.66,
+            "avg_R": -0.0476,
+            "pf_R": 0.855
+          },
+          "holdout_0.004": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 3573,
+            "median_monthly_jpy": 432,
+            "positive_month_pct": 50.0,
+            "p10_month_jpy": -5768,
+            "p90_month_jpy": 15412,
+            "return_pct": 17.15,
+            "max_dd_pct": 4.36,
+            "avg_R": 0.1202,
+            "pf_R": 1.547
+          },
+          "test_0.006": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": -1234,
+            "median_monthly_jpy": -1551,
+            "positive_month_pct": 36.1,
+            "p10_month_jpy": -11895,
+            "p90_month_jpy": 10064,
+            "return_pct": -8.88,
+            "max_dd_pct": 22.61,
+            "avg_R": -0.0476,
+            "pf_R": 0.855
+          },
+          "holdout_0.006": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 5558,
+            "median_monthly_jpy": 711,
+            "positive_month_pct": 50.0,
+            "p10_month_jpy": -9508,
+            "p90_month_jpy": 24735,
+            "return_pct": 26.68,
+            "max_dd_pct": 6.48,
+            "avg_R": 0.1202,
+            "pf_R": 1.547
+          },
+          "test_0.008": {
+            "n": 312,
+            "trades_per_month": 8.7,
+            "avg_monthly_jpy": -1641,
+            "median_monthly_jpy": -2069,
+            "positive_month_pct": 36.1,
+            "p10_month_jpy": -15748,
+            "p90_month_jpy": 13641,
+            "return_pct": -11.82,
+            "max_dd_pct": 29.02,
+            "avg_R": -0.0476,
+            "pf_R": 0.855
+          },
+          "holdout_0.008": {
+            "n": 332,
+            "trades_per_month": 13.8,
+            "avg_monthly_jpy": 7687,
+            "median_monthly_jpy": 1037,
+            "positive_month_pct": 50.0,
+            "p10_month_jpy": -13925,
+            "p90_month_jpy": 35279,
+            "return_pct": 36.9,
+            "max_dd_pct": 8.57,
+            "avg_R": 0.1202,
+            "pf_R": 1.547
+          }
+        }
+      },
+      "5": {
+        "pooled": {
+          "train": {
+            "n": 28,
+            "trades_per_month": 0.6,
+            "mean_net_pips": -7.957,
+            "median_net_pips": -2.8,
+            "pf": 0.295,
+            "win_pct": 39.3,
+            "t": -1.46,
+            "positive_month_pct": 17.4,
+            "positive_year_pct": 0.0,
+            "avg_gap_pips": 8.99
+          },
+          "val": {
+            "n": 52,
+            "trades_per_month": 1.4,
+            "mean_net_pips": -2.244,
+            "median_net_pips": 2.05,
+            "pf": 0.656,
+            "win_pct": 61.5,
+            "t": -0.43,
+            "positive_month_pct": 36.1,
+            "positive_year_pct": 66.7,
+            "avg_gap_pips": 9.18
+          },
+          "test": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "mean_net_pips": 4.035,
+            "median_net_pips": 4.1,
+            "pf": 4.204,
+            "win_pct": 76.8,
+            "t": 4.44,
+            "positive_month_pct": 55.6,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 9.74
+          },
+          "holdout": {
+            "n": 145,
+            "trades_per_month": 7.6,
+            "mean_net_pips": 6.459,
+            "median_net_pips": 4.4,
+            "pf": 6.774,
+            "win_pct": 80.0,
+            "t": 5.95,
+            "positive_month_pct": 84.2,
+            "positive_year_pct": 100.0,
+            "avg_gap_pips": 11.8
+          }
+        },
+        "by_pair": {
+          "eurusd": {
+            "train": {
+              "n": 0
+            },
+            "val": {
+              "n": 2,
+              "trades_per_month": 0.2,
+              "mean_net_pips": 8.05,
+              "median_net_pips": 8.05,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 5.96,
+              "positive_month_pct": 18.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.05
+            },
+            "test": {
+              "n": 3,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 0.8,
+              "median_net_pips": -0.4,
+              "pf": 2.2,
+              "win_pct": 33.3,
+              "t": 0.44,
+              "positive_month_pct": 4.0,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 5.47
+            },
+            "holdout": {
+              "n": 8,
+              "trades_per_month": 1.6,
+              "mean_net_pips": 12.9,
+              "median_net_pips": 4.75,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 2.04,
+              "positive_month_pct": 80.0,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 16.16
+            }
+          },
+          "gbpusd": {
+            "train": {
+              "n": 14,
+              "trades_per_month": 0.4,
+              "mean_net_pips": -15.743,
+              "median_net_pips": -4.7,
+              "pf": 0.097,
+              "win_pct": 28.6,
+              "t": -1.57,
+              "positive_month_pct": 7.7,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 8.21
+            },
+            "val": {
+              "n": 24,
+              "trades_per_month": 1.1,
+              "mean_net_pips": -9.263,
+              "median_net_pips": 1.8,
+              "pf": 0.306,
+              "win_pct": 54.2,
+              "t": -0.82,
+              "positive_month_pct": 31.8,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 10.79
+            },
+            "test": {
+              "n": 4,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 2.725,
+              "median_net_pips": 2.4,
+              "pf": 2.535,
+              "win_pct": 75.0,
+              "t": 0.66,
+              "positive_month_pct": 9.1,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 9.5
+            },
+            "holdout": {
+              "n": 22,
+              "trades_per_month": 1.8,
+              "mean_net_pips": 6.277,
+              "median_net_pips": 5.2,
+              "pf": 4.124,
+              "win_pct": 77.3,
+              "t": 2.18,
+              "positive_month_pct": 66.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 12.02
+            }
+          },
+          "audusd": {
+            "train": {
+              "n": 5,
+              "trades_per_month": 0.1,
+              "mean_net_pips": -7.5,
+              "median_net_pips": -1.8,
+              "pf": 0.316,
+              "win_pct": 40.0,
+              "t": -0.93,
+              "positive_month_pct": 4.9,
+              "positive_year_pct": 25.0,
+              "avg_gap_pips": 10.42
+            },
+            "val": {
+              "n": 2,
+              "trades_per_month": 0.2,
+              "mean_net_pips": -1.15,
+              "median_net_pips": -1.15,
+              "pf": 0.0,
+              "win_pct": 0.0,
+              "t": -1.35,
+              "positive_month_pct": 0.0,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 6.1
+            },
+            "test": {
+              "n": 11,
+              "trades_per_month": 0.4,
+              "mean_net_pips": 4.809,
+              "median_net_pips": 4.2,
+              "pf": 26.19,
+              "win_pct": 90.9,
+              "t": 4.48,
+              "positive_month_pct": 20.7,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 8.97
+            },
+            "holdout": {
+              "n": 13,
+              "trades_per_month": 0.8,
+              "mean_net_pips": 7.592,
+              "median_net_pips": 4.2,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": 3.59,
+              "positive_month_pct": 37.5,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.62
+            }
+          },
+          "usdcad": {
+            "train": {
+              "n": 2,
+              "trades_per_month": 0.1,
+              "mean_net_pips": -3.5,
+              "median_net_pips": -3.5,
+              "pf": 0.0,
+              "win_pct": 0.0,
+              "t": -1.52,
+              "positive_month_pct": 0.0,
+              "positive_year_pct": 0.0,
+              "avg_gap_pips": 13.15
+            },
+            "val": {
+              "n": 9,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 4.278,
+              "median_net_pips": 1.9,
+              "pf": 11.694,
+              "win_pct": 77.8,
+              "t": 1.89,
+              "positive_month_pct": 20.0,
+              "positive_year_pct": 66.7,
+              "avg_gap_pips": 7.69
+            },
+            "test": {
+              "n": 9,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 4.789,
+              "median_net_pips": 5.5,
+              "pf": 5.898,
+              "win_pct": 77.8,
+              "t": 2.44,
+              "positive_month_pct": 17.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 10.64
+            },
+            "holdout": {
+              "n": 25,
+              "trades_per_month": 1.3,
+              "mean_net_pips": 7.108,
+              "median_net_pips": 4.2,
+              "pf": 51.771,
+              "win_pct": 92.0,
+              "t": 4.19,
+              "positive_month_pct": 52.6,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.2
+            }
+          },
+          "usdchf": {
+            "train": {
+              "n": 6,
+              "trades_per_month": 0.1,
+              "mean_net_pips": 4.983,
+              "median_net_pips": 4.2,
+              "pf": 3.96,
+              "win_pct": 66.7,
+              "t": 1.14,
+              "positive_month_pct": 7.3,
+              "positive_year_pct": 50.0,
+              "avg_gap_pips": 7.85
+            },
+            "val": {
+              "n": 11,
+              "trades_per_month": 0.3,
+              "mean_net_pips": 4.127,
+              "median_net_pips": 3.3,
+              "pf": 5.365,
+              "win_pct": 63.6,
+              "t": 1.79,
+              "positive_month_pct": 13.9,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 8.56
+            },
+            "test": {
+              "n": 19,
+              "trades_per_month": 1.1,
+              "mean_net_pips": 6.126,
+              "median_net_pips": 5.9,
+              "pf": 9.885,
+              "win_pct": 78.9,
+              "t": 3.83,
+              "positive_month_pct": 44.4,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.03
+            },
+            "holdout": {
+              "n": 29,
+              "trades_per_month": 1.5,
+              "mean_net_pips": 1.807,
+              "median_net_pips": -1.0,
+              "pf": 1.708,
+              "win_pct": 48.3,
+              "t": 0.85,
+              "positive_month_pct": 42.1,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 9.79
+            }
+          },
+          "usdjpy": {
+            "train": {
+              "n": 1,
+              "trades_per_month": 1.0,
+              "mean_net_pips": 12.2,
+              "median_net_pips": 12.2,
+              "pf": null,
+              "win_pct": 100.0,
+              "t": null,
+              "positive_month_pct": 100.0,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 11.2
+            },
+            "val": {
+              "n": 4,
+              "trades_per_month": 0.2,
+              "mean_net_pips": 1.975,
+              "median_net_pips": 2.25,
+              "pf": 4.591,
+              "win_pct": 75.0,
+              "t": 1.15,
+              "positive_month_pct": 16.7,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 6.15
+            },
+            "test": {
+              "n": 23,
+              "trades_per_month": 0.7,
+              "mean_net_pips": 2.291,
+              "median_net_pips": 1.2,
+              "pf": 1.98,
+              "win_pct": 73.9,
+              "t": 1.11,
+              "positive_month_pct": 35.5,
+              "positive_year_pct": 33.3,
+              "avg_gap_pips": 9.29
+            },
+            "holdout": {
+              "n": 48,
+              "trades_per_month": 2.5,
+              "mean_net_pips": 7.635,
+              "median_net_pips": 5.95,
+              "pf": 10.049,
+              "win_pct": 85.4,
+              "t": 3.4,
+              "positive_month_pct": 63.2,
+              "positive_year_pct": 100.0,
+              "avg_gap_pips": 12.56
+            }
+          }
+        },
+        "equity_proxy": {
+          "test_0.003": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 862,
+            "median_monthly_jpy": 186,
+            "positive_month_pct": 55.6,
+            "p10_month_jpy": -829,
+            "p90_month_jpy": 3916,
+            "return_pct": 6.2,
+            "max_dd_pct": 1.43,
+            "avg_R": 0.292,
+            "pf_R": 2.478
+          },
+          "holdout_0.003": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 3472,
+            "median_monthly_jpy": 1348,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 10347,
+            "return_pct": 16.67,
+            "max_dd_pct": 0.7,
+            "avg_R": 0.3815,
+            "pf_R": 3.906
+          },
+          "test_0.004": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 1159,
+            "median_monthly_jpy": 252,
+            "positive_month_pct": 55.6,
+            "p10_month_jpy": -1115,
+            "p90_month_jpy": 5264,
+            "return_pct": 8.34,
+            "max_dd_pct": 1.9,
+            "avg_R": 0.292,
+            "pf_R": 2.478
+          },
+          "holdout_0.004": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 4750,
+            "median_monthly_jpy": 1880,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 14235,
+            "return_pct": 22.8,
+            "max_dd_pct": 0.93,
+            "avg_R": 0.3815,
+            "pf_R": 3.906
+          },
+          "test_0.006": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 1769,
+            "median_monthly_jpy": 388,
+            "positive_month_pct": 55.6,
+            "p10_month_jpy": -1702,
+            "p90_month_jpy": 8023,
+            "return_pct": 12.74,
+            "max_dd_pct": 2.85,
+            "avg_R": 0.292,
+            "pf_R": 2.478
+          },
+          "holdout_0.006": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 7504,
+            "median_monthly_jpy": 3087,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 22729,
+            "return_pct": 36.02,
+            "max_dd_pct": 1.39,
+            "avg_R": 0.3815,
+            "pf_R": 3.906
+          },
+          "test_0.008": {
+            "n": 69,
+            "trades_per_month": 1.9,
+            "avg_monthly_jpy": 2400,
+            "median_monthly_jpy": 531,
+            "positive_month_pct": 55.6,
+            "p10_month_jpy": -2310,
+            "p90_month_jpy": 10873,
+            "return_pct": 17.28,
+            "max_dd_pct": 3.78,
+            "avg_R": 0.292,
+            "pf_R": 2.478
+          },
+          "holdout_0.008": {
+            "n": 135,
+            "trades_per_month": 5.6,
+            "avg_monthly_jpy": 10546,
+            "median_monthly_jpy": 4504,
+            "positive_month_pct": 66.7,
+            "p10_month_jpy": 0,
+            "p90_month_jpy": 32254,
+            "return_pct": 50.62,
+            "max_dd_pct": 1.85,
+            "avg_R": 0.3815,
+            "pf_R": 3.906
+          }
+        }
+      }
+    }
+  }
+}
