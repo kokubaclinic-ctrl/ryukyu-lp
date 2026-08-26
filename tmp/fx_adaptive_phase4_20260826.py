@@ -18,12 +18,12 @@ def load(p):
  d['r12']=((d.close-d.close.shift(12))/pip)/(d.sig*np.sqrt(12));return d
 
 def gen(d,p,e,costmult):
- pip=PIP[p];cost=COST[p]*costmult;vals=[];rows=[];i=260;N=len(d);idx=d.index
+ pip=PIP[p];cost=COST[p]*costmult;rows=[];i=260;N=len(d);idx=d.index
  while i<N-e['hold']-2:
   if idx[i].hour%6 or idx[i].weekday()>=5 or (idx[i].weekday()==4 and idx[i].hour>=12):i+=1;continue
   dire=0
   if e['kind']=='MOM':
-   z=float(d.iloc[i][f"z{e['lb']}"]);
+   z=float(d.iloc[i][f"z{e['lb']}"])
    if np.isfinite(z) and abs(z)>=e['th']:dire=np.sign(z)*e['sign']
   elif e['kind']=='DON':
    hi=float(d.high.iloc[i-e['lb']:i].max());lo=float(d.low.iloc[i-e['lb']:i].min());c=float(d.close.iloc[i]);dire=(1 if c>hi else (-1 if c<lo else 0))*e['sign']
@@ -31,7 +31,7 @@ def gen(d,p,e,costmult):
    z=float(d.iloc[i][f"z{e['lb']}"]);r=float(d.iloc[i].r12)
    if np.isfinite(z) and np.isfinite(r) and abs(z)>=e['th'] and np.sign(r)==-np.sign(z) and abs(r)>=e['pb']:dire=np.sign(z)*e['sign']
   if dire==0:i+=1;continue
-  ei=i+1;xi=ei+e['hold'];entry=float(d.open.iloc[ei]);atr=float(d.atr.iloc[ei]);
+  ei=i+1;xi=ei+e['hold'];entry=float(d.open.iloc[ei]);atr=float(d.atr.iloc[ei])
   if not np.isfinite(atr) or atr<=0:i+=1;continue
   stop=max(5 if p.endswith('jpy') else 4,atr*e['stop']);sp=entry-dire*stop*pip;st=False
   for k in range(ei,xi+1):
@@ -53,7 +53,7 @@ def walk(expert_trades,window,topk,minmean,start,end):
  for m in months:
   hist_start=m-pd.DateOffset(months=window);scores=[]
   for key,df in expert_trades.items():
-   h=df[(df.dt>=hist_start)&(df.dt<m)];sc=hist_score(h,minmean)
+   h=df[(df['dt']>=hist_start)&(df['dt']<m)];sc=hist_score(h,minmean)
    if sc is not None:scores.append((sc,key))
   scores.sort(reverse=True);used_pairs=set();chosen=[]
   for sc,key in scores:
@@ -62,16 +62,16 @@ def walk(expert_trades,window,topk,minmean,start,end):
    chosen.append((sc,key));used_pairs.add(p)
    if len(chosen)>=topk:break
   sel_log.append({'month':str(m.date()),'chosen':[k for _,k in chosen]})
-  candidates=[]
-  nxt=m+pd.offsets.MonthBegin(1)
+  candidates=[];nxt=m+pd.offsets.MonthBegin(1)
   for sc,key in chosen:
-   z=expert_trades[key];q=z[(z.dt>=m)&(z.dt<nxt)].copy();q['rankscore']=sc;candidates.append(q)
+   z=expert_trades[key];q=z[(z['dt']>=m)&(z['dt']<nxt)].copy();q['rankscore']=sc;candidates.append(q)
   if not candidates:continue
   q=pd.concat(candidates).sort_values(['dt','rankscore'],ascending=[True,False]);active=[]
   for _,r in q.iterrows():
-   active=[a for a in active if a>r.dt]
+   rdt=r['dt'];rend=r['end']
+   active=[a for a in active if a>rdt]
    if len(active)>=2:continue
-   active.append(r.end);out.append(r)
+   active.append(rend);out.append(r)
  return pd.DataFrame(out),sel_log
 
 def perf(df):
