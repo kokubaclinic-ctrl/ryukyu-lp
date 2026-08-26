@@ -1,0 +1,36 @@
+name: TEMP FX Evidence Phase2 20260826
+on:
+  push:
+    branches: ['tmp/xauusd-v04-backtest-20260826']
+    paths:
+      - 'tmp/fx_evidence_download_20260826.js'
+      - 'tmp/fx_evidence_phase2_20260826.py'
+      - '.github/workflows/tmp-fx-evidence-phase2-20260826.yml'
+permissions:
+  contents: write
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: tmp/xauusd-v04-backtest-20260826
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: npm install --no-save dukascopy-node
+      - run: pip install -q pandas numpy
+      - run: node tmp/fx_evidence_download_20260826.js
+      - run: python tmp/fx_evidence_phase2_20260826.py
+      - name: Persist summary
+        run: |
+          git pull --rebase origin tmp/xauusd-v04-backtest-20260826 || true
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add tmp/fx_evidence_phase2_20260826_result.json
+          git commit -m 'chore: persist temporary FX evidence phase2 result' || exit 0
+          git push origin HEAD:tmp/xauusd-v04-backtest-20260826
