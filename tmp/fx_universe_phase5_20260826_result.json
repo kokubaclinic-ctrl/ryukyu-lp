@@ -1,0 +1,948 @@
+{
+  "status": "FX_UNIVERSE_PHASE5",
+  "source": "Dukascopy H1 free",
+  "loaded_pairs": [
+    "audcad",
+    "audchf",
+    "audjpy",
+    "audnzd",
+    "audusd",
+    "cadchf",
+    "cadjpy",
+    "chfjpy",
+    "euraud",
+    "eurcad",
+    "eurgbp",
+    "eurjpy",
+    "eurnzd",
+    "eurusd",
+    "gbpaud",
+    "gbpcad",
+    "gbpjpy",
+    "gbpnzd",
+    "gbpusd",
+    "nzdcad",
+    "nzdchf",
+    "nzdjpy",
+    "nzdusd",
+    "usdcad",
+    "usdchf",
+    "usdjpy"
+  ],
+  "candidate_count": 96,
+  "protocol": "one GLOBAL parameter set per factor selected only from 2014-18 train + 2019-21 validation across full universe; unchanged on all pairs in 2022-24 test and 2025-26 holdout; no post-test pair picking",
+  "cost_pips": {
+    "eurusd": 0.8,
+    "usdjpy": 1.0,
+    "gbpusd": 1.3,
+    "audusd": 1.1,
+    "nzdusd": 1.5,
+    "usdcad": 1.5,
+    "usdchf": 1.5,
+    "eurjpy": 1.4,
+    "gbpjpy": 2.4,
+    "audjpy": 1.3,
+    "nzdjpy": 2.0,
+    "cadjpy": 2.0,
+    "chfjpy": 2.2,
+    "eurgbp": 1.4,
+    "euraud": 2.0,
+    "eurcad": 2.0,
+    "eurnzd": 3.0,
+    "gbpaud": 3.0,
+    "gbpcad": 3.0,
+    "gbpnzd": 4.0,
+    "audcad": 2.0,
+    "audnzd": 2.5,
+    "audchf": 2.0,
+    "nzdcad": 2.5,
+    "nzdchf": 2.5,
+    "cadchf": 2.0
+  },
+  "chosen_global": {
+    "TSMOM": {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 0.5,
+      "hold": 12,
+      "stop": 1.5,
+      "train": {
+        "n": 27018,
+        "mean_R": -0.1022,
+        "pf": 0.855,
+        "win_pct": 46.1,
+        "t": -8.71,
+        "positive_pair_pct": 3.8,
+        "pairs": 26
+      },
+      "val": {
+        "n": 15822,
+        "mean_R": -0.0992,
+        "pf": 0.857,
+        "win_pct": 46.4,
+        "t": -6.7,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "test": {
+        "n": 16641,
+        "mean_R": -0.1151,
+        "pf": 0.84,
+        "win_pct": 46.4,
+        "t": -7.72,
+        "positive_pair_pct": 7.7,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 8813,
+        "mean_R": -0.1235,
+        "pf": 0.815,
+        "win_pct": 46.0,
+        "t": -6.89,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    "DONCHIAN": {
+      "family": "DONCHIAN",
+      "lb": 24,
+      "hold": 12,
+      "stop": 1.5,
+      "train": {
+        "n": 8776,
+        "mean_R": -0.1362,
+        "pf": 0.833,
+        "win_pct": 45.9,
+        "t": -5.86,
+        "positive_pair_pct": 7.7,
+        "pairs": 26
+      },
+      "val": {
+        "n": 5361,
+        "mean_R": -0.1057,
+        "pf": 0.867,
+        "win_pct": 47.3,
+        "t": -3.61,
+        "positive_pair_pct": 23.1,
+        "pairs": 26
+      },
+      "test": {
+        "n": 5776,
+        "mean_R": -0.1189,
+        "pf": 0.848,
+        "win_pct": 46.4,
+        "t": -4.45,
+        "positive_pair_pct": 26.9,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 2794,
+        "mean_R": -0.1318,
+        "pf": 0.82,
+        "win_pct": 46.0,
+        "t": -3.76,
+        "positive_pair_pct": 26.9,
+        "pairs": 26
+      },
+      "score": -999
+    }
+  },
+  "exact_factor_results": {
+    "TSMOM": {
+      "base": {
+        "train": {
+          "n": 27018,
+          "mean_R": -0.1022,
+          "pf": 0.827,
+          "win_pct": 37.1,
+          "t": -12.15,
+          "trades_per_month": 450.3,
+          "positive_month_pct": 20.0
+        },
+        "val": {
+          "n": 15822,
+          "mean_R": -0.096,
+          "pf": 0.839,
+          "win_pct": 37.6,
+          "t": -8.68,
+          "trades_per_month": 439.5,
+          "positive_month_pct": 22.2
+        },
+        "test": {
+          "n": 16641,
+          "mean_R": -0.141,
+          "pf": 0.771,
+          "win_pct": 35.9,
+          "t": -13.24,
+          "trades_per_month": 462.2,
+          "positive_month_pct": 11.1
+        },
+        "holdout": {
+          "n": 8813,
+          "mean_R": -0.1615,
+          "pf": 0.736,
+          "win_pct": 36.3,
+          "t": -11.9,
+          "trades_per_month": 367.2,
+          "positive_month_pct": 5.3
+        }
+      },
+      "stress": {
+        "train": {
+          "n": 27018,
+          "mean_R": -0.1407,
+          "pf": 0.771,
+          "win_pct": 36.4,
+          "t": -16.72,
+          "trades_per_month": 450.3,
+          "positive_month_pct": 10.0
+        },
+        "val": {
+          "n": 15822,
+          "mean_R": -0.1428,
+          "pf": 0.771,
+          "win_pct": 36.7,
+          "t": -12.9,
+          "trades_per_month": 439.5,
+          "positive_month_pct": 16.7
+        },
+        "test": {
+          "n": 16641,
+          "mean_R": -0.1838,
+          "pf": 0.715,
+          "win_pct": 35.0,
+          "t": -17.24,
+          "trades_per_month": 462.2,
+          "positive_month_pct": 8.3
+        },
+        "holdout": {
+          "n": 8813,
+          "mean_R": -0.2088,
+          "pf": 0.675,
+          "win_pct": 35.6,
+          "t": -15.36,
+          "trades_per_month": 367.2,
+          "positive_month_pct": 0.0
+        }
+      }
+    },
+    "DONCHIAN": {
+      "base": {
+        "train": {
+          "n": 8776,
+          "mean_R": -0.0748,
+          "pf": 0.88,
+          "win_pct": 35.8,
+          "t": -4.47,
+          "trades_per_month": 146.3,
+          "positive_month_pct": 38.3
+        },
+        "val": {
+          "n": 5361,
+          "mean_R": -0.0585,
+          "pf": 0.907,
+          "win_pct": 36.8,
+          "t": -2.78,
+          "trades_per_month": 148.9,
+          "positive_month_pct": 30.6
+        },
+        "test": {
+          "n": 5776,
+          "mean_R": -0.1371,
+          "pf": 0.789,
+          "win_pct": 34.1,
+          "t": -7.19,
+          "trades_per_month": 160.4,
+          "positive_month_pct": 25.0
+        },
+        "holdout": {
+          "n": 2794,
+          "mean_R": -0.199,
+          "pf": 0.702,
+          "win_pct": 34.1,
+          "t": -7.93,
+          "trades_per_month": 116.4,
+          "positive_month_pct": 21.1
+        }
+      },
+      "stress": {
+        "train": {
+          "n": 8776,
+          "mean_R": -0.1165,
+          "pf": 0.821,
+          "win_pct": 35.3,
+          "t": -6.96,
+          "trades_per_month": 146.3,
+          "positive_month_pct": 30.0
+        },
+        "val": {
+          "n": 5361,
+          "mean_R": -0.1088,
+          "pf": 0.836,
+          "win_pct": 36.2,
+          "t": -5.16,
+          "trades_per_month": 148.9,
+          "positive_month_pct": 27.8
+        },
+        "test": {
+          "n": 5776,
+          "mean_R": -0.1819,
+          "pf": 0.733,
+          "win_pct": 33.5,
+          "t": -9.52,
+          "trades_per_month": 160.4,
+          "positive_month_pct": 19.4
+        },
+        "holdout": {
+          "n": 2794,
+          "mean_R": -0.2482,
+          "pf": 0.646,
+          "win_pct": 33.5,
+          "t": -9.87,
+          "trades_per_month": 116.4,
+          "positive_month_pct": 10.5
+        }
+      }
+    }
+  },
+  "portfolio": {
+    "test_base_0.004": {
+      "n": 2609,
+      "trades_per_month": 72.5,
+      "avg_actual_risk_pct": 0.4,
+      "avg_monthly_jpy": -19526,
+      "median_monthly_jpy": -19947,
+      "positive_month_pct": 22.2,
+      "p10_month_jpy": -54269,
+      "p90_month_jpy": 14199,
+      "max_dd_pct": 139.1,
+      "avg_R": -0.1347,
+      "pf_R": 0.785
+    },
+    "holdout_base_0.004": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.4,
+      "avg_monthly_jpy": -22491,
+      "median_monthly_jpy": -14774,
+      "positive_month_pct": 4.2,
+      "p10_month_jpy": -51654,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 107.73,
+      "avg_R": -0.1869,
+      "pf_R": 0.705
+    },
+    "holdout_stress_0.004": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.4,
+      "avg_monthly_jpy": -28911,
+      "median_monthly_jpy": -22959,
+      "positive_month_pct": 4.2,
+      "p10_month_jpy": -60762,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 138.4,
+      "avg_R": -0.2403,
+      "pf_R": 0.641
+    },
+    "test_base_0.005": {
+      "n": 2609,
+      "trades_per_month": 72.5,
+      "avg_actual_risk_pct": 0.5,
+      "avg_monthly_jpy": -24408,
+      "median_monthly_jpy": -24933,
+      "positive_month_pct": 22.2,
+      "p10_month_jpy": -67837,
+      "p90_month_jpy": 17749,
+      "max_dd_pct": 172.29,
+      "avg_R": -0.1347,
+      "pf_R": 0.785
+    },
+    "holdout_base_0.005": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.5,
+      "avg_monthly_jpy": -28113,
+      "median_monthly_jpy": -18467,
+      "positive_month_pct": 4.2,
+      "p10_month_jpy": -64568,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 133.72,
+      "avg_R": -0.1869,
+      "pf_R": 0.705
+    },
+    "holdout_stress_0.005": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.5,
+      "avg_monthly_jpy": -36139,
+      "median_monthly_jpy": -28699,
+      "positive_month_pct": 4.2,
+      "p10_month_jpy": -75953,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 172.58,
+      "avg_R": -0.2403,
+      "pf_R": 0.641
+    },
+    "test_base_0.006": {
+      "n": 2609,
+      "trades_per_month": 72.5,
+      "avg_actual_risk_pct": 0.6,
+      "avg_monthly_jpy": -29290,
+      "median_monthly_jpy": -29920,
+      "positive_month_pct": 22.2,
+      "p10_month_jpy": -81404,
+      "p90_month_jpy": 21298,
+      "max_dd_pct": 204.88,
+      "avg_R": -0.1347,
+      "pf_R": 0.785
+    },
+    "holdout_base_0.006": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.6,
+      "avg_monthly_jpy": -33736,
+      "median_monthly_jpy": -22161,
+      "positive_month_pct": 4.2,
+      "p10_month_jpy": -77481,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 159.34,
+      "avg_R": -0.1869,
+      "pf_R": 0.705
+    },
+    "holdout_stress_0.006": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.6,
+      "avg_monthly_jpy": -43366,
+      "median_monthly_jpy": -34438,
+      "positive_month_pct": 4.2,
+      "p10_month_jpy": -91143,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 206.6,
+      "avg_R": -0.2403,
+      "pf_R": 0.641
+    },
+    "test_base_0.007": {
+      "n": 2609,
+      "trades_per_month": 72.5,
+      "avg_actual_risk_pct": 0.604,
+      "avg_monthly_jpy": -28664,
+      "median_monthly_jpy": -28743,
+      "positive_month_pct": 25.0,
+      "p10_month_jpy": -78799,
+      "p90_month_jpy": 24415,
+      "max_dd_pct": 198.74,
+      "avg_R": -0.1347,
+      "pf_R": 0.785
+    },
+    "holdout_base_0.007": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.602,
+      "avg_monthly_jpy": -33271,
+      "median_monthly_jpy": -22007,
+      "positive_month_pct": 8.3,
+      "p10_month_jpy": -78096,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 157.12,
+      "avg_R": -0.1869,
+      "pf_R": 0.705
+    },
+    "holdout_stress_0.007": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.602,
+      "avg_monthly_jpy": -42951,
+      "median_monthly_jpy": -33547,
+      "positive_month_pct": 4.2,
+      "p10_month_jpy": -90146,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 204.38,
+      "avg_R": -0.2403,
+      "pf_R": 0.641
+    },
+    "test_base_0.008": {
+      "n": 2609,
+      "trades_per_month": 72.5,
+      "avg_actual_risk_pct": 0.609,
+      "avg_monthly_jpy": -28039,
+      "median_monthly_jpy": -29057,
+      "positive_month_pct": 25.0,
+      "p10_month_jpy": -75275,
+      "p90_month_jpy": 25591,
+      "max_dd_pct": 192.82,
+      "avg_R": -0.1347,
+      "pf_R": 0.785
+    },
+    "holdout_base_0.008": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.603,
+      "avg_monthly_jpy": -32806,
+      "median_monthly_jpy": -24599,
+      "positive_month_pct": 12.5,
+      "p10_month_jpy": -81254,
+      "p90_month_jpy": 3753,
+      "max_dd_pct": 154.84,
+      "avg_R": -0.1869,
+      "pf_R": 0.705
+    },
+    "holdout_stress_0.008": {
+      "n": 1444,
+      "trades_per_month": 60.2,
+      "avg_actual_risk_pct": 0.603,
+      "avg_monthly_jpy": -42535,
+      "median_monthly_jpy": -35680,
+      "positive_month_pct": 8.3,
+      "p10_month_jpy": -90581,
+      "p90_month_jpy": 0,
+      "max_dd_pct": 202.17,
+      "avg_R": -0.2403,
+      "pf_R": 0.641
+    }
+  },
+  "top10_trainval": [
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 0.5,
+      "hold": 12,
+      "stop": 1.5,
+      "train": {
+        "n": 27018,
+        "mean_R": -0.1022,
+        "pf": 0.855,
+        "win_pct": 46.1,
+        "t": -8.71,
+        "positive_pair_pct": 3.8,
+        "pairs": 26
+      },
+      "val": {
+        "n": 15822,
+        "mean_R": -0.0992,
+        "pf": 0.857,
+        "win_pct": 46.4,
+        "t": -6.7,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "test": {
+        "n": 16641,
+        "mean_R": -0.1151,
+        "pf": 0.84,
+        "win_pct": 46.4,
+        "t": -7.72,
+        "positive_pair_pct": 7.7,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 8813,
+        "mean_R": -0.1235,
+        "pf": 0.815,
+        "win_pct": 46.0,
+        "t": -6.89,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 0.5,
+      "hold": 12,
+      "stop": 2.0,
+      "train": {
+        "n": 27018,
+        "mean_R": -0.0766,
+        "pf": 0.855,
+        "win_pct": 46.1,
+        "t": -8.71,
+        "positive_pair_pct": 3.8,
+        "pairs": 26
+      },
+      "val": {
+        "n": 15822,
+        "mean_R": -0.0744,
+        "pf": 0.857,
+        "win_pct": 46.4,
+        "t": -6.7,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "test": {
+        "n": 16641,
+        "mean_R": -0.0863,
+        "pf": 0.84,
+        "win_pct": 46.4,
+        "t": -7.72,
+        "positive_pair_pct": 7.7,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 8813,
+        "mean_R": -0.0927,
+        "pf": 0.815,
+        "win_pct": 46.0,
+        "t": -6.89,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 0.5,
+      "hold": 24,
+      "stop": 1.5,
+      "train": {
+        "n": 18226,
+        "mean_R": -0.1061,
+        "pf": 0.891,
+        "win_pct": 47.4,
+        "t": -5.48,
+        "positive_pair_pct": 7.7,
+        "pairs": 26
+      },
+      "val": {
+        "n": 10718,
+        "mean_R": -0.0815,
+        "pf": 0.914,
+        "win_pct": 48.0,
+        "t": -3.4,
+        "positive_pair_pct": 26.9,
+        "pairs": 26
+      },
+      "test": {
+        "n": 11244,
+        "mean_R": -0.0984,
+        "pf": 0.899,
+        "win_pct": 48.2,
+        "t": -4.04,
+        "positive_pair_pct": 19.2,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 5934,
+        "mean_R": -0.1085,
+        "pf": 0.88,
+        "win_pct": 47.0,
+        "t": -3.59,
+        "positive_pair_pct": 26.9,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 0.5,
+      "hold": 24,
+      "stop": 2.0,
+      "train": {
+        "n": 18226,
+        "mean_R": -0.0795,
+        "pf": 0.892,
+        "win_pct": 47.4,
+        "t": -5.47,
+        "positive_pair_pct": 7.7,
+        "pairs": 26
+      },
+      "val": {
+        "n": 10718,
+        "mean_R": -0.0612,
+        "pf": 0.914,
+        "win_pct": 48.0,
+        "t": -3.4,
+        "positive_pair_pct": 26.9,
+        "pairs": 26
+      },
+      "test": {
+        "n": 11244,
+        "mean_R": -0.0738,
+        "pf": 0.899,
+        "win_pct": 48.2,
+        "t": -4.04,
+        "positive_pair_pct": 19.2,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 5934,
+        "mean_R": -0.0814,
+        "pf": 0.88,
+        "win_pct": 47.0,
+        "t": -3.59,
+        "positive_pair_pct": 26.9,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 0.5,
+      "hold": 48,
+      "stop": 1.5,
+      "train": {
+        "n": 11151,
+        "mean_R": -0.1398,
+        "pf": 0.902,
+        "win_pct": 48.3,
+        "t": -3.81,
+        "positive_pair_pct": 23.1,
+        "pairs": 26
+      },
+      "val": {
+        "n": 6530,
+        "mean_R": -0.0171,
+        "pf": 0.987,
+        "win_pct": 48.8,
+        "t": -0.38,
+        "positive_pair_pct": 53.8,
+        "pairs": 26
+      },
+      "test": {
+        "n": 6826,
+        "mean_R": -0.2277,
+        "pf": 0.846,
+        "win_pct": 46.9,
+        "t": -5.02,
+        "positive_pair_pct": 23.1,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 3623,
+        "mean_R": -0.1757,
+        "pf": 0.867,
+        "win_pct": 47.6,
+        "t": -3.18,
+        "positive_pair_pct": 19.2,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 0.5,
+      "hold": 48,
+      "stop": 2.0,
+      "train": {
+        "n": 11151,
+        "mean_R": -0.1048,
+        "pf": 0.902,
+        "win_pct": 48.3,
+        "t": -3.81,
+        "positive_pair_pct": 23.1,
+        "pairs": 26
+      },
+      "val": {
+        "n": 6530,
+        "mean_R": -0.0128,
+        "pf": 0.987,
+        "win_pct": 48.8,
+        "t": -0.38,
+        "positive_pair_pct": 53.8,
+        "pairs": 26
+      },
+      "test": {
+        "n": 6826,
+        "mean_R": -0.1707,
+        "pf": 0.846,
+        "win_pct": 46.9,
+        "t": -5.02,
+        "positive_pair_pct": 23.1,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 3623,
+        "mean_R": -0.1318,
+        "pf": 0.867,
+        "win_pct": 47.6,
+        "t": -3.18,
+        "positive_pair_pct": 19.2,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 1.0,
+      "hold": 12,
+      "stop": 1.5,
+      "train": {
+        "n": 15085,
+        "mean_R": -0.0969,
+        "pf": 0.857,
+        "win_pct": 46.2,
+        "t": -6.41,
+        "positive_pair_pct": 19.2,
+        "pairs": 26
+      },
+      "val": {
+        "n": 8893,
+        "mean_R": -0.0569,
+        "pf": 0.915,
+        "win_pct": 47.1,
+        "t": -2.81,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "test": {
+        "n": 9310,
+        "mean_R": -0.1432,
+        "pf": 0.803,
+        "win_pct": 45.6,
+        "t": -7.3,
+        "positive_pair_pct": 0.0,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 4774,
+        "mean_R": -0.121,
+        "pf": 0.816,
+        "win_pct": 45.4,
+        "t": -5.02,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 1.0,
+      "hold": 12,
+      "stop": 2.0,
+      "train": {
+        "n": 15085,
+        "mean_R": -0.0727,
+        "pf": 0.857,
+        "win_pct": 46.2,
+        "t": -6.41,
+        "positive_pair_pct": 19.2,
+        "pairs": 26
+      },
+      "val": {
+        "n": 8893,
+        "mean_R": -0.0427,
+        "pf": 0.915,
+        "win_pct": 47.1,
+        "t": -2.81,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "test": {
+        "n": 9310,
+        "mean_R": -0.1074,
+        "pf": 0.803,
+        "win_pct": 45.6,
+        "t": -7.3,
+        "positive_pair_pct": 0.0,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 4774,
+        "mean_R": -0.0908,
+        "pf": 0.816,
+        "win_pct": 45.4,
+        "t": -5.02,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 1.0,
+      "hold": 24,
+      "stop": 1.5,
+      "train": {
+        "n": 11181,
+        "mean_R": -0.066,
+        "pf": 0.929,
+        "win_pct": 47.9,
+        "t": -2.8,
+        "positive_pair_pct": 26.9,
+        "pairs": 26
+      },
+      "val": {
+        "n": 6673,
+        "mean_R": -0.0684,
+        "pf": 0.927,
+        "win_pct": 48.7,
+        "t": -2.24,
+        "positive_pair_pct": 19.2,
+        "pairs": 26
+      },
+      "test": {
+        "n": 6982,
+        "mean_R": -0.1677,
+        "pf": 0.831,
+        "win_pct": 46.8,
+        "t": -5.53,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 3615,
+        "mean_R": -0.1654,
+        "pf": 0.824,
+        "win_pct": 46.1,
+        "t": -4.14,
+        "positive_pair_pct": 23.1,
+        "pairs": 26
+      },
+      "score": -999
+    },
+    {
+      "family": "TSMOM",
+      "lb": 24,
+      "th": 1.0,
+      "hold": 24,
+      "stop": 2.0,
+      "train": {
+        "n": 11181,
+        "mean_R": -0.0495,
+        "pf": 0.929,
+        "win_pct": 47.9,
+        "t": -2.8,
+        "positive_pair_pct": 26.9,
+        "pairs": 26
+      },
+      "val": {
+        "n": 6673,
+        "mean_R": -0.0513,
+        "pf": 0.927,
+        "win_pct": 48.7,
+        "t": -2.24,
+        "positive_pair_pct": 19.2,
+        "pairs": 26
+      },
+      "test": {
+        "n": 6982,
+        "mean_R": -0.1258,
+        "pf": 0.831,
+        "win_pct": 46.8,
+        "t": -5.53,
+        "positive_pair_pct": 11.5,
+        "pairs": 26
+      },
+      "holdout": {
+        "n": 3615,
+        "mean_R": -0.124,
+        "pf": 0.824,
+        "win_pct": 46.1,
+        "t": -4.14,
+        "positive_pair_pct": 23.1,
+        "pairs": 26
+      },
+      "score": -999
+    }
+  ]
+}
